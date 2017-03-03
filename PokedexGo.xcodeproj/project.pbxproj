@@ -20,6 +20,14 @@
 		4E9F8B9E1E69E5CC00A9CD59 /* PTTypeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8B9D1E69E5CC00A9CD59 /* PTTypeButton.m */; };
 		4E9F8BA01E69E77000A9CD59 /* TypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8B9F1E69E77000A9CD59 /* TypeTableViewCell.swift */; };
 		4E9F8BA11E69E77000A9CD59 /* TypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8B9F1E69E77000A9CD59 /* TypeTableViewCell.swift */; };
+		4E9F8BA31E6A013600A9CD59 /* StatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8BA21E6A013600A9CD59 /* StatsTableViewCell.swift */; };
+		4E9F8BA41E6A013600A9CD59 /* StatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8BA21E6A013600A9CD59 /* StatsTableViewCell.swift */; };
+		4E9F8BA61E6A1BE500A9CD59 /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8BA51E6A1BE500A9CD59 /* NameTableViewCell.swift */; };
+		4E9F8BA71E6A1BE500A9CD59 /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8BA51E6A1BE500A9CD59 /* NameTableViewCell.swift */; };
+		4E9F8BA91E6A1D1A00A9CD59 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8BA81E6A1D1A00A9CD59 /* ImageTableViewCell.swift */; };
+		4E9F8BAA1E6A1D1A00A9CD59 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8BA81E6A1D1A00A9CD59 /* ImageTableViewCell.swift */; };
+		4E9F8BAC1E6A255000A9CD59 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8BAB1E6A255000A9CD59 /* TitleTableViewCell.swift */; };
+		4E9F8BAD1E6A255000A9CD59 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8BAB1E6A255000A9CD59 /* TitleTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +67,10 @@
 		4E9F8B9C1E69E5CC00A9CD59 /* PTTypeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTTypeButton.h; sourceTree = "<group>"; };
 		4E9F8B9D1E69E5CC00A9CD59 /* PTTypeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTTypeButton.m; sourceTree = "<group>"; };
 		4E9F8B9F1E69E77000A9CD59 /* TypeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeTableViewCell.swift; sourceTree = "<group>"; };
+		4E9F8BA21E6A013600A9CD59 /* StatsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsTableViewCell.swift; sourceTree = "<group>"; };
+		4E9F8BA51E6A1BE500A9CD59 /* NameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameTableViewCell.swift; sourceTree = "<group>"; };
+		4E9F8BA81E6A1D1A00A9CD59 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		4E9F8BAB1E6A255000A9CD59 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +128,10 @@
 				4E9F8B9C1E69E5CC00A9CD59 /* PTTypeButton.h */,
 				4E9F8B9D1E69E5CC00A9CD59 /* PTTypeButton.m */,
 				4E9F8B9F1E69E77000A9CD59 /* TypeTableViewCell.swift */,
+				4E9F8BAB1E6A255000A9CD59 /* TitleTableViewCell.swift */,
+				4E9F8BA21E6A013600A9CD59 /* StatsTableViewCell.swift */,
+				4E9F8BA51E6A1BE500A9CD59 /* NameTableViewCell.swift */,
+				4E9F8BA81E6A1D1A00A9CD59 /* ImageTableViewCell.swift */,
 				4E9F8B6B1E67916C00A9CD59 /* Assets.xcassets */,
 				4E9F8B991E69DF8800A9CD59 /* point-bg.png */,
 				4E9F8B6D1E67916C00A9CD59 /* LaunchScreen.storyboard */,
@@ -281,9 +297,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E9F8B971E68E5A900A9CD59 /* PGHelper.swift in Sources */,
+				4E9F8BA91E6A1D1A00A9CD59 /* ImageTableViewCell.swift in Sources */,
+				4E9F8BA31E6A013600A9CD59 /* StatsTableViewCell.swift in Sources */,
+				4E9F8BA61E6A1BE500A9CD59 /* NameTableViewCell.swift in Sources */,
 				4E9F8BA01E69E77000A9CD59 /* TypeTableViewCell.swift in Sources */,
 				4E9F8B651E67916C00A9CD59 /* AppDelegate.swift in Sources */,
 				4E9F8B951E68E3D900A9CD59 /* PokemonDexTableViewController.swift in Sources */,
+				4E9F8BAC1E6A255000A9CD59 /* TitleTableViewCell.swift in Sources */,
 				4E9F8B9E1E69E5CC00A9CD59 /* PTTypeButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +322,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E9F8B851E67916C00A9CD59 /* PokedexGoUITests.swift in Sources */,
+				4E9F8BA41E6A013600A9CD59 /* StatsTableViewCell.swift in Sources */,
+				4E9F8BAA1E6A1D1A00A9CD59 /* ImageTableViewCell.swift in Sources */,
+				4E9F8BA71E6A1BE500A9CD59 /* NameTableViewCell.swift in Sources */,
+				4E9F8BAD1E6A255000A9CD59 /* TitleTableViewCell.swift in Sources */,
 				4E9F8BA11E69E77000A9CD59 /* TypeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

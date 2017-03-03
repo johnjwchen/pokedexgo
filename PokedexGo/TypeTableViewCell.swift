@@ -10,22 +10,14 @@ import UIKit
 
 class TypeTableViewCell: UITableViewCell {
     @IBOutlet weak var type1Button: PTTypeButton!
-
     @IBOutlet weak var type2Button: PTTypeButton!
+ 
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-        
-        //test
-        type1Button.pokemonType = PokemonTypeNormal
-        type2Button.pokemonType = PokemonTypeNormal
+    func setTypes(type1: PokemonType, type2: PokemonType) {
+        type1Button.pokemonType = type1
+        type2Button.pokemonType = type2
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+  
 
 }
