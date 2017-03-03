@@ -9,6 +9,7 @@
 import XCTest
 @testable import PokedexGo
 
+
 class PokedexGoTests: XCTestCase {
     
     override func setUp() {
@@ -24,6 +25,8 @@ class PokedexGoTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let s = PGHelper.imageUrlOfPokemon(width: 240, num: 1).absoluteString
+        XCTAssert(s == "https://pokedex.me/new-pokemon/240/001.png", "pokemon image url correct")
     }
     
     func testPerformanceExample() {

@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		4E9F8B651E67916C00A9CD59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8B641E67916C00A9CD59 /* AppDelegate.swift */; };
-		4E9F8B671E67916C00A9CD59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8B661E67916C00A9CD59 /* ViewController.swift */; };
 		4E9F8B6A1E67916C00A9CD59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9F8B681E67916C00A9CD59 /* Main.storyboard */; };
 		4E9F8B6C1E67916C00A9CD59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E9F8B6B1E67916C00A9CD59 /* Assets.xcassets */; };
 		4E9F8B6F1E67916C00A9CD59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9F8B6D1E67916C00A9CD59 /* LaunchScreen.storyboard */; };
 		4E9F8B7A1E67916C00A9CD59 /* PokedexGoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8B791E67916C00A9CD59 /* PokedexGoTests.swift */; };
 		4E9F8B851E67916C00A9CD59 /* PokedexGoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8B841E67916C00A9CD59 /* PokedexGoUITests.swift */; };
+		4E9F8B951E68E3D900A9CD59 /* PokemonDexTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8B941E68E3D900A9CD59 /* PokemonDexTableViewController.swift */; };
+		4E9F8B971E68E5A900A9CD59 /* PGHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8B961E68E5A900A9CD59 /* PGHelper.swift */; };
+		4E9F8B981E69D5E100A9CD59 /* PokemonDexTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8B941E68E3D900A9CD59 /* PokemonDexTableViewController.swift */; };
+		4E9F8B9A1E69DF8800A9CD59 /* point-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E9F8B991E69DF8800A9CD59 /* point-bg.png */; };
+		4E9F8B9E1E69E5CC00A9CD59 /* PTTypeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8B9D1E69E5CC00A9CD59 /* PTTypeButton.m */; };
+		4E9F8BA01E69E77000A9CD59 /* TypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8B9F1E69E77000A9CD59 /* TypeTableViewCell.swift */; };
+		4E9F8BA11E69E77000A9CD59 /* TypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8B9F1E69E77000A9CD59 /* TypeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +42,6 @@
 /* Begin PBXFileReference section */
 		4E9F8B611E67916C00A9CD59 /* PokedexGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokedexGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E9F8B641E67916C00A9CD59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4E9F8B661E67916C00A9CD59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4E9F8B691E67916C00A9CD59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4E9F8B6B1E67916C00A9CD59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E9F8B6E1E67916C00A9CD59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +52,13 @@
 		4E9F8B801E67916C00A9CD59 /* PokedexGoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokedexGoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E9F8B841E67916C00A9CD59 /* PokedexGoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexGoUITests.swift; sourceTree = "<group>"; };
 		4E9F8B861E67916C00A9CD59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E9F8B941E68E3D900A9CD59 /* PokemonDexTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PokemonDexTableViewController.swift; path = ../PokemonDexTableViewController.swift; sourceTree = "<group>"; };
+		4E9F8B961E68E5A900A9CD59 /* PGHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PGHelper.swift; sourceTree = "<group>"; };
+		4E9F8B991E69DF8800A9CD59 /* point-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "point-bg.png"; sourceTree = "<group>"; };
+		4E9F8B9B1E69E5CA00A9CD59 /* PokedexGo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PokedexGo-Bridging-Header.h"; sourceTree = "<group>"; };
+		4E9F8B9C1E69E5CC00A9CD59 /* PTTypeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTTypeButton.h; sourceTree = "<group>"; };
+		4E9F8B9D1E69E5CC00A9CD59 /* PTTypeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTTypeButton.m; sourceTree = "<group>"; };
+		4E9F8B9F1E69E77000A9CD59 /* TypeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +110,17 @@
 			isa = PBXGroup;
 			children = (
 				4E9F8B641E67916C00A9CD59 /* AppDelegate.swift */,
-				4E9F8B661E67916C00A9CD59 /* ViewController.swift */,
+				4E9F8B941E68E3D900A9CD59 /* PokemonDexTableViewController.swift */,
 				4E9F8B681E67916C00A9CD59 /* Main.storyboard */,
+				4E9F8B961E68E5A900A9CD59 /* PGHelper.swift */,
+				4E9F8B9C1E69E5CC00A9CD59 /* PTTypeButton.h */,
+				4E9F8B9D1E69E5CC00A9CD59 /* PTTypeButton.m */,
+				4E9F8B9F1E69E77000A9CD59 /* TypeTableViewCell.swift */,
 				4E9F8B6B1E67916C00A9CD59 /* Assets.xcassets */,
+				4E9F8B991E69DF8800A9CD59 /* point-bg.png */,
 				4E9F8B6D1E67916C00A9CD59 /* LaunchScreen.storyboard */,
 				4E9F8B701E67916C00A9CD59 /* Info.plist */,
+				4E9F8B9B1E69E5CA00A9CD59 /* PokedexGo-Bridging-Header.h */,
 			);
 			path = PokedexGo;
 			sourceTree = "<group>";
@@ -194,6 +212,7 @@
 					4E9F8B601E67916C00A9CD59 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 99V67VH5PP;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					4E9F8B741E67916C00A9CD59 = {
@@ -236,6 +255,7 @@
 				4E9F8B6F1E67916C00A9CD59 /* LaunchScreen.storyboard in Resources */,
 				4E9F8B6C1E67916C00A9CD59 /* Assets.xcassets in Resources */,
 				4E9F8B6A1E67916C00A9CD59 /* Main.storyboard in Resources */,
+				4E9F8B9A1E69DF8800A9CD59 /* point-bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,8 +280,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E9F8B671E67916C00A9CD59 /* ViewController.swift in Sources */,
+				4E9F8B971E68E5A900A9CD59 /* PGHelper.swift in Sources */,
+				4E9F8BA01E69E77000A9CD59 /* TypeTableViewCell.swift in Sources */,
 				4E9F8B651E67916C00A9CD59 /* AppDelegate.swift in Sources */,
+				4E9F8B951E68E3D900A9CD59 /* PokemonDexTableViewController.swift in Sources */,
+				4E9F8B9E1E69E5CC00A9CD59 /* PTTypeButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E9F8B7A1E67916C00A9CD59 /* PokedexGoTests.swift in Sources */,
+				4E9F8B981E69D5E100A9CD59 /* PokemonDexTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E9F8B851E67916C00A9CD59 /* PokedexGoUITests.swift in Sources */,
+				4E9F8BA11E69E77000A9CD59 /* TypeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,11 +438,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 99V67VH5PP;
 				INFOPLIST_FILE = PokedexGo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pokgear.PokedexGo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PokedexGo/PokedexGo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -426,11 +455,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 99V67VH5PP;
 				INFOPLIST_FILE = PokedexGo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pokgear.PokedexGo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PokedexGo/PokedexGo-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -508,6 +540,7 @@
 				4E9F8B8B1E67916C00A9CD59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E9F8B8C1E67916C00A9CD59 /* Build configuration list for PBXNativeTarget "PokedexGoTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +549,7 @@
 				4E9F8B8E1E67916C00A9CD59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E9F8B8F1E67916C00A9CD59 /* Build configuration list for PBXNativeTarget "PokedexGoUITests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +558,7 @@
 				4E9F8B911E67916C00A9CD59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
