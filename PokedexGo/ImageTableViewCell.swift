@@ -12,6 +12,14 @@ class ImageTableViewCell: UITableViewCell {
 
     @IBOutlet weak var centralImage: UIImageView!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+        
+        sizeToFit()
+        layoutIfNeeded()
+    }
+    
     func setPokemonImage(num: Int) {
         centralImage.downloadedFrom(url: PGHelper.imageUrlOfPokemon(width: 240, num: num))
     }

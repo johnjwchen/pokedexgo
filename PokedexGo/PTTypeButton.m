@@ -43,7 +43,9 @@
 }
 
 - (void)touch:(id)sender{
-    [_target performSelector:_selector withObject:self];
+    if (_delegate) {
+        [_delegate touchUp:self];
+    }
 }
 
 - (id)initWithFrame:(CGRect)frame

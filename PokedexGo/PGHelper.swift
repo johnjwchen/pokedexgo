@@ -30,6 +30,8 @@ extension UIImageView {
     }
 }
 
+
+
 class PGHelper: NSObject {
     
     /**
@@ -50,5 +52,27 @@ class PGHelper: NSObject {
     class func imageUrlOfPokemon(width: NSInteger, num: NSInteger) -> URL! {
         let url = String(format: "https://pokedex.me/new-pokemon/%d/%03d.png", width, num)
         return URL(string: url)
+    }
+    
+    class func convertToDictionary(name: String) -> [String: Any]? {
+        do {
+            if let file = Bundle.main.url(forResource: name, withExtension: "json") {
+                let data = try Data(contentsOf: file)
+                let json = try JSONSerialization.jsonObject(with: data, options: [])
+                if let object = json as? [String: Any] {
+                    return object
+                } else if let object = json as? [Any] {
+                    // json is an array
+                    print(object)
+                } else {
+                    print("JSON is invalid")
+                }
+            } else {
+                print("no file")
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+        return nil
     }
 }
