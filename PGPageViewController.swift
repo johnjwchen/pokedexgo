@@ -11,9 +11,9 @@ import UIKit
 class PGPageViewController: UIPageViewController {
 
     fileprivate(set) lazy var orderedViewControllers: [UIViewController] = {
-        return [self.newTableViewController(dexType: .Pokemon, dexKey: "1"),
-                self.newTableViewController(dexType: .Pokemon, dexKey: "101"),
-                self.newTableViewController(dexType: .Pokemon, dexKey: "111")]
+        return [self.newTableViewController(dexType: .Move, dexKey: "bone-club"),
+                self.newTableViewController(dexType: .Move, dexKey: "blizzard"),
+                self.newTableViewController(dexType: .Move, dexKey: "bite")]
     }()
     
     

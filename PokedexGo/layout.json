@@ -11,5 +11,11 @@
                {"cell": "MoveCell", "key": "chargeMoves"},
                {"cell": "TitleCell", "title": "Ideal Moves"},
                {"cell": "MoveCell", "key": "idealMoves"}
+    ],
+    "move": [
+             {"cell": "MoveNameCell"},
+             {"cell": "DescriptionCell"},
+             {"cell": "TitleCell", "title": "Pokemon that can have the move"},
+             {"cell": "PokemonCell"} 
     ]
 }

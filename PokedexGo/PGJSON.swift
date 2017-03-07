@@ -18,4 +18,27 @@ class PGJSON: NSObject {
         let name2 = name.lowercased().replacingOccurrences(of: " ", with: "-")
         return moveDex[name2] as! [String: Any]
     }
+    
+    static private var movePokemon: [String: Any]!
+    static func pokemonWith(move: String) -> [String] {
+        if (movePokemon == nil) {
+            movePokemon = [:]
+            for key in pokeDex.keys {
+                let pokemon = pokeDex[key] as! [String: Any]
+                for key2 in ["fastMoves", "chargeMoves"] {
+                    for mName in pokemon[key2] as! [String?] {
+                        if (movePokemon[mName!] == nil) {
+                            movePokemon[mName!] = [key]
+                        }
+                        else {
+                            var array = movePokemon[mName!] as! [String]
+                            array.append(key)
+                            movePokemon[mName!] = array
+                        }
+                    }
+                }
+            }
+        }
+        return movePokemon[move] as! [String]
+    }
 }
