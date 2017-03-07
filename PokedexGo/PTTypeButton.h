@@ -53,5 +53,5 @@ typedef enum
 
 @property (nonatomic, assign) PokemonType pokemonType;
 @property (nonatomic, weak) id <PTTypeButtonDelegate> delegate;
-
+- (void)set:(NSString *)type;
 @end

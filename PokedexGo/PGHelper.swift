@@ -21,6 +21,10 @@ extension UIImageView {
                 else { return }
             DispatchQueue.main.async() { () -> Void in
                 self.image = image
+                self.superview?.setNeedsLayout()
+                self.superview?.layoutSubviews()
+                self.superview?.superview?.setNeedsLayout()
+                self.superview?.superview?.layoutSubviews()
             }
             }.resume()
     }

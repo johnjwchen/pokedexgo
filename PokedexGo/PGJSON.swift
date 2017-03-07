@@ -10,6 +10,7 @@ import UIKit
 
 class PGJSON: NSObject {
     static let layout = PGHelper.convertToDictionary(name: "layout")
-    
+    static let moveDex = PGHelper.convertToDictionary(name: "movedex-go")
+    static let pokeDex = PGHelper.convertToDictionary(name: "pokedex-go")
     
 }

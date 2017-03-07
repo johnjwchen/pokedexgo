@@ -65,6 +65,46 @@
     return self;
 }
 
+- (void)set:(NSString *)type {
+    NSString *a = type.lowercaseString;
+    if ([a isEqualToString:@"normal"])
+        [self setPokemonType:PokemonTypeNormal];
+    else if ([a isEqualToString:@"fire"])
+        [self setPokemonType:PokemonTypeFire];
+    else if ([a isEqualToString:@"water"])
+        [self setPokemonType:PokemonTypeWater];
+    else if ([a isEqualToString:@"grass"])
+        [self setPokemonType:PokemonTypeGrass];
+    else if ([a isEqualToString:@"electric"])
+        [self setPokemonType:PokemonTypeElectric];
+    else if ([a isEqualToString:@"ice"])
+        [self setPokemonType:PokemonTypeIce];
+    else if ([a isEqualToString:@"fighting"])
+        [self setPokemonType:PokemonTypeFighting];
+    else if ([a isEqualToString:@"poison"])
+        [self setPokemonType:PokemonTypePoison];
+    else if ([a isEqualToString:@"ground"])
+        [self setPokemonType:PokemonTypeGround];
+    else if ([a isEqualToString:@"flying"])
+        [self setPokemonType:PokemonTypeFlying];
+    else if ([a isEqualToString:@"psychic"])
+        [self setPokemonType:PokemonTypePsychic];
+    else if ([a isEqualToString:@"bug"])
+        [self setPokemonType:PokemonTypeBug];
+    else if ([a isEqualToString:@"rock"])
+        [self setPokemonType:PokemonTypeRock];
+    else if ([a isEqualToString:@"ghost"])
+        [self setPokemonType:PokemonTypeGhost];
+    else if ([a isEqualToString:@"dragon"])
+        [self setPokemonType:PokemonTypeDragon];
+    else if ([a isEqualToString:@"dark"])
+        [self setPokemonType:PokemonTypeDark];
+    else if ([a isEqualToString:@"steel"])
+        [self setPokemonType:PokemonTypeSteel];
+    else if ([a isEqualToString:@"fairy"])
+        [self setPokemonType:PokemonTypeFairy];
+}
+
 - (void)setPokemonType:(PokemonType)pokemonType {
     if (_pokemonType != pokemonType) {
         _pokemonType = pokemonType;

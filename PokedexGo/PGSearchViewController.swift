@@ -14,9 +14,16 @@ class PGSearchViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
+    
+    
+    
+    
     lazy var searchViewController: UISearchController! = {
         return UISearchController(searchResultsController: nil)
     }()
+ 
+    fileprivate(set) var pokemonArray: [Any]!
+    fileprivate(set) var moveArray: [Any]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,15 +32,20 @@ class PGSearchViewController: UIViewController {
         tableView.delegate = self
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 140
+     
         
-        segmentedControl.removeAllSegments()
-        segmentedControl.insertSegment(withTitle: "All", at: 0, animated: false)
-        segmentedControl.insertSegment(withTitle: "Pokemon", at: 1, animated: false)
-        segmentedControl.insertSegment(withTitle: "Move", at: 2, animated: false)
-        
+        setUpArrays()
     }
     
- 
+    func setUpArrays() {
+        pokemonArray = Array(PGJSON.pokeDex!.values)
+        moveArray = Array(PGJSON.moveDex!.values)
+    }
+    
+    @IBAction func segmentChanged(_ sender: Any) {
+        tableView.reloadData()
+    }
+    
     
     @IBAction func cancelTouchUp(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -53,36 +65,59 @@ class PGSearchViewController: UIViewController {
 
 extension PGSearchViewController: UITableViewDataSource {
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 13
+        switch segmentedControl.selectedSegmentIndex {
+        case 0:
+            return section == 0 ? pokemonArray.count : moveArray.count
+        case 1:
+            return pokemonArray.count
+        case 2:
+            return moveArray.count
+        default:
+            return 0
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        switch segmentedControl.selectedSegmentIndex {
+        case 0:
+            return 2
+        case 1:
+            return 1
+        case 2:
+            return 1
+        default:
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if (indexPath.section == 0) {
+        if (segmentedControl.selectedSegmentIndex == 0 && indexPath.section == 0 ||
+            segmentedControl.selectedSegmentIndex == 1) {
             let cell = tableView.dequeueReusableCell(withIdentifier: "PokemonCell", for: indexPath) as! PokemonTableViewCell
             
             // configure the cell
-            cell.set(pokemon: ["name": "fuck"])
+            cell.set(pokemon: pokemonArray[indexPath.row] as! [String : Any])
             
             return cell
         }
         else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MoveSimpleCell") as! MoveSimpleTableViewCell
             
+            cell.set(move: moveArray[indexPath.row] as! [String : Any])
+            
             return cell
         }
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 23
+        return 29
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        if section == 0 {
+        if segmentedControl.selectedSegmentIndex == 0 && section == 0 ||
+            segmentedControl.selectedSegmentIndex == 1 {
             return tableView.dequeueReusableCell(withIdentifier: "PokemonTitleCell")
         }
         else {

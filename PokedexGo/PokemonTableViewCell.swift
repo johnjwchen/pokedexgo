@@ -13,20 +13,37 @@ class PokemonTableViewCell: UITableViewCell {
     @IBOutlet weak var pokemonImage: UIImageView!
     @IBOutlet weak var numLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var weightLabel: UILabel!
-    @IBOutlet weak var heightLabel: UILabel!
-    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var staminaLabel: UILabel!
+    @IBOutlet weak var attackLabel: UILabel!
+    @IBOutlet weak var defenseLabel: UILabel!
+    @IBOutlet weak var maxcpLabel: UILabel!
+    
+    var toRemoveView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        // Initialization code 
         if UIDevice.current.userInterfaceIdiom != .pad {
-            categoryLabel.removeFromSuperview()
+            if toRemoveView != nil {
+                toRemoveView.removeFromSuperview()
+            }
+            else {
+                maxcpLabel.removeFromSuperview()
+            }
+            
+            if UIScreen.main.bounds.width <= 320 {
+                numLabel.removeFromSuperview()
+                numLabel = nil
+            }
         }
     }
 
     func set(pokemon: [String: Any]) {
-        pokemonImage.downloadedFrom(url: PGHelper.imageUrlOfPokemon(width: 60, num: 11))
+        let num = pokemon["num"] as! NSInteger
+        pokemonImage.downloadedFrom(url: PGHelper.imageUrlOfPokemon(width: 60, num: num))
+        numLabel?.text = String(format: "#%03d", arguments: [num])
+        nameLabel.text = pokemon["name"] as? String
+   
     }
     
 
