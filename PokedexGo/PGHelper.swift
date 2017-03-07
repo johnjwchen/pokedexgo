@@ -58,7 +58,7 @@ class PGHelper: NSObject {
         return URL(string: url)
     }
     
-    class func convertToDictionary(name: String) -> [String: Any]? {
+    class func jsonFrom(name: String) -> Any? {
         do {
             if let file = Bundle.main.url(forResource: name, withExtension: "json") {
                 let data = try Data(contentsOf: file)
@@ -67,7 +67,7 @@ class PGHelper: NSObject {
                     return object
                 } else if let object = json as? [Any] {
                     // json is an array
-                    print(object)
+                    return object
                 } else {
                     print("JSON is invalid")
                 }

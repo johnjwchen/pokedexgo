@@ -505,7 +505,7 @@
                                     <outlet property="typeButton" destination="i1x-gx-ToQ" id="xoK-mK-eAz"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DescriptionCell" rowHeight="65" id="qod-HK-MlS">
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DescriptionCell" rowHeight="65" id="qod-HK-MlS" customClass="DescriptionTableViewCell" customModule="PokedexGo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="586" width="320" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qod-HK-MlS" id="eeJ-Zv-pSf">
@@ -527,6 +527,9 @@
                                         <constraint firstItem="dF2-k7-e9D" firstAttribute="top" secondItem="eeJ-Zv-pSf" secondAttribute="top" constant="12" id="nLw-8r-UIn"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptLabel" destination="dF2-k7-e9D" id="ddx-gx-LMe"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

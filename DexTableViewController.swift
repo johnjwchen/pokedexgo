@@ -34,7 +34,7 @@ class DexTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        layout = PGJSON.layout!["pokemon"] as! [Any]
+        layout = PGJSON.layout["pokemon"] as! [Any]
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 140
         
@@ -69,7 +69,7 @@ class DexTableViewController: UITableViewController {
 
     func configPokemon(cell: UITableViewCell!, indexPath: IndexPath) {
        
-        let pokemon = PGJSON.pokeDex?[dexKey] as! [String: Any]
+        let pokemon = PGJSON.pokeDex[dexKey] as! [String: Any]
         
         if let nameCell = cell as? NameTableViewCell{
             nameCell.set(info: pokemon)
@@ -96,6 +96,11 @@ class DexTableViewController: UITableViewController {
             let moveName = array[indexPath.row] as! String
             let move = PGJSON.moveOf(name: moveName)
             moveCell.set(move: move)
+        }
+        else if let desCell = cell as? DescriptionTableViewCell {
+            let num = pokemon["num"] as! Int
+            let desc = PGJSON.pokemonDescArray[num] as! String
+            desCell.set(description: desc)
         }
     }
     

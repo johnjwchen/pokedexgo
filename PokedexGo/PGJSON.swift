@@ -9,11 +9,13 @@
 import UIKit
 
 class PGJSON: NSObject {
-    static let layout = PGHelper.convertToDictionary(name: "layout")
-    static let moveDex = PGHelper.convertToDictionary(name: "movedex-go")
-    static let pokeDex = PGHelper.convertToDictionary(name: "godex")
+    static let layout = PGHelper.jsonFrom(name: "layout") as! [String: Any]
+    static let moveDex = PGHelper.jsonFrom(name: "movedex-go") as! [String: Any]
+    static let pokeDex = PGHelper.jsonFrom(name: "godex") as! [String: Any]
+    static let pokemonDescArray = PGHelper.jsonFrom(name: "pokemon_desc_30") as! [Any]
+    
     static func moveOf(name: String) -> [String: Any] {
         let name2 = name.lowercased().replacingOccurrences(of: " ", with: "-")
-        return moveDex![name2] as! [String: Any]
+        return moveDex[name2] as! [String: Any]
     }
 }

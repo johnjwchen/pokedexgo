@@ -19,6 +19,8 @@
 		4E09411B1E6DFFB3000EA173 /* pt-black.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E09411A1E6DFFB3000EA173 /* pt-black.png */; };
 		4E09411E1E6E0141000EA173 /* movedex-go.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E09411C1E6E0141000EA173 /* movedex-go.json */; };
 		4E90C5AB1E6F1FB3008A6ADB /* godex.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E90C5AA1E6F1FB3008A6ADB /* godex.json */; };
+		4E90C5AD1E6F4D00008A6ADB /* pokemon_desc_30.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E90C5AC1E6F4D00008A6ADB /* pokemon_desc_30.json */; };
+		4E90C5AF1E6F4DC2008A6ADB /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E90C5AE1E6F4DC2008A6ADB /* DescriptionTableViewCell.swift */; };
 		4E9F8B651E67916C00A9CD59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8B641E67916C00A9CD59 /* AppDelegate.swift */; };
 		4E9F8B6A1E67916C00A9CD59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9F8B681E67916C00A9CD59 /* Main.storyboard */; };
 		4E9F8B6C1E67916C00A9CD59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E9F8B6B1E67916C00A9CD59 /* Assets.xcassets */; };
@@ -76,6 +78,8 @@
 		4E09411A1E6DFFB3000EA173 /* pt-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pt-black.png"; sourceTree = "<group>"; };
 		4E09411C1E6E0141000EA173 /* movedex-go.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "movedex-go.json"; sourceTree = "<group>"; };
 		4E90C5AA1E6F1FB3008A6ADB /* godex.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = godex.json; sourceTree = "<group>"; };
+		4E90C5AC1E6F4D00008A6ADB /* pokemon_desc_30.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pokemon_desc_30.json; sourceTree = "<group>"; };
+		4E90C5AE1E6F4DC2008A6ADB /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		4E9F8B611E67916C00A9CD59 /* PokedexGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokedexGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E9F8B641E67916C00A9CD59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E9F8B691E67916C00A9CD59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -168,6 +172,7 @@
 				4E9F8BAE1E6A491700A9CD59 /* MoveTableViewCell.swift */,
 				4E0941161E6DF2AB000EA173 /* MoveSimpleTableViewCell.swift */,
 				4E9F8BAB1E6A255000A9CD59 /* TitleTableViewCell.swift */,
+				4E90C5AE1E6F4DC2008A6ADB /* DescriptionTableViewCell.swift */,
 				4E9F8BA21E6A013600A9CD59 /* StatsTableViewCell.swift */,
 				4E9F8BA51E6A1BE500A9CD59 /* NameTableViewCell.swift */,
 				4E9F8BA81E6A1D1A00A9CD59 /* ImageTableViewCell.swift */,
@@ -206,6 +211,7 @@
 				4E9F8BB21E6A4F6F00A9CD59 /* layout.json */,
 				4E90C5AA1E6F1FB3008A6ADB /* godex.json */,
 				4E09411C1E6E0141000EA173 /* movedex-go.json */,
+				4E90C5AC1E6F4D00008A6ADB /* pokemon_desc_30.json */,
 				4E9F8BB51E6A649E00A9CD59 /* PGJSON.swift */,
 			);
 			name = json;
@@ -321,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E9F8B6F1E67916C00A9CD59 /* LaunchScreen.storyboard in Resources */,
+				4E90C5AD1E6F4D00008A6ADB /* pokemon_desc_30.json in Resources */,
 				4E0941111E6D08F5000EA173 /* pt-yellow.png in Resources */,
 				4E09411E1E6E0141000EA173 /* movedex-go.json in Resources */,
 				4E09411B1E6DFFB3000EA173 /* pt-black.png in Resources */,
@@ -370,6 +377,7 @@
 				4E0941171E6DF2AB000EA173 /* MoveSimpleTableViewCell.swift in Sources */,
 				4E9F8BAC1E6A255000A9CD59 /* TitleTableViewCell.swift in Sources */,
 				4E9F8B9E1E69E5CC00A9CD59 /* PTTypeButton.m in Sources */,
+				4E90C5AF1E6F4DC2008A6ADB /* DescriptionTableViewCell.swift in Sources */,
 				4E9F8BB61E6A649E00A9CD59 /* PGJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

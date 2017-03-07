@@ -52,8 +52,8 @@ class PGSearchViewController: UIViewController {
     
     
     func setUpArrays() {
-        pokemonArray = Array(PGJSON.pokeDex!.values)
-        moveArray = Array(PGJSON.moveDex!.values)
+        pokemonArray = Array(PGJSON.pokeDex.values)
+        moveArray = Array(PGJSON.moveDex.values)
         
         if segmentIndex > -1 {
             segmentedControl.selectedSegmentIndex = segmentIndex

@@ -72,7 +72,7 @@ class PokemonHeaderTableViewCell: UITableViewCell {
         case "defense":
             defenseLabel.text = defenseLabel.text! + arrow
         case "maxcp":
-            maxcpLabel.text = maxcpLabel.text! + arrow
+            maxcpLabel?.text = maxcpLabel.text! + arrow
         default: break
         }
     }
