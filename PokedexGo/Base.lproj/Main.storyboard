@@ -315,7 +315,7 @@
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="21" id="kDy-XI-EhN"/>
                                                                     </constraints>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -355,6 +355,7 @@
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="30" id="BAs-TA-nwa"/>
                                                                     </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <state key="normal" title="Power"/>
                                                                 </button>
                                                             </subviews>
@@ -381,6 +382,7 @@
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="30" id="g6U-UG-HJW"/>
                                                                     </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <state key="normal" title="CD"/>
                                                                 </button>
                                                             </subviews>
@@ -407,6 +409,7 @@
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="30" id="Bt3-zo-g2y"/>
                                                                     </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <state key="normal" title="DPS"/>
                                                                 </button>
                                                             </subviews>
@@ -433,6 +436,7 @@
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="30" id="yRF-L9-veQ"/>
                                                                     </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <state key="normal" title="EPS"/>
                                                                 </button>
                                                             </subviews>

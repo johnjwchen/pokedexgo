@@ -1,1582 +1,1742 @@
 {
-	"acid": {
-		"name": "Acid",
-		"type": "Poison",
-		"category": "Fast",
-		"power": 9,
-		"cd": 0.8,
-		"eps": 10,
-		"dps": 11.3,
-		"nrg": 8
-	},
-	"aerial-ace": {
-		"name": "Aerial Ace",
-		"type": "Flying",
-		"category": "Charge",
-		"power": 55,
-		"cd": 2.4,
-		"eps": 0,
-		"dps": 22.9,
-		"nrg": -33
-	},
-	"air-cutter": {
-		"name": "Air Cutter",
-		"type": "Flying",
-		"category": "Charge",
-		"power": 60,
-		"cd": 2.7,
-		"eps": 0,
-		"dps": 22.2,
-		"nrg": -50
-	},
-	"air-slash": {
-		"name": "Air Slash",
-		"type": "Flying",
-		"category": "Fast",
-		"power": 14,
-		"cd": 1.2,
-		"eps": 8.3,
-		"dps": 11.7,
-		"nrg": 10
-	},
-	"ancient-power": {
-		"name": "Ancient Power",
-		"type": "Rock",
-		"category": "Charge",
-		"power": 70,
-		"cd": 3.5,
-		"eps": 0,
-		"dps": 20,
-		"nrg": -33
-	},
-	"aqua-jet": {
-		"name": "Aqua Jet",
-		"type": "Water",
-		"category": "Charge",
-		"power": 45,
-		"cd": 2.6,
-		"eps": 0,
-		"dps": 17.3,
-		"nrg": -33
-	},
-	"aqua-tail": {
-		"name": "Aqua Tail",
-		"type": "Water",
-		"category": "Charge",
-		"power": 50,
-		"cd": 1.9,
-		"eps": 0,
-		"dps": 26.3,
-		"nrg": -33
-	},
-	"astonish": {
-		"name": "Astonish",
-		"type": "Ghost",
-		"category": "Fast",
-		"power": 8,
-		"cd": 1.1,
-		"eps": 12.7,
-		"dps": 7.3,
-		"nrg": 14
-	},
-	"aurora-beam": {
-		"name": "Aurora Beam",
-		"type": "Ice",
-		"category": "Charge",
-		"power": 80,
-		"cd": 3.55,
-		"eps": 0,
-		"dps": 22.5,
-		"nrg": -50
-	},
-	"avalanche": {
-		"name": "Avalanche",
-		"type": "Ice",
-		"category": "Charge",
-		"power": 90,
-		"cd": 2.7,
-		"eps": 0,
-		"dps": 33.3,
-		"nrg": -50
-	},
-	"bite": {
-		"name": "Bite",
-		"type": "Dark",
-		"category": "Fast",
-		"power": 6,
-		"cd": 0.5,
-		"eps": 8,
-		"dps": 12,
-		"nrg": 4
-	},
-	"blizzard": {
-		"name": "Blizzard",
-		"type": "Ice",
-		"category": "Charge",
-		"power": 130,
-		"cd": 3.1,
-		"eps": 0,
-		"dps": 41.9,
-		"nrg": -100
-	},
-	"body-slam": {
-		"name": "Body Slam",
-		"type": "Normal",
-		"category": "Charge",
-		"power": 50,
-		"cd": 1.9,
-		"eps": 0,
-		"dps": 26.3,
-		"nrg": -33
-	},
-	"bone-club": {
-		"name": "Bone Club",
-		"type": "Ground",
-		"category": "Charge",
-		"power": 40,
-		"cd": 1.6,
-		"eps": 0,
-		"dps": 25,
-		"nrg": -33
-	},
-	"brave-bird": {
-		"name": "Brave Bird",
-		"type": "Flying",
-		"category": "Charge",
-		"power": 90,
-		"cd": 2,
-		"eps": 0,
-		"dps": 45,
-		"nrg": -100
-	},
-	"brick-break": {
-		"name": "Brick Break",
-		"type": "Fighting",
-		"category": "Charge",
-		"power": 40,
-		"cd": 1.6,
-		"eps": 0,
-		"dps": 25,
-		"nrg": -33
-	},
-	"brine": {
-		"name": "Brine",
-		"type": "Water",
-		"category": "Charge",
-		"power": 60,
-		"cd": 2.3,
-		"eps": 0,
-		"dps": 26.1,
-		"nrg": -50
-	},
-	"bubble": {
-		"name": "Bubble",
-		"type": "Water",
-		"category": "Fast",
-		"power": 12,
-		"cd": 1.2,
-		"eps": 11.7,
-		"dps": 10,
-		"nrg": 14
-	},
-	"bubble-beam": {
-		"name": "Bubble Beam",
-		"type": "Water",
-		"category": "Charge",
-		"power": 45,
-		"cd": 1.9,
-		"eps": 0,
-		"dps": 23.7,
-		"nrg": -33
-	},
-	"bug-bite": {
-		"name": "Bug Bite",
-		"type": "Bug",
-		"category": "Fast",
-		"power": 5,
-		"cd": 0.5,
-		"eps": 12,
-		"dps": 10,
-		"nrg": 6
-	},
-	"bug-buzz": {
-		"name": "Bug Buzz",
-		"type": "Bug",
-		"category": "Charge",
-		"power": 90,
-		"cd": 3.7,
-		"eps": 0,
-		"dps": 24.3,
-		"nrg": -50
-	},
-	"bulldoze": {
-		"name": "Bulldoze",
-		"type": "Ground",
-		"category": "Charge",
-		"power": 80,
-		"cd": 3.5,
-		"eps": 0,
-		"dps": 22.9,
-		"nrg": -50
-	},
-	"bullet-punch": {
-		"name": "Bullet Punch",
-		"type": "Steel",
-		"category": "Fast",
-		"power": 9,
-		"cd": 0.9,
-		"eps": 11.1,
-		"dps": 10,
-		"nrg": 10
-	},
-	"bullet-seed": {
-		"name": "Bullet Seed",
-		"type": "Grass",
-		"category": "Fast",
-		"power": 8,
-		"cd": 1.1,
-		"eps": 12.7,
-		"dps": 7.3,
-		"nrg": 14
-	},
-	"charge-beam": {
-		"name": "Charge Beam",
-		"type": "Electric",
-		"category": "Fast",
-		"power": 8,
-		"cd": 1.1,
-		"eps": 13.6,
-		"dps": 7.3,
-		"nrg": 15
-	},
-	"close-combat": {
-		"name": "Close Combat",
-		"type": "Fighting",
-		"category": "Charge",
-		"power": 100,
-		"cd": 2.3,
-		"eps": 0,
-		"dps": 43.5,
-		"nrg": -100
-	},
-	"confusion": {
-		"name": "Confusion",
-		"type": "Psychic",
-		"category": "Fast",
-		"power": 20,
-		"cd": 1.6,
-		"eps": 9.4,
-		"dps": 12.5,
-		"nrg": 15
-	},
-	"counter": {
-		"name": "Counter",
-		"type": "Fighting",
-		"category": "Fast",
-		"power": 10,
-		"cd": 0.9,
-		"eps": 8.9,
-		"dps": 13.3,
-		"nrg": 8
-	},
-	"cross-chop": {
-		"name": "Cross Chop",
-		"type": "Fighting",
-		"category": "Charge",
-		"power": 50,
-		"cd": 1.5,
-		"eps": 0,
-		"dps": 33.3,
-		"nrg": -100
-	},
-	"cross-poison": {
-		"name": "Cross Poison",
-		"type": "Poison",
-		"category": "Charge",
-		"power": 40,
-		"cd": 1.5,
-		"eps": 0,
-		"dps": 26.7,
-		"nrg": -33
-	},
-	"crunch": {
-		"name": "Crunch",
-		"type": "Dark",
-		"category": "Charge",
-		"power": 70,
-		"cd": 3.2,
-		"eps": 0,
-		"dps": 21.9,
-		"nrg": -33
-	},
-	"cut": {
-		"name": "Cut",
-		"type": "Normal",
-		"category": "Fast",
-		"power": 5,
-		"cd": 0.5,
-		"eps": 10,
-		"dps": 10,
-		"nrg": 5
-	},
-	"dark-pulse": {
-		"name": "Dark Pulse",
-		"type": "Dark",
-		"category": "Charge",
-		"power": 80,
-		"cd": 3,
-		"eps": 0,
-		"dps": 26.7,
-		"nrg": -50
-	},
-	"dazzling-gleam": {
-		"name": "Dazzling Gleam",
-		"type": "Fairy",
-		"category": "Charge",
-		"power": 100,
-		"cd": 3.5,
-		"eps": 0,
-		"dps": 28.6,
-		"nrg": -50
-	},
-	"dig": {
-		"name": "Dig",
-		"type": "Ground",
-		"category": "Charge",
-		"power": 100,
-		"cd": 4.7,
-		"eps": 0,
-		"dps": 21.3,
-		"nrg": -50
-	},
-	"disarming-voice": {
-		"name": "Disarming Voice",
-		"type": "Fairy",
-		"category": "Charge",
-		"power": 70,
-		"cd": 3.9,
-		"eps": 0,
-		"dps": 18,
-		"nrg": -33
-	},
-	"discharge": {
-		"name": "Discharge",
-		"type": "Electric",
-		"category": "Charge",
-		"power": 65,
-		"cd": 2.5,
-		"eps": 0,
-		"dps": 26,
-		"nrg": -33
-	},
-	"dragon-breath": {
-		"name": "Dragon Breath",
-		"type": "Dragon",
-		"category": "Fast",
-		"power": 6,
-		"cd": 0.5,
-		"eps": 8,
-		"dps": 12,
-		"nrg": 4
-	},
-	"dragon-claw": {
-		"name": "Dragon Claw",
-		"type": "Dragon",
-		"category": "Charge",
-		"power": 50,
-		"cd": 1.7,
-		"eps": 0,
-		"dps": 29.4,
-		"nrg": -33
-	},
-	"dragon-pulse": {
-		"name": "Dragon Pulse",
-		"type": "Dragon",
-		"category": "Charge",
-		"power": 90,
-		"cd": 3.6,
-		"eps": 0,
-		"dps": 25,
-		"nrg": -50
-	},
-	"dragon-tail": {
-		"name": "Dragon Tail",
-		"type": "Dragon",
-		"category": "Fast",
-		"power": 15,
-		"cd": 1.1,
-		"eps": 8.2,
-		"dps": 13.6,
-		"nrg": 9
-	},
-	"draining-kiss": {
-		"name": "Draining Kiss",
-		"type": "Fairy",
-		"category": "Charge",
-		"power": 60,
-		"cd": 2.6,
-		"eps": 0,
-		"dps": 23.1,
-		"nrg": -50
-	},
-	"drill-peck": {
-		"name": "Drill Peck",
-		"type": "Flying",
-		"category": "Charge",
-		"power": 60,
-		"cd": 2.3,
-		"eps": 0,
-		"dps": 26.1,
-		"nrg": -33
-	},
-	"drill-run": {
-		"name": "Drill Run",
-		"type": "Ground",
-		"category": "Charge",
-		"power": 80,
-		"cd": 2.8,
-		"eps": 0,
-		"dps": 28.6,
-		"nrg": -50
-	},
-	"dynamic-punch": {
-		"name": "Dynamic Punch",
-		"type": "Fighting",
-		"category": "Charge",
-		"power": 90,
-		"cd": 2.7,
-		"eps": 0,
-		"dps": 33.3,
-		"nrg": -50
-	},
-	"earthquake": {
-		"name": "Earthquake",
-		"type": "Ground",
-		"category": "Charge",
-		"power": 120,
-		"cd": 3.6,
-		"eps": 0,
-		"dps": 33.3,
-		"nrg": -100
-	},
-	"ember": {
-		"name": "Ember",
-		"type": "Fire",
-		"category": "Fast",
-		"power": 10,
-		"cd": 1,
-		"eps": 10,
-		"dps": 10,
-		"nrg": 10
-	},
-	"energy-ball": {
-		"name": "Energy Ball",
-		"type": "Grass",
-		"category": "Charge",
-		"power": 90,
-		"cd": 3.9,
-		"eps": 0,
-		"dps": 23.1,
-		"nrg": -50
-	},
-	"extrasensory": {
-		"name": "Extrasensory",
-		"type": "Psychic",
-		"category": "Fast",
-		"power": 12,
-		"cd": 1.1,
-		"eps": 10.9,
-		"dps": 10.9,
-		"nrg": 12
-	},
-	"feint-attack": {
-		"name": "Feint Attack",
-		"type": "Dark",
-		"category": "Fast",
-		"power": 10,
-		"cd": 0.9,
-		"eps": 10,
-		"dps": 11.1,
-		"nrg": 9
-	},
-	"fire-blast": {
-		"name": "Fire Blast",
-		"type": "Fire",
-		"category": "Charge",
-		"power": 140,
-		"cd": 4.2,
-		"eps": 0,
-		"dps": 33.3,
-		"nrg": -100
-	},
-	"fire-fang": {
-		"name": "Fire Fang",
-		"type": "Fire",
-		"category": "Fast",
-		"power": 11,
-		"cd": 0.9,
-		"eps": 8.9,
-		"dps": 12.2,
-		"nrg": 8
-	},
-	"fire-punch": {
-		"name": "Fire Punch",
-		"type": "Fire",
-		"category": "Charge",
-		"power": 55,
-		"cd": 2.2,
-		"eps": 0,
-		"dps": 25,
-		"nrg": -33
-	},
-	"fire-spin": {
-		"name": "Fire Spin",
-		"type": "Fire",
-		"category": "Fast",
-		"power": 14,
-		"cd": 1.1,
-		"eps": 9.1,
-		"dps": 12.7,
-		"nrg": 10
-	},
-	"flame-burst": {
-		"name": "Flame Burst",
-		"type": "Fire",
-		"category": "Charge",
-		"power": 70,
-		"cd": 2.6,
-		"eps": 0,
-		"dps": 26.9,
-		"nrg": -50
-	},
-	"flame-charge": {
-		"name": "Flame Charge",
-		"type": "Fire",
-		"category": "Charge",
-		"power": 70,
-		"cd": 3.8,
-		"eps": 0,
-		"dps": 18.4,
-		"nrg": -33
-	},
-	"flame-wheel": {
-		"name": "Flame Wheel",
-		"type": "Fire",
-		"category": "Charge",
-		"power": 60,
-		"cd": 2.7,
-		"eps": 0,
-		"dps": 22.2,
-		"nrg": -50
-	},
-	"flamethrower": {
-		"name": "Flamethrower",
-		"type": "Fire",
-		"category": "Charge",
-		"power": 70,
-		"cd": 2.2,
-		"eps": 0,
-		"dps": 31.8,
-		"nrg": -50
-	},
-	"flash-cannon": {
-		"name": "Flash Cannon",
-		"type": "Steel",
-		"category": "Charge",
-		"power": 100,
-		"cd": 2.7,
-		"eps": 0,
-		"dps": 37,
-		"nrg": -100
-	},
-	"focus-blast": {
-		"name": "Focus Blast",
-		"type": "Fighting",
-		"category": "Charge",
-		"power": 140,
-		"cd": 3.5,
-		"eps": 0,
-		"dps": 40,
-		"nrg": -100
-	},
-	"foul-play": {
-		"name": "Foul Play",
-		"type": "Dark",
-		"category": "Charge",
-		"power": 70,
-		"cd": 2,
-		"eps": 0,
-		"dps": 35,
-		"nrg": -50
-	},
-	"frost-breath": {
-		"name": "Frost Breath",
-		"type": "Ice",
-		"category": "Fast",
-		"power": 10,
-		"cd": 0.9,
-		"eps": 8.9,
-		"dps": 11.1,
-		"nrg": 8
-	},
-	"fury-cutter": {
-		"name": "Fury Cutter",
-		"type": "Bug",
-		"category": "Fast",
-		"power": 3,
-		"cd": 0.4,
-		"eps": 15,
-		"dps": 7.5,
-		"nrg": 6
-	},
-	"future-sight": {
-		"name": "Future Sight",
-		"type": "Psychic",
-		"category": "Charge",
-		"power": 120,
-		"cd": 2.7,
-		"eps": 0,
-		"dps": 44.4,
-		"nrg": -100
-	},
-	"giga-drain": {
-		"name": "Giga Drain",
-		"type": "Grass",
-		"category": "Charge",
-		"power": 50,
-		"cd": 3.9,
-		"eps": 0,
-		"dps": 12.8,
-		"nrg": -100
-	},
-	"grass-knot": {
-		"name": "Grass Knot",
-		"type": "Grass",
-		"category": "Charge",
-		"power": 90,
-		"cd": 2.6,
-		"eps": 0,
-		"dps": 34.6,
-		"nrg": -50
-	},
-	"gunk-shot": {
-		"name": "Gunk Shot",
-		"type": "Poison",
-		"category": "Charge",
-		"power": 130,
-		"cd": 3.1,
-		"eps": 0,
-		"dps": 41.9,
-		"nrg": -100
-	},
-	"gyro-ball": {
-		"name": "Gyro Ball",
-		"type": "Steel",
-		"category": "Charge",
-		"power": 80,
-		"cd": 3.3,
-		"eps": 0,
-		"dps": 24.2,
-		"nrg": -50
-	},
-	"heart-stamp": {
-		"name": "Heart Stamp",
-		"type": "Psychic",
-		"category": "Charge",
-		"power": 40,
-		"cd": 1.9,
-		"eps": 0,
-		"dps": 21.1,
-		"nrg": -33
-	},
-	"heat-wave": {
-		"name": "Heat Wave",
-		"type": "Fire",
-		"category": "Charge",
-		"power": 95,
-		"cd": 3,
-		"eps": 0,
-		"dps": 31.7,
-		"nrg": -100
-	},
-	"heavy-slam": {
-		"name": "Heavy Slam",
-		"type": "Steel",
-		"category": "Charge",
-		"power": 70,
-		"cd": 2.1,
-		"eps": 0,
-		"dps": 33.3,
-		"nrg": -50
-	},
-	"hex": {
-		"name": "Hex",
-		"type": "Ghost",
-		"category": "Fast",
-		"power": 10,
-		"cd": 1.2,
-		"eps": 12.5,
-		"dps": 8.3,
-		"nrg": 15
-	},
-	"hidden-power": {
-		"name": "Hidden Power",
-		"type": "Normal",
-		"category": "Fast",
-		"power": 15,
-		"cd": 1.5,
-		"eps": 10,
-		"dps": 10,
-		"nrg": 15
-	},
-	"horn-attack": {
-		"name": "Horn Attack",
-		"type": "Normal",
-		"category": "Charge",
-		"power": 40,
-		"cd": 1.85,
-		"eps": 0,
-		"dps": 21.6,
-		"nrg": -100
-	},
-	"hurricane": {
-		"name": "Hurricane",
-		"type": "Flying",
-		"category": "Charge",
-		"power": 110,
-		"cd": 2.7,
-		"eps": 0,
-		"dps": 40.7,
-		"nrg": -100
-	},
-	"hydro-pump": {
-		"name": "Hydro Pump",
-		"type": "Water",
-		"category": "Charge",
-		"power": 130,
-		"cd": 3.3,
-		"eps": 0,
-		"dps": 39.4,
-		"nrg": -100
-	},
-	"hydro-pump-(blastoise)": {
-		"name": "Hydro Pump (Blastoise)",
-		"type": "Water",
-		"category": "Charge",
-		"power": 90,
-		"cd": 4.5,
-		"eps": 0,
-		"dps": 20,
-		"nrg": -100
-	},
-	"hyper-beam": {
-		"name": "Hyper Beam",
-		"type": "Normal",
-		"category": "Charge",
-		"power": 150,
-		"cd": 3.8,
-		"eps": 0,
-		"dps": 39.5,
-		"nrg": -100
-	},
-	"hyper-fang": {
-		"name": "Hyper Fang",
-		"type": "Normal",
-		"category": "Charge",
-		"power": 80,
-		"cd": 2.5,
-		"eps": 0,
-		"dps": 32,
-		"nrg": -50
-	},
-	"ice-beam": {
-		"name": "Ice Beam",
-		"type": "Ice",
-		"category": "Charge",
-		"power": 90,
-		"cd": 3.3,
-		"eps": 0,
-		"dps": 27.3,
-		"nrg": -50
-	},
-	"ice-punch": {
-		"name": "Ice Punch",
-		"type": "Ice",
-		"category": "Charge",
-		"power": 50,
-		"cd": 1.9,
-		"eps": 0,
-		"dps": 26.3,
-		"nrg": -33
-	},
-	"ice-shard": {
-		"name": "Ice Shard",
-		"type": "Ice",
-		"category": "Fast",
-		"power": 12,
-		"cd": 1.2,
-		"eps": 10,
-		"dps": 10,
-		"nrg": 12
-	},
-	"icy-wind": {
-		"name": "Icy Wind",
-		"type": "Ice",
-		"category": "Charge",
-		"power": 60,
-		"cd": 3.3,
-		"eps": 0,
-		"dps": 18.2,
-		"nrg": -33
-	},
-	"infestation": {
-		"name": "Infestation",
-		"type": "Bug",
-		"category": "Fast",
-		"power": 10,
-		"cd": 1.1,
-		"eps": 12.7,
-		"dps": 9.1,
-		"nrg": 14
-	},
-	"iron-head": {
-		"name": "Iron Head",
-		"type": "Steel",
-		"category": "Charge",
-		"power": 60,
-		"cd": 1.9,
-		"eps": 0,
-		"dps": 31.6,
-		"nrg": -50
-	},
-	"iron-tail": {
-		"name": "Iron Tail",
-		"type": "Steel",
-		"category": "Fast",
-		"power": 15,
-		"cd": 1.1,
-		"eps": 6.4,
-		"dps": 13.6,
-		"nrg": 7
-	},
-	"karate-chop": {
-		"name": "Karate Chop",
-		"type": "Fighting",
-		"category": "Fast",
-		"power": 8,
-		"cd": 0.8,
-		"eps": 12.5,
-		"dps": 10,
-		"nrg": 10
-	},
-	"leaf-blade": {
-		"name": "Leaf Blade",
-		"type": "Grass",
-		"category": "Charge",
-		"power": 70,
-		"cd": 2.4,
-		"eps": 0,
-		"dps": 29.2,
-		"nrg": -33
-	},
-	"lick": {
-		"name": "Lick",
-		"type": "Ghost",
-		"category": "Fast",
-		"power": 5,
-		"cd": 0.5,
-		"eps": 12,
-		"dps": 10,
-		"nrg": 6
-	},
-	"low-kick": {
-		"name": "Low Kick",
-		"type": "Fighting",
-		"category": "Fast",
-		"power": 6,
-		"cd": 0.6,
-		"eps": 10,
-		"dps": 10,
-		"nrg": 6
-	},
-	"low-sweep": {
-		"name": "Low Sweep",
-		"type": "Fighting",
-		"category": "Charge",
-		"power": 40,
-		"cd": 1.9,
-		"eps": 0,
-		"dps": 21.1,
-		"nrg": -33
-	},
-	"magnet-bomb": {
-		"name": "Magnet Bomb",
-		"type": "Steel",
-		"category": "Charge",
-		"power": 70,
-		"cd": 2.8,
-		"eps": 0,
-		"dps": 25,
-		"nrg": -33
-	},
-	"mega-drain": {
-		"name": "Mega Drain",
-		"type": "Grass",
-		"category": "Charge",
-		"power": 25,
-		"cd": 2.6,
-		"eps": 0,
-		"dps": 9.6,
-		"nrg": -50
-	},
-	"megahorn": {
-		"name": "Megahorn",
-		"type": "Bug",
-		"category": "Charge",
-		"power": 90,
-		"cd": 2.2,
-		"eps": 0,
-		"dps": 40.9,
-		"nrg": -100
-	},
-	"metal-claw": {
-		"name": "Metal Claw",
-		"type": "Steel",
-		"category": "Fast",
-		"power": 8,
-		"cd": 0.7,
-		"eps": 10,
-		"dps": 11.4,
-		"nrg": 7
-	},
-	"mirror-coat": {
-		"name": "Mirror Coat",
-		"type": "Psychic",
-		"category": "Charge",
-		"power": 60,
-		"cd": 2.6,
-		"eps": 0,
-		"dps": 23.1,
-		"nrg": -50
-	},
-	"moonblast": {
-		"name": "Moonblast",
-		"type": "Fairy",
-		"category": "Charge",
-		"power": 130,
-		"cd": 3.9,
-		"eps": 0,
-		"dps": 33.3,
-		"nrg": -100
-	},
-	"mud-bomb": {
-		"name": "Mud Bomb",
-		"type": "Ground",
-		"category": "Charge",
-		"power": 55,
-		"cd": 2.3,
-		"eps": 0,
-		"dps": 23.9,
-		"nrg": -33
-	},
-	"mud-shot": {
-		"name": "Mud Shot",
-		"type": "Ground",
-		"category": "Fast",
-		"power": 5,
-		"cd": 0.6,
-		"eps": 11.7,
-		"dps": 8.3,
-		"nrg": 7
-	},
-	"mud-slap": {
-		"name": "Mud Slap",
-		"type": "Ground",
-		"category": "Fast",
-		"power": 15,
-		"cd": 1.4,
-		"eps": 8.6,
-		"dps": 10.7,
-		"nrg": 12
-	},
-	"night-shade": {
-		"name": "Night Shade",
-		"type": "Ghost",
-		"category": "Charge",
-		"power": 60,
-		"cd": 2.6,
-		"eps": 0,
-		"dps": 23.1,
-		"nrg": -50
-	},
-	"night-slash": {
-		"name": "Night Slash",
-		"type": "Dark",
-		"category": "Charge",
-		"power": 50,
-		"cd": 2.2,
-		"eps": 0,
-		"dps": 22.7,
-		"nrg": -33
-	},
-	"ominous-wind": {
-		"name": "Ominous Wind",
-		"type": "Ghost",
-		"category": "Charge",
-		"power": 50,
-		"cd": 2.3,
-		"eps": 0,
-		"dps": 21.7,
-		"nrg": -33
-	},
-	"outrage": {
-		"name": "Outrage",
-		"type": "Dragon",
-		"category": "Charge",
-		"power": 110,
-		"cd": 3.9,
-		"eps": 0,
-		"dps": 28.2,
-		"nrg": -50
-	},
-	"overheat": {
-		"name": "Overheat",
-		"type": "Fire",
-		"category": "Charge",
-		"power": 160,
-		"cd": 4,
-		"eps": 0,
-		"dps": 40,
-		"nrg": -100
-	},
-	"parabolic-charge": {
-		"name": "Parabolic Charge",
-		"type": "Electric",
-		"category": "Charge",
-		"power": 25,
-		"cd": 2.8,
-		"eps": 0,
-		"dps": 8.9,
-		"nrg": -50
-	},
-	"peck": {
-		"name": "Peck",
-		"type": "Flying",
-		"category": "Fast",
-		"power": 10,
-		"cd": 1,
-		"eps": 10,
-		"dps": 10,
-		"nrg": 10
-	},
-	"petal-blizzard": {
-		"name": "Petal Blizzard",
-		"type": "Grass",
-		"category": "Charge",
-		"power": 110,
-		"cd": 2.6,
-		"eps": 0,
-		"dps": 42.3,
-		"nrg": -100
-	},
-	"play-rough": {
-		"name": "Play Rough",
-		"type": "Fairy",
-		"category": "Charge",
-		"power": 90,
-		"cd": 2.9,
-		"eps": 0,
-		"dps": 31,
-		"nrg": -50
-	},
-	"poison-fang": {
-		"name": "Poison Fang",
-		"type": "Poison",
-		"category": "Charge",
-		"power": 35,
-		"cd": 1.7,
-		"eps": 0,
-		"dps": 20.6,
-		"nrg": -33
-	},
-	"poison-jab": {
-		"name": "Poison Jab",
-		"type": "Poison",
-		"category": "Fast",
-		"power": 10,
-		"cd": 0.8,
-		"eps": 8.8,
-		"dps": 12.5,
-		"nrg": 7
-	},
-	"poison-sting": {
-		"name": "Poison Sting",
-		"type": "Poison",
-		"category": "Fast",
-		"power": 5,
-		"cd": 0.6,
-		"eps": 11.7,
-		"dps": 8.3,
-		"nrg": 7
-	},
-	"pound": {
-		"name": "Pound",
-		"type": "Normal",
-		"category": "Fast",
-		"power": 7,
-		"cd": 0.6,
-		"eps": 10,
-		"dps": 11.7,
-		"nrg": 6
-	},
-	"powder-snow": {
-		"name": "Powder Snow",
-		"type": "Ice",
-		"category": "Fast",
-		"power": 6,
-		"cd": 1,
-		"eps": 15,
-		"dps": 6,
-		"nrg": 15
-	},
-	"power-gem": {
-		"name": "Power Gem",
-		"type": "Rock",
-		"category": "Charge",
-		"power": 80,
-		"cd": 2.9,
-		"eps": 0,
-		"dps": 27.6,
-		"nrg": -50
-	},
-	"power-whip": {
-		"name": "Power Whip",
-		"type": "Grass",
-		"category": "Charge",
-		"power": 90,
-		"cd": 2.6,
-		"eps": 0,
-		"dps": 34.6,
-		"nrg": -50
-	},
-	"psybeam": {
-		"name": "Psybeam",
-		"type": "Psychic",
-		"category": "Charge",
-		"power": 70,
-		"cd": 3.2,
-		"eps": 0,
-		"dps": 21.9,
-		"nrg": -50
-	},
-	"psychic": {
-		"name": "Psychic",
-		"type": "Psychic",
-		"category": "Charge",
-		"power": 100,
-		"cd": 2.8,
-		"eps": 0,
-		"dps": 35.7,
-		"nrg": -100
-	},
-	"psycho-cut": {
-		"name": "Psycho Cut",
-		"type": "Psychic",
-		"category": "Fast",
-		"power": 5,
-		"cd": 0.6,
-		"eps": 13.3,
-		"dps": 8.3,
-		"nrg": 8
-	},
-	"psyshock": {
-		"name": "Psyshock",
-		"type": "Psychic",
-		"category": "Charge",
-		"power": 65,
-		"cd": 2.7,
-		"eps": 0,
-		"dps": 24.1,
-		"nrg": -33
-	},
-	"psystrike": {
-		"name": "Psystrike",
-		"type": "Psychic",
-		"category": "Charge",
-		"power": 100,
-		"cd": 4.4,
-		"eps": 0,
-		"dps": 22.7,
-		"nrg": -50
-	},
-	"quick-attack": {
-		"name": "Quick Attack",
-		"type": "Normal",
-		"category": "Fast",
-		"power": 8,
-		"cd": 0.8,
-		"eps": 12.5,
-		"dps": 10,
-		"nrg": 10
-	},
-	"razor-leaf": {
-		"name": "Razor Leaf",
-		"type": "Grass",
-		"category": "Fast",
-		"power": 13,
-		"cd": 1,
-		"eps": 7,
-		"dps": 13,
-		"nrg": 7
-	},
-	"rest": {
-		"name": "Rest",
-		"type": "Normal",
-		"category": "Charge",
-		"power": 50,
-		"cd": 1.9,
-		"eps": 0,
-		"dps": 26.3,
-		"nrg": -33
-	},
-	"sludge-bomb": {
-		"name": "Sludge Bomb",
-		"type": "Poison",
-		"category": "Charge",
-		"power": 80,
-		"cd": 2.3,
-		"eps": 0,
-		"dps": 34.8,
-		"nrg": -50
-	},
-	"sludge-wave": {
-		"name": "Sludge Wave",
-		"type": "Poison",
-		"category": "Charge",
-		"power": 110,
-		"cd": 3.2,
-		"eps": 0,
-		"dps": 34.4,
-		"nrg": -100
-	},
-	"snarl": {
-		"name": "Snarl",
-		"type": "Dark",
-		"category": "Fast",
-		"power": 12,
-		"cd": 1.1,
-		"eps": 10.9,
-		"dps": 10.9,
-		"nrg": 12
-	},
-	"solar-beam": {
-		"name": "Solar Beam",
-		"type": "Grass",
-		"category": "Charge",
-		"power": 180,
-		"cd": 4.9,
-		"eps": 0,
-		"dps": 36.7,
-		"nrg": -100
-	},
-	"spark": {
-		"name": "Spark",
-		"type": "Electric",
-		"category": "Fast",
-		"power": 6,
-		"cd": 0.7,
-		"eps": 12.9,
-		"dps": 8.6,
-		"nrg": 9
-	},
-	"splash": {
-		"name": "Splash",
-		"type": "Water",
-		"category": "Fast",
-		"power": 0,
-		"cd": 1.73,
-		"eps": 0,
-		"dps": 0,
-		"nrg": 0
-	},
-	"steel-wing": {
-		"name": "Steel Wing",
-		"type": "Steel",
-		"category": "Fast",
-		"power": 11,
-		"cd": 0.8,
-		"eps": 7.5,
-		"dps": 13.8,
-		"nrg": 6
-	},
-	"stomp": {
-		"name": "Stomp",
-		"type": "Normal",
-		"category": "Charge",
-		"power": 55,
-		"cd": 1.7,
-		"eps": 0,
-		"dps": 32.4,
-		"nrg": -50
-	},
-	"stone-edge": {
-		"name": "Stone Edge",
-		"type": "Rock",
-		"category": "Charge",
-		"power": 100,
-		"cd": 2.3,
-		"eps": 0,
-		"dps": 43.5,
-		"nrg": -100
-	},
-	"struggle": {
-		"name": "Struggle",
-		"type": "Normal",
-		"category": "Charge",
-		"power": 35,
-		"cd": 2.2,
-		"eps": 0,
-		"dps": 15.9,
-		"nrg": -33
-	},
-	"struggle-bug": {
-		"name": "Struggle Bug",
-		"type": "Bug",
-		"category": "Fast",
-		"power": 15,
-		"cd": 1.5,
-		"eps": 10,
-		"dps": 10,
-		"nrg": 15
-	},
-	"submission": {
-		"name": "Submission",
-		"type": "Fighting",
-		"category": "Charge",
-		"power": 60,
-		"cd": 2.2,
-		"eps": 0,
-		"dps": 27.3,
-		"nrg": -50
-	},
-	"sucker-punch": {
-		"name": "Sucker Punch",
-		"type": "Dark",
-		"category": "Fast",
-		"power": 7,
-		"cd": 0.7,
-		"eps": 11.4,
-		"dps": 10,
-		"nrg": 8
-	},
-	"swift": {
-		"name": "Swift",
-		"type": "Normal",
-		"category": "Charge",
-		"power": 60,
-		"cd": 2.8,
-		"eps": 0,
-		"dps": 21.4,
-		"nrg": -50
-	},
-	"tackle": {
-		"name": "Tackle",
-		"type": "Normal",
-		"category": "Fast",
-		"power": 5,
-		"cd": 0.5,
-		"eps": 10,
-		"dps": 10,
-		"nrg": 5
-	},
-	"thunder": {
-		"name": "Thunder",
-		"type": "Electric",
-		"category": "Charge",
-		"power": 100,
-		"cd": 2.4,
-		"eps": 0,
-		"dps": 41.7,
-		"nrg": -100
-	},
-	"thunder-punch": {
-		"name": "Thunder Punch",
-		"type": "Electric",
-		"category": "Charge",
-		"power": 45,
-		"cd": 1.8,
-		"eps": 0,
-		"dps": 25,
-		"nrg": -33
-	},
-	"thunder-shock": {
-		"name": "Thunder Shock",
-		"type": "Electric",
-		"category": "Fast",
-		"power": 5,
-		"cd": 0.6,
-		"eps": 13.3,
-		"dps": 8.3,
-		"nrg": 8
-	},
-	"thunderbolt": {
-		"name": "Thunderbolt",
-		"type": "Electric",
-		"category": "Charge",
-		"power": 80,
-		"cd": 2.5,
-		"eps": 0,
-		"dps": 32,
-		"nrg": -50
-	},
-	"transform": {
-		"name": "Transform",
-		"type": "Normal",
-		"category": "Fast",
-		"power": 0,
-		"cd": 2.23,
-		"eps": 0,
-		"dps": 0,
-		"nrg": 0
-	},
-	"twister": {
-		"name": "Twister",
-		"type": "Dragon",
-		"category": "Charge",
-		"power": 45,
-		"cd": 2.8,
-		"eps": 0,
-		"dps": 16.1,
-		"nrg": -33
-	},
-	"vice-grip": {
-		"name": "Vice Grip",
-		"type": "Normal",
-		"category": "Charge",
-		"power": 35,
-		"cd": 1.9,
-		"eps": 0,
-		"dps": 18.4,
-		"nrg": -33
-	},
-	"vine-whip": {
-		"name": "Vine Whip",
-		"type": "Grass",
-		"category": "Fast",
-		"power": 7,
-		"cd": 0.6,
-		"eps": 10,
-		"dps": 11.7,
-		"nrg": 6
-	},
-	"volt-switch": {
-		"name": "Volt Switch",
-		"type": "Electric",
-		"category": "Fast",
-		"power": 20,
-		"cd": 2.3,
-		"eps": 10.9,
-		"dps": 8.7,
-		"nrg": 25
-	},
-	"water-gun": {
-		"name": "Water Gun",
-		"type": "Water",
-		"category": "Fast",
-		"power": 5,
-		"cd": 0.5,
-		"eps": 10,
-		"dps": 10,
-		"nrg": 5
-	},
-	"water-gun-(blastoise)": {
-		"name": "Water Gun (Blastoise)",
-		"type": "Water",
-		"category": "Fast",
-		"power": 10,
-		"cd": 1,
-		"eps": 6,
-		"dps": 10,
-		"nrg": 6
-	},
-	"water-pulse": {
-		"name": "Water Pulse",
-		"type": "Water",
-		"category": "Charge",
-		"power": 70,
-		"cd": 3.2,
-		"eps": 0,
-		"dps": 21.9,
-		"nrg": -50
-	},
-	"wild-charge": {
-		"name": "Wild Charge",
-		"type": "Electric",
-		"category": "Charge",
-		"power": 90,
-		"cd": 2.6,
-		"eps": 0,
-		"dps": 34.6,
-		"nrg": -50
-	},
-	"wing-attack": {
-		"name": "Wing Attack",
-		"type": "Flying",
-		"category": "Fast",
-		"power": 8,
-		"cd": 0.8,
-		"eps": 11.3,
-		"dps": 10,
-		"nrg": 9
-	},
-	"wrap": {
-		"name": "Wrap",
-		"type": "Normal",
-		"category": "Charge",
-		"power": 60,
-		"cd": 2.9,
-		"eps": 0,
-		"dps": 20.7,
-		"nrg": -33
-	},
-	"wrap-(green/pink)": {
-		"name": "Wrap (Green/Pink)",
-		"type": "Normal",
-		"category": "Charge",
-		"power": 25,
-		"cd": 2.9,
-		"eps": 0,
-		"dps": 8.6,
-		"nrg": -33
-	},
-	"x-scissor": {
-		"name": "X-Scissor",
-		"type": "Bug",
-		"category": "Charge",
-		"power": 45,
-		"cd": 1.6,
-		"eps": 0,
-		"dps": 28.1,
-		"nrg": -33
-	},
-	"zap-cannon": {
-		"name": "Zap Cannon",
-		"type": "Electric",
-		"category": "Charge",
-		"power": 140,
-		"cd": 3.7,
-		"eps": 0,
-		"dps": 37.8,
-		"nrg": -100
-	},
-	"zen-headbutt": {
-		"name": "Zen Headbutt",
-		"type": "Psychic",
-		"category": "Fast",
-		"power": 12,
-		"cd": 1.1,
-		"eps": 9.1,
-		"dps": 10.9,
-		"nrg": 10
-	}
+    "seed-bomb": {
+        "name": "Seed Bomb",
+        "type": "Grass",
+        "category": "Charge",
+        "power": 55,
+        "cd": 2.1,
+        "eps": 0,
+        "dps": 26.2,
+        "nrg": -33
+    },
+    "scratch": {
+        "name": "Scratch",
+        "type": "Normal",
+        "category": "Fast",
+        "power": 6,
+        "cd": 0.5,
+        "eps": 0,
+        "dps": 12,
+        "nrg": 4
+    },
+    "signal-beam": {
+        "name": "Signal Beam",
+        "type": "Bug",
+        "category": "Charge",
+        "power": 75,
+        "cd": 2.9,
+        "eps": 0,
+        "dps": 25.9,
+        "nrg": -50
+    },
+    "sky-attack": {
+        "name": "Sky Attack",
+        "type": "Flying",
+        "category": "Charge",
+        "power": 70,
+        "cd": 2,
+        "eps": 0,
+        "dps": 35,
+        "nrg": -50
+    },
+    "rock-slide": {
+        "name": "Rock Slide",
+        "type": "Rock",
+        "category": "Charge",
+        "power": 80,
+        "cd": 2.7,
+        "eps": 0,
+        "dps": 29.6,
+        "nrg": -50
+    },
+    "sand-tomb": {
+        "name": "Sand Tomb",
+        "type": "Ground",
+        "category": "Charge",
+        "power": 80,
+        "cd": 4,
+        "eps": 0,
+        "dps": 20,
+        "nrg": -50
+    },
+    "rock-tomb": {
+        "name": "Rock Tomb",
+        "type": "Rock",
+        "category": "Charge",
+        "power": 70,
+        "cd": 3.2,
+        "eps": 0,
+        "dps": 21.9,
+        "nrg": -50
+    },
+    "shadow-ball": {
+        "name": "Shadow Ball",
+        "type": "Ghost",
+        "category": "Charge",
+        "power": 100,
+        "cd": 3,
+        "eps": 0,
+        "dps": 33.3,
+        "nrg": -50
+    },
+    "silver-wind": {
+        "name": "Silver Wind",
+        "type": "Bug",
+        "category": "Charge",
+        "power": 70,
+        "cd": 3.7,
+        "eps": 0,
+        "dps": 18.9,
+        "nrg": -33
+    },
+    "rock-smash": {
+        "name": "Rock Smash",
+        "type": "Fighting",
+        "category": "Fast",
+        "power": 15,
+        "cd": 1.3,
+        "eps": 0,
+        "dps": 11.5,
+        "nrg": 10
+    },
+    "rock-throw": {
+        "name": "Rock Throw",
+        "type": "Rock",
+        "category": "Fast",
+        "power": 12,
+        "cd": 0.9,
+        "eps": 0,
+        "dps": 13.3,
+        "nrg": 7
+    },
+    "rock-blast": {
+        "name": "Rock Blast",
+        "type": "Rock",
+        "category": "Charge",
+        "power": 50,
+        "cd": 2.1,
+        "eps": 0,
+        "dps": 23.8,
+        "nrg": -33
+    },
+    "sludge": {
+        "name": "Sludge",
+        "type": "Poison",
+        "category": "Charge",
+        "power": 80,
+        "cd": 2.3,
+        "eps": 0,
+        "dps": 34.8,
+        "nrg": -50
+    },
+    "shadow-claw": {
+        "name": "Shadow Claw",
+        "type": "Ghost",
+        "category": "Fast",
+        "power": 9,
+        "cd": 0.7,
+        "eps": 0,
+        "dps": 12.9,
+        "nrg": 6
+    },
+    "shadow-punch": {
+        "name": "Shadow Punch",
+        "type": "Ghost",
+        "category": "Charge",
+        "power": 40,
+        "cd": 1.7,
+        "eps": 0,
+        "dps": 23.5,
+        "nrg": -33
+    },
+    "shadow-sneak": {
+        "name": "Shadow Sneak",
+        "type": "Ghost",
+        "category": "Charge",
+        "power": 50,
+        "cd": 2.9,
+        "eps": 0,
+        "dps": 17.2,
+        "nrg": -33
+    },
+    "acid": {
+        "name": "Acid",
+        "type": "Poison",
+        "category": "Fast",
+        "power": 9,
+        "cd": 0.8,
+        "eps": 10,
+        "dps": 11.3,
+        "nrg": 8
+    },
+    "aerial-ace": {
+        "name": "Aerial Ace",
+        "type": "Flying",
+        "category": "Charge",
+        "power": 55,
+        "cd": 2.4,
+        "eps": 0,
+        "dps": 22.9,
+        "nrg": -33
+    },
+    "air-cutter": {
+        "name": "Air Cutter",
+        "type": "Flying",
+        "category": "Charge",
+        "power": 60,
+        "cd": 2.7,
+        "eps": 0,
+        "dps": 22.2,
+        "nrg": -50
+    },
+    "air-slash": {
+        "name": "Air Slash",
+        "type": "Flying",
+        "category": "Fast",
+        "power": 14,
+        "cd": 1.2,
+        "eps": 8.3,
+        "dps": 11.7,
+        "nrg": 10
+    },
+    "ancient-power": {
+        "name": "Ancient Power",
+        "type": "Rock",
+        "category": "Charge",
+        "power": 70,
+        "cd": 3.5,
+        "eps": 0,
+        "dps": 20,
+        "nrg": -33
+    },
+    "aqua-jet": {
+        "name": "Aqua Jet",
+        "type": "Water",
+        "category": "Charge",
+        "power": 45,
+        "cd": 2.6,
+        "eps": 0,
+        "dps": 17.3,
+        "nrg": -33
+    },
+    "aqua-tail": {
+        "name": "Aqua Tail",
+        "type": "Water",
+        "category": "Charge",
+        "power": 50,
+        "cd": 1.9,
+        "eps": 0,
+        "dps": 26.3,
+        "nrg": -33
+    },
+    "astonish": {
+        "name": "Astonish",
+        "type": "Ghost",
+        "category": "Fast",
+        "power": 8,
+        "cd": 1.1,
+        "eps": 12.7,
+        "dps": 7.3,
+        "nrg": 14
+    },
+    "aurora-beam": {
+        "name": "Aurora Beam",
+        "type": "Ice",
+        "category": "Charge",
+        "power": 80,
+        "cd": 3.55,
+        "eps": 0,
+        "dps": 22.5,
+        "nrg": -50
+    },
+    "avalanche": {
+        "name": "Avalanche",
+        "type": "Ice",
+        "category": "Charge",
+        "power": 90,
+        "cd": 2.7,
+        "eps": 0,
+        "dps": 33.3,
+        "nrg": -50
+    },
+    "bite": {
+        "name": "Bite",
+        "type": "Dark",
+        "category": "Fast",
+        "power": 6,
+        "cd": 0.5,
+        "eps": 8,
+        "dps": 12,
+        "nrg": 4
+    },
+    "blizzard": {
+        "name": "Blizzard",
+        "type": "Ice",
+        "category": "Charge",
+        "power": 130,
+        "cd": 3.1,
+        "eps": 0,
+        "dps": 41.9,
+        "nrg": -100
+    },
+    "body-slam": {
+        "name": "Body Slam",
+        "type": "Normal",
+        "category": "Charge",
+        "power": 50,
+        "cd": 1.9,
+        "eps": 0,
+        "dps": 26.3,
+        "nrg": -33
+    },
+    "bone-club": {
+        "name": "Bone Club",
+        "type": "Ground",
+        "category": "Charge",
+        "power": 40,
+        "cd": 1.6,
+        "eps": 0,
+        "dps": 25,
+        "nrg": -33
+    },
+    "brave-bird": {
+        "name": "Brave Bird",
+        "type": "Flying",
+        "category": "Charge",
+        "power": 90,
+        "cd": 2,
+        "eps": 0,
+        "dps": 45,
+        "nrg": -100
+    },
+    "brick-break": {
+        "name": "Brick Break",
+        "type": "Fighting",
+        "category": "Charge",
+        "power": 40,
+        "cd": 1.6,
+        "eps": 0,
+        "dps": 25,
+        "nrg": -33
+    },
+    "brine": {
+        "name": "Brine",
+        "type": "Water",
+        "category": "Charge",
+        "power": 60,
+        "cd": 2.3,
+        "eps": 0,
+        "dps": 26.1,
+        "nrg": -50
+    },
+    "bubble": {
+        "name": "Bubble",
+        "type": "Water",
+        "category": "Fast",
+        "power": 12,
+        "cd": 1.2,
+        "eps": 11.7,
+        "dps": 10,
+        "nrg": 14
+    },
+    "bubble-beam": {
+        "name": "Bubble Beam",
+        "type": "Water",
+        "category": "Charge",
+        "power": 45,
+        "cd": 1.9,
+        "eps": 0,
+        "dps": 23.7,
+        "nrg": -33
+    },
+    "bug-bite": {
+        "name": "Bug Bite",
+        "type": "Bug",
+        "category": "Fast",
+        "power": 5,
+        "cd": 0.5,
+        "eps": 12,
+        "dps": 10,
+        "nrg": 6
+    },
+    "bug-buzz": {
+        "name": "Bug Buzz",
+        "type": "Bug",
+        "category": "Charge",
+        "power": 90,
+        "cd": 3.7,
+        "eps": 0,
+        "dps": 24.3,
+        "nrg": -50
+    },
+    "bulldoze": {
+        "name": "Bulldoze",
+        "type": "Ground",
+        "category": "Charge",
+        "power": 80,
+        "cd": 3.5,
+        "eps": 0,
+        "dps": 22.9,
+        "nrg": -50
+    },
+    "bullet-punch": {
+        "name": "Bullet Punch",
+        "type": "Steel",
+        "category": "Fast",
+        "power": 9,
+        "cd": 0.9,
+        "eps": 11.1,
+        "dps": 10,
+        "nrg": 10
+    },
+    "bullet-seed": {
+        "name": "Bullet Seed",
+        "type": "Grass",
+        "category": "Fast",
+        "power": 8,
+        "cd": 1.1,
+        "eps": 12.7,
+        "dps": 7.3,
+        "nrg": 14
+    },
+    "charge-beam": {
+        "name": "Charge Beam",
+        "type": "Electric",
+        "category": "Fast",
+        "power": 8,
+        "cd": 1.1,
+        "eps": 13.6,
+        "dps": 7.3,
+        "nrg": 15
+    },
+    "close-combat": {
+        "name": "Close Combat",
+        "type": "Fighting",
+        "category": "Charge",
+        "power": 100,
+        "cd": 2.3,
+        "eps": 0,
+        "dps": 43.5,
+        "nrg": -100
+    },
+    "confusion": {
+        "name": "Confusion",
+        "type": "Psychic",
+        "category": "Fast",
+        "power": 20,
+        "cd": 1.6,
+        "eps": 9.4,
+        "dps": 12.5,
+        "nrg": 15
+    },
+    "counter": {
+        "name": "Counter",
+        "type": "Fighting",
+        "category": "Fast",
+        "power": 10,
+        "cd": 0.9,
+        "eps": 8.9,
+        "dps": 13.3,
+        "nrg": 8
+    },
+    "cross-chop": {
+        "name": "Cross Chop",
+        "type": "Fighting",
+        "category": "Charge",
+        "power": 50,
+        "cd": 1.5,
+        "eps": 0,
+        "dps": 33.3,
+        "nrg": -100
+    },
+    "cross-poison": {
+        "name": "Cross Poison",
+        "type": "Poison",
+        "category": "Charge",
+        "power": 40,
+        "cd": 1.5,
+        "eps": 0,
+        "dps": 26.7,
+        "nrg": -33
+    },
+    "crunch": {
+        "name": "Crunch",
+        "type": "Dark",
+        "category": "Charge",
+        "power": 70,
+        "cd": 3.2,
+        "eps": 0,
+        "dps": 21.9,
+        "nrg": -33
+    },
+    "cut": {
+        "name": "Cut",
+        "type": "Normal",
+        "category": "Fast",
+        "power": 5,
+        "cd": 0.5,
+        "eps": 10,
+        "dps": 10,
+        "nrg": 5
+    },
+    "dark-pulse": {
+        "name": "Dark Pulse",
+        "type": "Dark",
+        "category": "Charge",
+        "power": 80,
+        "cd": 3,
+        "eps": 0,
+        "dps": 26.7,
+        "nrg": -50
+    },
+    "dazzling-gleam": {
+        "name": "Dazzling Gleam",
+        "type": "Fairy",
+        "category": "Charge",
+        "power": 100,
+        "cd": 3.5,
+        "eps": 0,
+        "dps": 28.6,
+        "nrg": -50
+    },
+    "dig": {
+        "name": "Dig",
+        "type": "Ground",
+        "category": "Charge",
+        "power": 100,
+        "cd": 4.7,
+        "eps": 0,
+        "dps": 21.3,
+        "nrg": -50
+    },
+    "disarming-voice": {
+        "name": "Disarming Voice",
+        "type": "Fairy",
+        "category": "Charge",
+        "power": 70,
+        "cd": 3.9,
+        "eps": 0,
+        "dps": 18,
+        "nrg": -33
+    },
+    "discharge": {
+        "name": "Discharge",
+        "type": "Electric",
+        "category": "Charge",
+        "power": 65,
+        "cd": 2.5,
+        "eps": 0,
+        "dps": 26,
+        "nrg": -33
+    },
+    "dragon-breath": {
+        "name": "Dragon Breath",
+        "type": "Dragon",
+        "category": "Fast",
+        "power": 6,
+        "cd": 0.5,
+        "eps": 8,
+        "dps": 12,
+        "nrg": 4
+    },
+    "dragon-claw": {
+        "name": "Dragon Claw",
+        "type": "Dragon",
+        "category": "Charge",
+        "power": 50,
+        "cd": 1.7,
+        "eps": 0,
+        "dps": 29.4,
+        "nrg": -33
+    },
+    "dragon-pulse": {
+        "name": "Dragon Pulse",
+        "type": "Dragon",
+        "category": "Charge",
+        "power": 90,
+        "cd": 3.6,
+        "eps": 0,
+        "dps": 25,
+        "nrg": -50
+    },
+    "dragon-tail": {
+        "name": "Dragon Tail",
+        "type": "Dragon",
+        "category": "Fast",
+        "power": 15,
+        "cd": 1.1,
+        "eps": 8.2,
+        "dps": 13.6,
+        "nrg": 9
+    },
+    "draining-kiss": {
+        "name": "Draining Kiss",
+        "type": "Fairy",
+        "category": "Charge",
+        "power": 60,
+        "cd": 2.6,
+        "eps": 0,
+        "dps": 23.1,
+        "nrg": -50
+    },
+    "drill-peck": {
+        "name": "Drill Peck",
+        "type": "Flying",
+        "category": "Charge",
+        "power": 60,
+        "cd": 2.3,
+        "eps": 0,
+        "dps": 26.1,
+        "nrg": -33
+    },
+    "drill-run": {
+        "name": "Drill Run",
+        "type": "Ground",
+        "category": "Charge",
+        "power": 80,
+        "cd": 2.8,
+        "eps": 0,
+        "dps": 28.6,
+        "nrg": -50
+    },
+    "dynamic-punch": {
+        "name": "Dynamic Punch",
+        "type": "Fighting",
+        "category": "Charge",
+        "power": 90,
+        "cd": 2.7,
+        "eps": 0,
+        "dps": 33.3,
+        "nrg": -50
+    },
+    "earthquake": {
+        "name": "Earthquake",
+        "type": "Ground",
+        "category": "Charge",
+        "power": 120,
+        "cd": 3.6,
+        "eps": 0,
+        "dps": 33.3,
+        "nrg": -100
+    },
+    "ember": {
+        "name": "Ember",
+        "type": "Fire",
+        "category": "Fast",
+        "power": 10,
+        "cd": 1,
+        "eps": 10,
+        "dps": 10,
+        "nrg": 10
+    },
+    "energy-ball": {
+        "name": "Energy Ball",
+        "type": "Grass",
+        "category": "Charge",
+        "power": 90,
+        "cd": 3.9,
+        "eps": 0,
+        "dps": 23.1,
+        "nrg": -50
+    },
+    "extrasensory": {
+        "name": "Extrasensory",
+        "type": "Psychic",
+        "category": "Fast",
+        "power": 12,
+        "cd": 1.1,
+        "eps": 10.9,
+        "dps": 10.9,
+        "nrg": 12
+    },
+    "feint-attack": {
+        "name": "Feint Attack",
+        "type": "Dark",
+        "category": "Fast",
+        "power": 10,
+        "cd": 0.9,
+        "eps": 10,
+        "dps": 11.1,
+        "nrg": 9
+    },
+    "fire-blast": {
+        "name": "Fire Blast",
+        "type": "Fire",
+        "category": "Charge",
+        "power": 140,
+        "cd": 4.2,
+        "eps": 0,
+        "dps": 33.3,
+        "nrg": -100
+    },
+    "fire-fang": {
+        "name": "Fire Fang",
+        "type": "Fire",
+        "category": "Fast",
+        "power": 11,
+        "cd": 0.9,
+        "eps": 8.9,
+        "dps": 12.2,
+        "nrg": 8
+    },
+    "fire-punch": {
+        "name": "Fire Punch",
+        "type": "Fire",
+        "category": "Charge",
+        "power": 55,
+        "cd": 2.2,
+        "eps": 0,
+        "dps": 25,
+        "nrg": -33
+    },
+    "fire-spin": {
+        "name": "Fire Spin",
+        "type": "Fire",
+        "category": "Fast",
+        "power": 14,
+        "cd": 1.1,
+        "eps": 9.1,
+        "dps": 12.7,
+        "nrg": 10
+    },
+    "flame-burst": {
+        "name": "Flame Burst",
+        "type": "Fire",
+        "category": "Charge",
+        "power": 70,
+        "cd": 2.6,
+        "eps": 0,
+        "dps": 26.9,
+        "nrg": -50
+    },
+    "flame-charge": {
+        "name": "Flame Charge",
+        "type": "Fire",
+        "category": "Charge",
+        "power": 70,
+        "cd": 3.8,
+        "eps": 0,
+        "dps": 18.4,
+        "nrg": -33
+    },
+    "flame-wheel": {
+        "name": "Flame Wheel",
+        "type": "Fire",
+        "category": "Charge",
+        "power": 60,
+        "cd": 2.7,
+        "eps": 0,
+        "dps": 22.2,
+        "nrg": -50
+    },
+    "flamethrower": {
+        "name": "Flamethrower",
+        "type": "Fire",
+        "category": "Charge",
+        "power": 70,
+        "cd": 2.2,
+        "eps": 0,
+        "dps": 31.8,
+        "nrg": -50
+    },
+    "flash-cannon": {
+        "name": "Flash Cannon",
+        "type": "Steel",
+        "category": "Charge",
+        "power": 100,
+        "cd": 2.7,
+        "eps": 0,
+        "dps": 37,
+        "nrg": -100
+    },
+    "focus-blast": {
+        "name": "Focus Blast",
+        "type": "Fighting",
+        "category": "Charge",
+        "power": 140,
+        "cd": 3.5,
+        "eps": 0,
+        "dps": 40,
+        "nrg": -100
+    },
+    "foul-play": {
+        "name": "Foul Play",
+        "type": "Dark",
+        "category": "Charge",
+        "power": 70,
+        "cd": 2,
+        "eps": 0,
+        "dps": 35,
+        "nrg": -50
+    },
+    "frost-breath": {
+        "name": "Frost Breath",
+        "type": "Ice",
+        "category": "Fast",
+        "power": 10,
+        "cd": 0.9,
+        "eps": 8.9,
+        "dps": 11.1,
+        "nrg": 8
+    },
+    "fury-cutter": {
+        "name": "Fury Cutter",
+        "type": "Bug",
+        "category": "Fast",
+        "power": 3,
+        "cd": 0.4,
+        "eps": 15,
+        "dps": 7.5,
+        "nrg": 6
+    },
+    "future-sight": {
+        "name": "Future Sight",
+        "type": "Psychic",
+        "category": "Charge",
+        "power": 120,
+        "cd": 2.7,
+        "eps": 0,
+        "dps": 44.4,
+        "nrg": -100
+    },
+    "giga-drain": {
+        "name": "Giga Drain",
+        "type": "Grass",
+        "category": "Charge",
+        "power": 50,
+        "cd": 3.9,
+        "eps": 0,
+        "dps": 12.8,
+        "nrg": -100
+    },
+    "grass-knot": {
+        "name": "Grass Knot",
+        "type": "Grass",
+        "category": "Charge",
+        "power": 90,
+        "cd": 2.6,
+        "eps": 0,
+        "dps": 34.6,
+        "nrg": -50
+    },
+    "gunk-shot": {
+        "name": "Gunk Shot",
+        "type": "Poison",
+        "category": "Charge",
+        "power": 130,
+        "cd": 3.1,
+        "eps": 0,
+        "dps": 41.9,
+        "nrg": -100
+    },
+    "gyro-ball": {
+        "name": "Gyro Ball",
+        "type": "Steel",
+        "category": "Charge",
+        "power": 80,
+        "cd": 3.3,
+        "eps": 0,
+        "dps": 24.2,
+        "nrg": -50
+    },
+    "heart-stamp": {
+        "name": "Heart Stamp",
+        "type": "Psychic",
+        "category": "Charge",
+        "power": 40,
+        "cd": 1.9,
+        "eps": 0,
+        "dps": 21.1,
+        "nrg": -33
+    },
+    "heat-wave": {
+        "name": "Heat Wave",
+        "type": "Fire",
+        "category": "Charge",
+        "power": 95,
+        "cd": 3,
+        "eps": 0,
+        "dps": 31.7,
+        "nrg": -100
+    },
+    "heavy-slam": {
+        "name": "Heavy Slam",
+        "type": "Steel",
+        "category": "Charge",
+        "power": 70,
+        "cd": 2.1,
+        "eps": 0,
+        "dps": 33.3,
+        "nrg": -50
+    },
+    "hex": {
+        "name": "Hex",
+        "type": "Ghost",
+        "category": "Fast",
+        "power": 10,
+        "cd": 1.2,
+        "eps": 12.5,
+        "dps": 8.3,
+        "nrg": 15
+    },
+    "hidden-power": {
+        "name": "Hidden Power",
+        "type": "Normal",
+        "category": "Fast",
+        "power": 15,
+        "cd": 1.5,
+        "eps": 10,
+        "dps": 10,
+        "nrg": 15
+    },
+    "horn-attack": {
+        "name": "Horn Attack",
+        "type": "Normal",
+        "category": "Charge",
+        "power": 40,
+        "cd": 1.85,
+        "eps": 0,
+        "dps": 21.6,
+        "nrg": -100
+    },
+    "hurricane": {
+        "name": "Hurricane",
+        "type": "Flying",
+        "category": "Charge",
+        "power": 110,
+        "cd": 2.7,
+        "eps": 0,
+        "dps": 40.7,
+        "nrg": -100
+    },
+    "hydro-pump": {
+        "name": "Hydro Pump",
+        "type": "Water",
+        "category": "Charge",
+        "power": 130,
+        "cd": 3.3,
+        "eps": 0,
+        "dps": 39.4,
+        "nrg": -100
+    },
+    "hydro-pump-(blastoise)": {
+        "name": "Hydro Pump (Blastoise)",
+        "type": "Water",
+        "category": "Charge",
+        "power": 90,
+        "cd": 4.5,
+        "eps": 0,
+        "dps": 20,
+        "nrg": -100
+    },
+    "hyper-beam": {
+        "name": "Hyper Beam",
+        "type": "Normal",
+        "category": "Charge",
+        "power": 150,
+        "cd": 3.8,
+        "eps": 0,
+        "dps": 39.5,
+        "nrg": -100
+    },
+    "hyper-fang": {
+        "name": "Hyper Fang",
+        "type": "Normal",
+        "category": "Charge",
+        "power": 80,
+        "cd": 2.5,
+        "eps": 0,
+        "dps": 32,
+        "nrg": -50
+    },
+    "ice-beam": {
+        "name": "Ice Beam",
+        "type": "Ice",
+        "category": "Charge",
+        "power": 90,
+        "cd": 3.3,
+        "eps": 0,
+        "dps": 27.3,
+        "nrg": -50
+    },
+    "ice-punch": {
+        "name": "Ice Punch",
+        "type": "Ice",
+        "category": "Charge",
+        "power": 50,
+        "cd": 1.9,
+        "eps": 0,
+        "dps": 26.3,
+        "nrg": -33
+    },
+    "ice-shard": {
+        "name": "Ice Shard",
+        "type": "Ice",
+        "category": "Fast",
+        "power": 12,
+        "cd": 1.2,
+        "eps": 10,
+        "dps": 10,
+        "nrg": 12
+    },
+    "icy-wind": {
+        "name": "Icy Wind",
+        "type": "Ice",
+        "category": "Charge",
+        "power": 60,
+        "cd": 3.3,
+        "eps": 0,
+        "dps": 18.2,
+        "nrg": -33
+    },
+    "infestation": {
+        "name": "Infestation",
+        "type": "Bug",
+        "category": "Fast",
+        "power": 10,
+        "cd": 1.1,
+        "eps": 12.7,
+        "dps": 9.1,
+        "nrg": 14
+    },
+    "iron-head": {
+        "name": "Iron Head",
+        "type": "Steel",
+        "category": "Charge",
+        "power": 60,
+        "cd": 1.9,
+        "eps": 0,
+        "dps": 31.6,
+        "nrg": -50
+    },
+    "iron-tail": {
+        "name": "Iron Tail",
+        "type": "Steel",
+        "category": "Fast",
+        "power": 15,
+        "cd": 1.1,
+        "eps": 6.4,
+        "dps": 13.6,
+        "nrg": 7
+    },
+    "karate-chop": {
+        "name": "Karate Chop",
+        "type": "Fighting",
+        "category": "Fast",
+        "power": 8,
+        "cd": 0.8,
+        "eps": 12.5,
+        "dps": 10,
+        "nrg": 10
+    },
+    "leaf-blade": {
+        "name": "Leaf Blade",
+        "type": "Grass",
+        "category": "Charge",
+        "power": 70,
+        "cd": 2.4,
+        "eps": 0,
+        "dps": 29.2,
+        "nrg": -33
+    },
+    "lick": {
+        "name": "Lick",
+        "type": "Ghost",
+        "category": "Fast",
+        "power": 5,
+        "cd": 0.5,
+        "eps": 12,
+        "dps": 10,
+        "nrg": 6
+    },
+    "low-kick": {
+        "name": "Low Kick",
+        "type": "Fighting",
+        "category": "Fast",
+        "power": 6,
+        "cd": 0.6,
+        "eps": 10,
+        "dps": 10,
+        "nrg": 6
+    },
+    "low-sweep": {
+        "name": "Low Sweep",
+        "type": "Fighting",
+        "category": "Charge",
+        "power": 40,
+        "cd": 1.9,
+        "eps": 0,
+        "dps": 21.1,
+        "nrg": -33
+    },
+    "magnet-bomb": {
+        "name": "Magnet Bomb",
+        "type": "Steel",
+        "category": "Charge",
+        "power": 70,
+        "cd": 2.8,
+        "eps": 0,
+        "dps": 25,
+        "nrg": -33
+    },
+    "mega-drain": {
+        "name": "Mega Drain",
+        "type": "Grass",
+        "category": "Charge",
+        "power": 25,
+        "cd": 2.6,
+        "eps": 0,
+        "dps": 9.6,
+        "nrg": -50
+    },
+    "megahorn": {
+        "name": "Megahorn",
+        "type": "Bug",
+        "category": "Charge",
+        "power": 90,
+        "cd": 2.2,
+        "eps": 0,
+        "dps": 40.9,
+        "nrg": -100
+    },
+    "metal-claw": {
+        "name": "Metal Claw",
+        "type": "Steel",
+        "category": "Fast",
+        "power": 8,
+        "cd": 0.7,
+        "eps": 10,
+        "dps": 11.4,
+        "nrg": 7
+    },
+    "mirror-coat": {
+        "name": "Mirror Coat",
+        "type": "Psychic",
+        "category": "Charge",
+        "power": 60,
+        "cd": 2.6,
+        "eps": 0,
+        "dps": 23.1,
+        "nrg": -50
+    },
+    "moonblast": {
+        "name": "Moonblast",
+        "type": "Fairy",
+        "category": "Charge",
+        "power": 130,
+        "cd": 3.9,
+        "eps": 0,
+        "dps": 33.3,
+        "nrg": -100
+    },
+    "mud-bomb": {
+        "name": "Mud Bomb",
+        "type": "Ground",
+        "category": "Charge",
+        "power": 55,
+        "cd": 2.3,
+        "eps": 0,
+        "dps": 23.9,
+        "nrg": -33
+    },
+    "mud-shot": {
+        "name": "Mud Shot",
+        "type": "Ground",
+        "category": "Fast",
+        "power": 5,
+        "cd": 0.6,
+        "eps": 11.7,
+        "dps": 8.3,
+        "nrg": 7
+    },
+    "mud-slap": {
+        "name": "Mud Slap",
+        "type": "Ground",
+        "category": "Fast",
+        "power": 15,
+        "cd": 1.4,
+        "eps": 8.6,
+        "dps": 10.7,
+        "nrg": 12
+    },
+    "night-shade": {
+        "name": "Night Shade",
+        "type": "Ghost",
+        "category": "Charge",
+        "power": 60,
+        "cd": 2.6,
+        "eps": 0,
+        "dps": 23.1,
+        "nrg": -50
+    },
+    "night-slash": {
+        "name": "Night Slash",
+        "type": "Dark",
+        "category": "Charge",
+        "power": 50,
+        "cd": 2.2,
+        "eps": 0,
+        "dps": 22.7,
+        "nrg": -33
+    },
+    "ominous-wind": {
+        "name": "Ominous Wind",
+        "type": "Ghost",
+        "category": "Charge",
+        "power": 50,
+        "cd": 2.3,
+        "eps": 0,
+        "dps": 21.7,
+        "nrg": -33
+    },
+    "outrage": {
+        "name": "Outrage",
+        "type": "Dragon",
+        "category": "Charge",
+        "power": 110,
+        "cd": 3.9,
+        "eps": 0,
+        "dps": 28.2,
+        "nrg": -50
+    },
+    "overheat": {
+        "name": "Overheat",
+        "type": "Fire",
+        "category": "Charge",
+        "power": 160,
+        "cd": 4,
+        "eps": 0,
+        "dps": 40,
+        "nrg": -100
+    },
+    "parabolic-charge": {
+        "name": "Parabolic Charge",
+        "type": "Electric",
+        "category": "Charge",
+        "power": 25,
+        "cd": 2.8,
+        "eps": 0,
+        "dps": 8.9,
+        "nrg": -50
+    },
+    "peck": {
+        "name": "Peck",
+        "type": "Flying",
+        "category": "Fast",
+        "power": 10,
+        "cd": 1,
+        "eps": 10,
+        "dps": 10,
+        "nrg": 10
+    },
+    "petal-blizzard": {
+        "name": "Petal Blizzard",
+        "type": "Grass",
+        "category": "Charge",
+        "power": 110,
+        "cd": 2.6,
+        "eps": 0,
+        "dps": 42.3,
+        "nrg": -100
+    },
+    "play-rough": {
+        "name": "Play Rough",
+        "type": "Fairy",
+        "category": "Charge",
+        "power": 90,
+        "cd": 2.9,
+        "eps": 0,
+        "dps": 31,
+        "nrg": -50
+    },
+    "poison-fang": {
+        "name": "Poison Fang",
+        "type": "Poison",
+        "category": "Charge",
+        "power": 35,
+        "cd": 1.7,
+        "eps": 0,
+        "dps": 20.6,
+        "nrg": -33
+    },
+    "poison-jab": {
+        "name": "Poison Jab",
+        "type": "Poison",
+        "category": "Fast",
+        "power": 10,
+        "cd": 0.8,
+        "eps": 8.8,
+        "dps": 12.5,
+        "nrg": 7
+    },
+    "poison-sting": {
+        "name": "Poison Sting",
+        "type": "Poison",
+        "category": "Fast",
+        "power": 5,
+        "cd": 0.6,
+        "eps": 11.7,
+        "dps": 8.3,
+        "nrg": 7
+    },
+    "pound": {
+        "name": "Pound",
+        "type": "Normal",
+        "category": "Fast",
+        "power": 7,
+        "cd": 0.6,
+        "eps": 10,
+        "dps": 11.7,
+        "nrg": 6
+    },
+    "powder-snow": {
+        "name": "Powder Snow",
+        "type": "Ice",
+        "category": "Fast",
+        "power": 6,
+        "cd": 1,
+        "eps": 15,
+        "dps": 6,
+        "nrg": 15
+    },
+    "power-gem": {
+        "name": "Power Gem",
+        "type": "Rock",
+        "category": "Charge",
+        "power": 80,
+        "cd": 2.9,
+        "eps": 0,
+        "dps": 27.6,
+        "nrg": -50
+    },
+    "power-whip": {
+        "name": "Power Whip",
+        "type": "Grass",
+        "category": "Charge",
+        "power": 90,
+        "cd": 2.6,
+        "eps": 0,
+        "dps": 34.6,
+        "nrg": -50
+    },
+    "psybeam": {
+        "name": "Psybeam",
+        "type": "Psychic",
+        "category": "Charge",
+        "power": 70,
+        "cd": 3.2,
+        "eps": 0,
+        "dps": 21.9,
+        "nrg": -50
+    },
+    "psychic": {
+        "name": "Psychic",
+        "type": "Psychic",
+        "category": "Charge",
+        "power": 100,
+        "cd": 2.8,
+        "eps": 0,
+        "dps": 35.7,
+        "nrg": -100
+    },
+    "psycho-cut": {
+        "name": "Psycho Cut",
+        "type": "Psychic",
+        "category": "Fast",
+        "power": 5,
+        "cd": 0.6,
+        "eps": 13.3,
+        "dps": 8.3,
+        "nrg": 8
+    },
+    "psyshock": {
+        "name": "Psyshock",
+        "type": "Psychic",
+        "category": "Charge",
+        "power": 65,
+        "cd": 2.7,
+        "eps": 0,
+        "dps": 24.1,
+        "nrg": -33
+    },
+    "psystrike": {
+        "name": "Psystrike",
+        "type": "Psychic",
+        "category": "Charge",
+        "power": 100,
+        "cd": 4.4,
+        "eps": 0,
+        "dps": 22.7,
+        "nrg": -50
+    },
+    "quick-attack": {
+        "name": "Quick Attack",
+        "type": "Normal",
+        "category": "Fast",
+        "power": 8,
+        "cd": 0.8,
+        "eps": 12.5,
+        "dps": 10,
+        "nrg": 10
+    },
+    "razor-leaf": {
+        "name": "Razor Leaf",
+        "type": "Grass",
+        "category": "Fast",
+        "power": 13,
+        "cd": 1,
+        "eps": 7,
+        "dps": 13,
+        "nrg": 7
+    },
+    "rest": {
+        "name": "Rest",
+        "type": "Normal",
+        "category": "Charge",
+        "power": 50,
+        "cd": 1.9,
+        "eps": 0,
+        "dps": 26.3,
+        "nrg": -33
+    },
+    "sludge-bomb": {
+        "name": "Sludge Bomb",
+        "type": "Poison",
+        "category": "Charge",
+        "power": 80,
+        "cd": 2.3,
+        "eps": 0,
+        "dps": 34.8,
+        "nrg": -50
+    },
+    "sludge-wave": {
+        "name": "Sludge Wave",
+        "type": "Poison",
+        "category": "Charge",
+        "power": 110,
+        "cd": 3.2,
+        "eps": 0,
+        "dps": 34.4,
+        "nrg": -100
+    },
+    "snarl": {
+        "name": "Snarl",
+        "type": "Dark",
+        "category": "Fast",
+        "power": 12,
+        "cd": 1.1,
+        "eps": 10.9,
+        "dps": 10.9,
+        "nrg": 12
+    },
+    "solar-beam": {
+        "name": "Solar Beam",
+        "type": "Grass",
+        "category": "Charge",
+        "power": 180,
+        "cd": 4.9,
+        "eps": 0,
+        "dps": 36.7,
+        "nrg": -100
+    },
+    "spark": {
+        "name": "Spark",
+        "type": "Electric",
+        "category": "Fast",
+        "power": 6,
+        "cd": 0.7,
+        "eps": 12.9,
+        "dps": 8.6,
+        "nrg": 9
+    },
+    "splash": {
+        "name": "Splash",
+        "type": "Water",
+        "category": "Fast",
+        "power": 0,
+        "cd": 1.73,
+        "eps": 0,
+        "dps": 0,
+        "nrg": 0
+    },
+    "steel-wing": {
+        "name": "Steel Wing",
+        "type": "Steel",
+        "category": "Fast",
+        "power": 11,
+        "cd": 0.8,
+        "eps": 7.5,
+        "dps": 13.8,
+        "nrg": 6
+    },
+    "stomp": {
+        "name": "Stomp",
+        "type": "Normal",
+        "category": "Charge",
+        "power": 55,
+        "cd": 1.7,
+        "eps": 0,
+        "dps": 32.4,
+        "nrg": -50
+    },
+    "stone-edge": {
+        "name": "Stone Edge",
+        "type": "Rock",
+        "category": "Charge",
+        "power": 100,
+        "cd": 2.3,
+        "eps": 0,
+        "dps": 43.5,
+        "nrg": -100
+    },
+    "struggle": {
+        "name": "Struggle",
+        "type": "Normal",
+        "category": "Charge",
+        "power": 35,
+        "cd": 2.2,
+        "eps": 0,
+        "dps": 15.9,
+        "nrg": -33
+    },
+    "struggle-bug": {
+        "name": "Struggle Bug",
+        "type": "Bug",
+        "category": "Fast",
+        "power": 15,
+        "cd": 1.5,
+        "eps": 10,
+        "dps": 10,
+        "nrg": 15
+    },
+    "submission": {
+        "name": "Submission",
+        "type": "Fighting",
+        "category": "Charge",
+        "power": 60,
+        "cd": 2.2,
+        "eps": 0,
+        "dps": 27.3,
+        "nrg": -50
+    },
+    "sucker-punch": {
+        "name": "Sucker Punch",
+        "type": "Dark",
+        "category": "Fast",
+        "power": 7,
+        "cd": 0.7,
+        "eps": 11.4,
+        "dps": 10,
+        "nrg": 8
+    },
+    "swift": {
+        "name": "Swift",
+        "type": "Normal",
+        "category": "Charge",
+        "power": 60,
+        "cd": 2.8,
+        "eps": 0,
+        "dps": 21.4,
+        "nrg": -50
+    },
+    "tackle": {
+        "name": "Tackle",
+        "type": "Normal",
+        "category": "Fast",
+        "power": 5,
+        "cd": 0.5,
+        "eps": 10,
+        "dps": 10,
+        "nrg": 5
+    },
+    "thunder": {
+        "name": "Thunder",
+        "type": "Electric",
+        "category": "Charge",
+        "power": 100,
+        "cd": 2.4,
+        "eps": 0,
+        "dps": 41.7,
+        "nrg": -100
+    },
+    "thunder-punch": {
+        "name": "Thunder Punch",
+        "type": "Electric",
+        "category": "Charge",
+        "power": 45,
+        "cd": 1.8,
+        "eps": 0,
+        "dps": 25,
+        "nrg": -33
+    },
+    "thunder-shock": {
+        "name": "Thunder Shock",
+        "type": "Electric",
+        "category": "Fast",
+        "power": 5,
+        "cd": 0.6,
+        "eps": 13.3,
+        "dps": 8.3,
+        "nrg": 8
+    },
+    "thunderbolt": {
+        "name": "Thunderbolt",
+        "type": "Electric",
+        "category": "Charge",
+        "power": 80,
+        "cd": 2.5,
+        "eps": 0,
+        "dps": 32,
+        "nrg": -50
+    },
+    "transform": {
+        "name": "Transform",
+        "type": "Normal",
+        "category": "Fast",
+        "power": 0,
+        "cd": 2.23,
+        "eps": 0,
+        "dps": 0,
+        "nrg": 0
+    },
+    "twister": {
+        "name": "Twister",
+        "type": "Dragon",
+        "category": "Charge",
+        "power": 45,
+        "cd": 2.8,
+        "eps": 0,
+        "dps": 16.1,
+        "nrg": -33
+    },
+    "vice-grip": {
+        "name": "Vice Grip",
+        "type": "Normal",
+        "category": "Charge",
+        "power": 35,
+        "cd": 1.9,
+        "eps": 0,
+        "dps": 18.4,
+        "nrg": -33
+    },
+    "vine-whip": {
+        "name": "Vine Whip",
+        "type": "Grass",
+        "category": "Fast",
+        "power": 7,
+        "cd": 0.6,
+        "eps": 10,
+        "dps": 11.7,
+        "nrg": 6
+    },
+    "volt-switch": {
+        "name": "Volt Switch",
+        "type": "Electric",
+        "category": "Fast",
+        "power": 20,
+        "cd": 2.3,
+        "eps": 10.9,
+        "dps": 8.7,
+        "nrg": 25
+    },
+    "water-gun": {
+        "name": "Water Gun",
+        "type": "Water",
+        "category": "Fast",
+        "power": 5,
+        "cd": 0.5,
+        "eps": 10,
+        "dps": 10,
+        "nrg": 5
+    },
+    "water-gun-(blastoise)": {
+        "name": "Water Gun (Blastoise)",
+        "type": "Water",
+        "category": "Fast",
+        "power": 10,
+        "cd": 1,
+        "eps": 6,
+        "dps": 10,
+        "nrg": 6
+    },
+    "water-pulse": {
+        "name": "Water Pulse",
+        "type": "Water",
+        "category": "Charge",
+        "power": 70,
+        "cd": 3.2,
+        "eps": 0,
+        "dps": 21.9,
+        "nrg": -50
+    },
+    "wild-charge": {
+        "name": "Wild Charge",
+        "type": "Electric",
+        "category": "Charge",
+        "power": 90,
+        "cd": 2.6,
+        "eps": 0,
+        "dps": 34.6,
+        "nrg": -50
+    },
+    "wing-attack": {
+        "name": "Wing Attack",
+        "type": "Flying",
+        "category": "Fast",
+        "power": 8,
+        "cd": 0.8,
+        "eps": 11.3,
+        "dps": 10,
+        "nrg": 9
+    },
+    "wrap": {
+        "name": "Wrap",
+        "type": "Normal",
+        "category": "Charge",
+        "power": 60,
+        "cd": 2.9,
+        "eps": 0,
+        "dps": 20.7,
+        "nrg": -33
+    },
+    "wrap-(green/pink)": {
+        "name": "Wrap (Green/Pink)",
+        "type": "Normal",
+        "category": "Charge",
+        "power": 25,
+        "cd": 2.9,
+        "eps": 0,
+        "dps": 8.6,
+        "nrg": -33
+    },
+    "x-scissor": {
+        "name": "X-Scissor",
+        "type": "Bug",
+        "category": "Charge",
+        "power": 45,
+        "cd": 1.6,
+        "eps": 0,
+        "dps": 28.1,
+        "nrg": -33
+    },
+    "zap-cannon": {
+        "name": "Zap Cannon",
+        "type": "Electric",
+        "category": "Charge",
+        "power": 140,
+        "cd": 3.7,
+        "eps": 0,
+        "dps": 37.8,
+        "nrg": -100
+    },
+    "zen-headbutt": {
+        "name": "Zen Headbutt",
+        "type": "Psychic",
+        "category": "Fast",
+        "power": 12,
+        "cd": 1.1,
+        "eps": 9.1,
+        "dps": 10.9,
+        "nrg": 10
+    }
 }

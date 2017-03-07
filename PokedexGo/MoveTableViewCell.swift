@@ -28,8 +28,8 @@ class MoveTableViewCell: UITableViewCell {
         nameLabel.text = move["name"] as? String
         typeButton.set(move["type"] as? String)
         powerLabel?.text = String(move["power"] as! Int)
-        cdLabel?.text = String(move["cd"] as! Int)
-        dpsLabel?.text = String(move["dps"] as! Int)
-        epsLabel?.text = String(move["eps"] as! Int)
+        cdLabel?.text = String(move["cd"] as! Float)
+        dpsLabel?.text = String(move["dps"] as! Float)
+        epsLabel?.text = String(move["eps"] as! Float)
     }
 }

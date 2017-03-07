@@ -97,6 +97,9 @@ extension PGSearchViewController: PokemonSortDelegate, MoveSortDelegate {
         else if let v1 = move1[key] as? Int, let v2 = move2[key] as? Int {
             return !up ? v1 > v2 : v1 < v2
         }
+        else if let f1 = move1[key] as? Float, let f2 = move2[key] as? Float {
+            return !up ? f1 > f2 : f1 < f2
+        }
         else {
             return false
         }

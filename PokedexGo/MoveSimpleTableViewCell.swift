@@ -29,11 +29,11 @@ class MoveSimpleTableViewCell: UITableViewCell {
     func set(move: [String: Any]) {
         nameLabel.text = move["name"] as? String
         typeButton.set(move["type"] as! String)
-        powerLabel.text = String(format: "%d", move["power"] as! Int)
-        cdLabel.text = String(format: "%d", move["cd"] as! Int)
-        dpsLabel.text = String(format: "%d", move["dps"] as! Int)
+        powerLabel.text = String(move["power"] as! Int)
+        cdLabel.text = String(move["cd"] as! Float)
+        dpsLabel.text = String(move["dps"] as! Float)
         if (epsLabel != nil) {
-            epsLabel.text = String(format: "%d", move["eps"] as! Int)
+            epsLabel.text = String(move["eps"] as! Float)
         }
     }
 

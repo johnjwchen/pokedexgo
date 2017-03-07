@@ -18,7 +18,11 @@ class TypeTableViewCell: UITableViewCell {
             type1Button.set(types[0])
         }
         if types.count > 1 {
+            type2Button.isHidden = false
             type2Button.set(types[1])
+        }
+        else {
+            type2Button.isHidden = true
         }
     }
 
