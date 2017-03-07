@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 protocol PokemonSortDelegate {
     func sortPokemon(key: String, down: Bool);
 }
@@ -27,6 +28,14 @@ class PokemonHeaderTableViewCell: UITableViewCell {
     @IBOutlet weak var attackLabel: UILabel!
     @IBOutlet weak var defenseLabel: UILabel!
     @IBOutlet weak var maxcpLabel: UILabel!
+    
+    var toRemoveView: UIView!
+    
+    fileprivate(set) var sortKey: String! = "num"
+    
+    /// fase: sort up 1, 2, 3...
+    /// true: sort down 9, 8, 7...
+    private(set) var sortDown: Bool = false
     
     private lazy var labelArray: [UILabel?] = {
         return [
@@ -62,13 +71,7 @@ class PokemonHeaderTableViewCell: UITableViewCell {
         }
     }
     
-    var toRemoveView: UIView!
     
-    private(set) var sortKey: String!
-    
-    /// fase: sort up 1, 2, 3...
-    /// true: sort down 9, 8, 7...
-    private(set) var sortDown: Bool = false
     
     var delegate: PokemonSortDelegate?
     

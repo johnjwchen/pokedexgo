@@ -74,6 +74,7 @@ class PGPageViewController: UIPageViewController {
 
 }
 
+
 extension PGPageViewController:UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {

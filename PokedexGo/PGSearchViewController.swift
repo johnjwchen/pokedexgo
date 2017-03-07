@@ -14,9 +14,17 @@ class PGSearchViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
+    fileprivate lazy var pokemonHeaderView: PokemonHeaderTableViewCell = {
+        let header = self.tableView.dequeueReusableCell(withIdentifier: "PokemonTitleCell") as! PokemonHeaderTableViewCell
+        header.delegate = self
+        return header
+    }()
     
-    
-    
+    fileprivate lazy var moveHeaderView: MoveHeaderTableViewCell = {
+        let header = self.tableView.dequeueReusableCell(withIdentifier: "MoveTitleCell") as! MoveHeaderTableViewCell
+        header.delegate = self
+        return header
+    }()
     
     lazy var searchViewController: UISearchController! = {
         return UISearchController(searchResultsController: nil)
@@ -40,6 +48,8 @@ class PGSearchViewController: UIViewController {
     func setUpArrays() {
         pokemonArray = Array(PGJSON.pokeDex!.values)
         moveArray = Array(PGJSON.moveDex!.values)
+        
+        preSortTable()
     }
     
     @IBAction func segmentChanged(_ sender: Any) {
@@ -61,6 +71,43 @@ class PGSearchViewController: UIViewController {
 //        searchBar.becomeFirstResponder()
     }
 
+}
+
+extension PGSearchViewController: PokemonSortDelegate, MoveSortDelegate {
+    
+    func preSortTable() {
+        sortPokemon(key: pokemonHeaderView.sortKey, down: pokemonHeaderView.sortDown)
+        sortMove(key: moveHeaderView.sortKey, down: moveHeaderView.sortDown)
+    }
+    
+    func sortPokemon(key: String, down: Bool) {
+        pokemonArray.sort { (a, b) -> Bool in
+            doSort(a: a, b: b, key: key, down: down)
+        }
+        tableView.reloadData()
+    }
+  
+    
+    func doSort(a: Any, b: Any, key: String, down: Bool) -> Bool {
+        let move1 = a as! [String: AnyObject]
+        let move2 = b as! [String: AnyObject]
+        if let s1 = move1[key] as? String, let s2 = move2[key] as? String {
+            return down ? s1 > s2 : s1 < s2
+        }
+        else if let v1 = move1[key] as? Int, let v2 = move2[key] as? Int {
+            return down ? v1 > v2 : v1 < v2
+        }
+        else {
+            return false
+        }
+    }
+    
+    func sortMove(key: String, down: Bool) {
+        moveArray.sort { (a, b) -> Bool in
+            doSort(a: a, b: b, key: key, down: down)
+        }
+        tableView.reloadData()
+    }
 }
 
 extension PGSearchViewController: UITableViewDataSource {
@@ -118,10 +165,10 @@ extension PGSearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if segmentedControl.selectedSegmentIndex == 0 && section == 0 ||
             segmentedControl.selectedSegmentIndex == 1 {
-            return tableView.dequeueReusableCell(withIdentifier: "PokemonTitleCell")
+            return pokemonHeaderView
         }
         else {
-            return tableView.dequeueReusableCell(withIdentifier: "MoveTitleCell")
+            return moveHeaderView
         }
     }
     

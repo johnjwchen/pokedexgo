@@ -601,7 +601,7 @@
                                         <rect key="frame" x="0.0" y="28" width="500" height="29"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0rq-AD-Xf9" id="N72-7B-emo">
-                                            <rect key="frame" x="0.0" y="0.0" width="500" height="28.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="500" height="28"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Jl8-BZ-ka6">
@@ -726,14 +726,25 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.82793337109999998" blue="0.3983075023" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
+                                            <outlet property="cdLabel" destination="GIe-dF-v4D" id="cLo-cp-Xrl"/>
+                                            <outlet property="cdView" destination="2c1-rZ-M9f" id="M5g-kR-9m7"/>
+                                            <outlet property="dpsLabel" destination="CZ8-Zq-uio" id="9G2-iy-6Uw"/>
+                                            <outlet property="dpsView" destination="Ma2-GJ-McO" id="gSe-Fb-hlG"/>
+                                            <outlet property="espLabel" destination="qmv-Jk-vOH" id="blF-8O-DXp"/>
                                             <outlet property="espView" destination="u6B-4P-vDc" id="W7d-aQ-xoa"/>
+                                            <outlet property="nameLabel" destination="B8T-cV-fr5" id="G5u-Jc-WYm"/>
+                                            <outlet property="nameView" destination="71f-VI-sHG" id="RTD-vX-vMk"/>
+                                            <outlet property="powerLabel" destination="LD6-b1-JDX" id="RXO-du-QBR"/>
+                                            <outlet property="powerView" destination="qTh-xn-xHx" id="5jQ-4B-QPr"/>
+                                            <outlet property="typeLabel" destination="1g9-dN-eXY" id="yO4-6m-qZb"/>
+                                            <outlet property="typeView" destination="uTX-wl-HWW" id="L3K-Po-jzY"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MoveSimpleCell" rowHeight="41" id="UIn-X8-c17" customClass="MoveSimpleTableViewCell" customModule="PokedexGo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="57" width="500" height="41"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="UIn-X8-c17" id="lpS-8n-PYB">
-                                            <rect key="frame" x="0.0" y="0.0" width="500" height="40.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="500" height="40"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VV9-wf-saT">
@@ -832,7 +843,7 @@
                                         <rect key="frame" x="0.0" y="98" width="500" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qW2-16-6QS" id="Q23-tB-Kc4">
-                                            <rect key="frame" x="0.0" y="0.0" width="500" height="45.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="500" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="2iM-3C-XYQ">
@@ -928,7 +939,7 @@
                                         <rect key="frame" x="0.0" y="144" width="500" height="23"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cuK-rW-ZSh" id="v7b-F0-gla">
-                                            <rect key="frame" x="0.0" y="0.0" width="500" height="22.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="500" height="22"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Tmo-ML-oRY">
