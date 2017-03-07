@@ -10,7 +10,7 @@ import UIKit
 
 
 protocol PokemonSortDelegate {
-    func sortPokemon(key: String, down: Bool);
+    func sortPokemon(key: String, up: Bool);
 }
 
 class PokemonHeaderTableViewCell: UITableViewCell {
@@ -35,7 +35,7 @@ class PokemonHeaderTableViewCell: UITableViewCell {
     
     /// fase: sort up 1, 2, 3...
     /// true: sort down 9, 8, 7...
-    private(set) var sortDown: Bool = false
+    private(set) var sortUp: Bool = true
     
     private lazy var labelArray: [UILabel?] = {
         return [
@@ -53,7 +53,7 @@ class PokemonHeaderTableViewCell: UITableViewCell {
             label?.text = label?.text?.replacingOccurrences(of: "▲", with: "").replacingOccurrences(of: "▼", with: "")
         }
         
-        let arrow = sortDown ? "▼" : "▲"
+        let arrow = sortUp ? "▲" : "▼"
         switch sortKey {
         case "num":
             numLabel.text = numLabel.text! + arrow
@@ -115,14 +115,14 @@ class PokemonHeaderTableViewCell: UITableViewCell {
     
     func tap(key: String?) {
         if (key == sortKey) {
-            sortDown = !sortDown
+            sortUp = !sortUp
         }
         else {
-            sortDown = false
+            sortUp = false
             sortKey = key
         }
         updateArrow()
-        delegate?.sortPokemon(key: sortKey, down: sortDown)
+        delegate?.sortPokemon(key: sortKey, up: sortUp)
     }
     
     

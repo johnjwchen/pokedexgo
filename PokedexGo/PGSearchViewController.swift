@@ -76,35 +76,35 @@ class PGSearchViewController: UIViewController {
 extension PGSearchViewController: PokemonSortDelegate, MoveSortDelegate {
     
     func preSortTable() {
-        sortPokemon(key: pokemonHeaderView.sortKey, down: pokemonHeaderView.sortDown)
-        sortMove(key: moveHeaderView.sortKey, down: moveHeaderView.sortDown)
+        sortPokemon(key: pokemonHeaderView.sortKey, up: pokemonHeaderView.sortUp)
+        sortMove(key: moveHeaderView.sortKey, up: moveHeaderView.sortUp)
     }
     
-    func sortPokemon(key: String, down: Bool) {
+    func sortPokemon(key: String, up: Bool) {
         pokemonArray.sort { (a, b) -> Bool in
-            doSort(a: a, b: b, key: key, down: down)
+            doSort(a: a, b: b, key: key, up: up)
         }
         tableView.reloadData()
     }
   
     
-    func doSort(a: Any, b: Any, key: String, down: Bool) -> Bool {
+    func doSort(a: Any, b: Any, key: String, up: Bool) -> Bool {
         let move1 = a as! [String: AnyObject]
         let move2 = b as! [String: AnyObject]
         if let s1 = move1[key] as? String, let s2 = move2[key] as? String {
-            return down ? s1 > s2 : s1 < s2
+            return !up ? s1 > s2 : s1 < s2
         }
         else if let v1 = move1[key] as? Int, let v2 = move2[key] as? Int {
-            return down ? v1 > v2 : v1 < v2
+            return !up ? v1 > v2 : v1 < v2
         }
         else {
             return false
         }
     }
     
-    func sortMove(key: String, down: Bool) {
+    func sortMove(key: String, up: Bool) {
         moveArray.sort { (a, b) -> Bool in
-            doSort(a: a, b: b, key: key, down: down)
+            doSort(a: a, b: b, key: key, up: up)
         }
         tableView.reloadData()
     }

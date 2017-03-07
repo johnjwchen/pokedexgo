@@ -9,7 +9,7 @@
 import UIKit
 
 protocol MoveSortDelegate {
-    func sortMove(key: String, down: Bool);
+    func sortMove(key: String, up: Bool);
 }
 
 class MoveHeaderTableViewCell: UITableViewCell {
@@ -34,7 +34,7 @@ class MoveHeaderTableViewCell: UITableViewCell {
     
     /// fase: sort up 1, 2, 3...
     /// true: sort down 9, 8, 7...
-    fileprivate(set) var sortDown: Bool = false
+    fileprivate(set) var sortUp: Bool = true
     
     private lazy var labelArray: [UILabel?] = {
         return [
@@ -52,7 +52,7 @@ class MoveHeaderTableViewCell: UITableViewCell {
             label?.text = label?.text?.replacingOccurrences(of: "▲", with: "").replacingOccurrences(of: "▼", with: "")
         }
         
-        let arrow = sortDown ? "▼" : "▲"
+        let arrow = sortUp ? "▲" : "▼" 
         switch sortKey {
         case "type":
             typeLabel.text = typeLabel.text! + arrow
@@ -102,14 +102,14 @@ class MoveHeaderTableViewCell: UITableViewCell {
     
     func tap(key: String?) {
         if (key == sortKey) {
-            sortDown = !sortDown
+            sortUp = !sortUp
         }
         else {
-            sortDown = false
+            sortUp = false
             sortKey = key!
         }
         updateArrow()
-        delegate?.sortMove(key: sortKey, down: sortDown)
+        delegate?.sortMove(key: sortKey, up: sortUp)
     }
     
     
