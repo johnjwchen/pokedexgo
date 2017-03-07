@@ -8,8 +8,10 @@
 
 import UIKit
 
-class PGSearchViewController: UIViewController {
 
+
+class PGSearchViewController: UIViewController {
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -33,6 +35,11 @@ class PGSearchViewController: UIViewController {
     fileprivate(set) var pokemonArray: [Any]!
     fileprivate(set) var moveArray: [Any]!
     
+    
+    var segmentIndex: Int = -1
+    
+    var sortKey: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,15 +47,26 @@ class PGSearchViewController: UIViewController {
         tableView.delegate = self
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 140
-     
-        
-        setUpArrays()
     }
+    
+    
     
     func setUpArrays() {
         pokemonArray = Array(PGJSON.pokeDex!.values)
         moveArray = Array(PGJSON.moveDex!.values)
         
+        if segmentIndex > -1 {
+            segmentedControl.selectedSegmentIndex = segmentIndex
+            if segmentIndex == 1 {
+                pokemonHeaderView.setSort(key: sortKey, up: false)
+            }
+            if segmentIndex == 2 {
+                moveHeaderView.setSort(key: sortKey, up: false)
+            }
+        }
+        
+        segmentIndex = -1
+        sortKey = nil
         preSortTable()
     }
     
@@ -68,7 +86,7 @@ class PGSearchViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-//        searchBar.becomeFirstResponder()
+        setUpArrays()
     }
 
 }

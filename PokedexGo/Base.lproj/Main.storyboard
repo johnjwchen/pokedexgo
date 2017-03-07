@@ -167,6 +167,9 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5e-MZ-qwC">
                                                             <rect key="frame" x="12" y="43" width="56" height="30"/>
                                                             <state key="normal" title="Stamina"/>
+                                                            <connections>
+                                                                <action selector="staminaTouchUp:" destination="qUT-eY-vGA" eventType="touchUpInside" id="8KS-5E-mDT"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -193,6 +196,9 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaM-37-8i1">
                                                             <rect key="frame" x="18" y="43" width="44" height="30"/>
                                                             <state key="normal" title="Attack"/>
+                                                            <connections>
+                                                                <action selector="attackTouchUp:" destination="qUT-eY-vGA" eventType="touchUpInside" id="0KJ-nx-ZDq"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -218,6 +224,9 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehm-HA-cDo">
                                                             <rect key="frame" x="11.5" y="43" width="57" height="30"/>
                                                             <state key="normal" title="Defense"/>
+                                                            <connections>
+                                                                <action selector="defenseTouchUp:" destination="qUT-eY-vGA" eventType="touchUpInside" id="uyM-8w-lWP"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -243,6 +252,9 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVo-LY-6BK">
                                                             <rect key="frame" x="13.5" y="43" width="53" height="30"/>
                                                             <state key="normal" title="Max CP"/>
+                                                            <connections>
+                                                                <action selector="maxcpTouchUp:" destination="qUT-eY-vGA" eventType="touchUpInside" id="7az-i8-xOE"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -357,6 +369,9 @@
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <state key="normal" title="Power"/>
+                                                                    <connections>
+                                                                        <action selector="powerTouchUp:" destination="qUT-eY-vGA" eventType="touchUpInside" id="MIF-7l-6zz"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -384,6 +399,9 @@
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <state key="normal" title="CD"/>
+                                                                    <connections>
+                                                                        <action selector="cdTouchUp:" destination="qUT-eY-vGA" eventType="touchUpInside" id="bul-X0-UrO"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -411,6 +429,9 @@
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <state key="normal" title="DPS"/>
+                                                                    <connections>
+                                                                        <action selector="dpsTouchUp:" destination="qUT-eY-vGA" eventType="touchUpInside" id="RbS-8g-ED8"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -438,6 +459,9 @@
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <state key="normal" title="EPS"/>
+                                                                    <connections>
+                                                                        <action selector="epsTouchUp:" destination="qUT-eY-vGA" eventType="touchUpInside" id="kfD-YB-ZKk"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

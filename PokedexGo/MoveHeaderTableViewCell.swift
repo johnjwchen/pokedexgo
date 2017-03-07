@@ -36,6 +36,12 @@ class MoveHeaderTableViewCell: UITableViewCell {
     /// true: sort down 9, 8, 7...
     fileprivate(set) var sortUp: Bool = true
     
+    func setSort(key: String!, up: Bool) {
+        sortKey = key
+        sortUp = up
+        updateArrow()
+    }
+    
     private lazy var labelArray: [UILabel?] = {
         return [
             self.typeLabel,

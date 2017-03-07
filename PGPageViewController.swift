@@ -20,6 +20,7 @@ class PGPageViewController: UIPageViewController {
     private func newTableViewController(dexType: DexType, dexKey: String) -> UIViewController {
         let vc = storyboard!.instantiateViewController(withIdentifier: "DexTableViewController") as! DexTableViewController
         vc.setDex(dexType: dexType, dexKey: dexKey)
+        vc.showSortDelegate = self
         return vc
     }
     
@@ -111,5 +112,13 @@ extension PGPageViewController:UIPageViewControllerDataSource {
         }
         
         return orderedViewControllers[nextIndex]
+    }
+}
+
+extension PGPageViewController: ShowSortTableDelegate {
+    func showTable(sortKey: String, up: Bool, scope: Int) {
+        searchViewController.segmentIndex = scope
+        searchViewController.sortKey = sortKey
+        self.present(searchViewController, animated: true, completion: nil)
     }
 }

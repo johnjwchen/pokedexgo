@@ -32,4 +32,5 @@ class MoveTableViewCell: UITableViewCell {
         dpsLabel?.text = String(move["dps"] as! Float)
         epsLabel?.text = String(move["eps"] as! Float)
     }
+    
 }

@@ -35,7 +35,13 @@ class PokemonHeaderTableViewCell: UITableViewCell {
     
     /// fase: sort up 1, 2, 3...
     /// true: sort down 9, 8, 7...
-    private(set) var sortUp: Bool = true
+    fileprivate(set) var sortUp: Bool = true
+    
+    func setSort(key: String!, up: Bool) {
+        sortKey = key
+        sortUp = up
+        updateArrow()
+    }
     
     private lazy var labelArray: [UILabel?] = {
         return [
