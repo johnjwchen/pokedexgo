@@ -15,7 +15,34 @@ class NameTableViewCell: UITableViewCell {
     @IBOutlet weak var gender: UILabel!
     @IBOutlet weak var category: UIButton!
     
-    func setInfo(info: NSDictionary) {
-        /// to do
+    static let preferredLanguage = NSLocale.preferredLanguages[0] as String
+    
+    
+    func text(genderType: Int) -> String? {
+        switch genderType {
+        case 1:
+            return "♂"
+        case 7:
+            return "♀"
+        case 8:
+            return ""
+        default:
+            return "♂ ♀"
+        }
+    }
+    func set(info: [String: Any]) {
+        name.text = info["name"] as? String
+        let h1 = info["height1"] as! String
+        let h2 = info["height2"] as! String
+        let w1 = info["weight1"] as! String
+        let w2 = info["weight2"] as! String
+        if NameTableViewCell.preferredLanguage == "en" {
+            detail.text = String(format: "%@, %@", h1, w1)
+        }
+        else {
+            detail.text = String(format: "%@, %@", h2, w2)
+        }
+        gender.text = text(genderType: info["gendertype"] as! Int)
+        category.setTitle(info["category"] as? String, for: .normal)
     }
 }

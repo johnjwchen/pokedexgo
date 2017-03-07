@@ -59,26 +59,22 @@ class DexTableViewController: UITableViewController {
         return sec["cell"] as! String
     }
 
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func configPokemon(cell: UITableViewCell!, indexPath: IndexPath) {
+       
+        let pokemon = PGJSON.pokeDex?[dexKey] as! [String: Any]
         
-        let identifier = cellIdentifier(section: indexPath.section)
-        let cell = tableView.dequeueReusableCell(withIdentifier: identifier!, for: indexPath)
-
-        // Configure the cell...
         if let nameCell = cell as? NameTableViewCell{
-            //nameCell?.setInfo(nil)
+            nameCell.set(info: pokemon)
             
         }
         else if let imageCell = cell as? ImageTableViewCell {
             imageCell.setPokemonImage(num: Int(dexKey)!)
         }
         else if let typeCell = cell as? TypeTableViewCell {
-            typeCell.setTypes(type1: PokemonTypeBug, type2: PokemonTypeDark)
+            typeCell.set(types: pokemon["types"] as! [String])
         }
         else if let statsCell = cell as? StatsTableViewCell {
-            // stats
-            //statsCell?.setStats(stats: nil)
+            statsCell.set(stats: pokemon)
         }
         else if let titleCell = cell as? TitleTableViewCell {
             let sec = layout[indexPath.section] as! [String: Any]
@@ -86,7 +82,21 @@ class DexTableViewController: UITableViewController {
         }
         else if let moveCell = cell as? MoveTableViewCell {
             /// moves
+            let dict = layout[indexPath.section] as! [String: Any]
+            let key = dict["key"] as! String
+            let array = pokemon[key]as! [AnyObject]
+            let moveName = array[indexPath.row] as! String
+            let move = PGJSON.moveOf(name: moveName)
+            moveCell.set(move: move)
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let identifier = cellIdentifier(section: indexPath.section)
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier!, for: indexPath)
+
+        configPokemon(cell: cell, indexPath: indexPath)
 
         return cell
     }

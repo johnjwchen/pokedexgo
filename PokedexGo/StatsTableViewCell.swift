@@ -19,11 +19,11 @@ class StatsTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    func setStats(stats: NSDictionary) {
-        stamina.text = stats.object(forKey: "stamina") as! String?
-        attack.text = stats.object(forKey: "attack") as! String?
-        defense.text = stats.object(forKey: "defense") as! String?
-        maxcp.text = stats.object(forKey: "maxcp") as! String?
+    func set(stats: [String: Any]) {
+        stamina.text = String(stats["stamina"] as! Int)
+        attack.text = String(stats["attack"] as! Int)
+        defense.text = String(stats["defense"] as! Int)
+        maxcp.text = String(stats["maxcp"] as! Int)
     }
    
 

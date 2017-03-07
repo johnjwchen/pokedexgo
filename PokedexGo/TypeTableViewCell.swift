@@ -13,9 +13,13 @@ class TypeTableViewCell: UITableViewCell {
     @IBOutlet weak var type2Button: PTTypeButton!
  
     
-    func setTypes(type1: PokemonType, type2: PokemonType) {
-        type1Button.pokemonType = type1
-        type2Button.pokemonType = type2
+    func set(types: [String]) {
+        if types.count > 0 {
+            type1Button.set(types[0])
+        }
+        if types.count > 1 {
+            type2Button.set(types[1])
+        }
     }
 
   
