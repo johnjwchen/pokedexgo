@@ -2,7 +2,7 @@
     "1": {
         "num": 1,
         "name": "Bulbasaur",
-        "category": "Seed Pokémon",
+        "category": "Seed",
         "fastMoves": [
                       "Tackle",
                       "Vine Whip"
@@ -33,7 +33,7 @@
     "2": {
         "num": 2,
         "name": "Ivysaur",
-        "category": "Seed Pokémon",
+        "category": "Seed",
         "fastMoves": [
                       "Razor Leaf",
                       "Vine Whip"
@@ -64,7 +64,7 @@
     "3": {
         "num": 3,
         "name": "Venusaur",
-        "category": "Seed Pokémon",
+        "category": "Seed",
         "fastMoves": [
                       "Razor Leaf",
                       "Vine Whip"
@@ -95,7 +95,7 @@
     "4": {
         "num": 4,
         "name": "Charmander",
-        "category": "Lizard Pokémon",
+        "category": "Lizard",
         "fastMoves": [
                       "Ember",
                       "Scratch"
@@ -125,7 +125,7 @@
     "5": {
         "num": 5,
         "name": "Charmeleon",
-        "category": "Flame Pokémon",
+        "category": "Flame",
         "fastMoves": [
                       "Ember",
                       "Fire Fang"
@@ -155,7 +155,7 @@
     "6": {
         "num": 6,
         "name": "Charizard",
-        "category": "Flame Pokémon",
+        "category": "Flame",
         "fastMoves": [
                       "Air Slash",
                       "Fire Spin"
@@ -186,7 +186,7 @@
     "7": {
         "num": 7,
         "name": "Squirtle",
-        "category": "Tiny Turtle Pokémon",
+        "category": "Tiny Turtle",
         "fastMoves": [
                       "Bubble",
                       "Tackle"
@@ -216,7 +216,7 @@
     "8": {
         "num": 8,
         "name": "Wartortle",
-        "category": "Turtle Pokémon",
+        "category": "Turtle",
         "fastMoves": [
                       "Bite",
                       "Water Gun"
@@ -246,7 +246,7 @@
     "9": {
         "num": 9,
         "name": "Blastoise",
-        "category": "Shellfish Pokémon",
+        "category": "Shellfish",
         "fastMoves": [
                       "Bite",
                       "Water Gun"
@@ -276,7 +276,7 @@
     "10": {
         "num": 10,
         "name": "Caterpie",
-        "category": "Worm Pokémon",
+        "category": "Worm",
         "fastMoves": [
                       "Bug Bite",
                       "Tackle"
@@ -304,7 +304,7 @@
     "11": {
         "num": 11,
         "name": "Metapod",
-        "category": "Cocoon Pokémon",
+        "category": "Cocoon",
         "fastMoves": [
                       "Bug Bite",
                       "Tackle"
@@ -332,7 +332,7 @@
     "12": {
         "num": 12,
         "name": "Butterfree",
-        "category": "Butterfly Pokémon",
+        "category": "Butterfly",
         "fastMoves": [
                       "Confusion",
                       "Struggle Bug"
@@ -363,7 +363,7 @@
     "13": {
         "num": 13,
         "name": "Weedle",
-        "category": "Hairy Bug Pokémon",
+        "category": "Hairy Bug",
         "fastMoves": [
                       "Bug Bite",
                       "Poison Sting"
@@ -392,7 +392,7 @@
     "14": {
         "num": 14,
         "name": "Kakuna",
-        "category": "Cocoon Pokémon",
+        "category": "Cocoon",
         "fastMoves": [
                       "Bug Bite",
                       "Poison Sting"
@@ -421,7 +421,7 @@
     "15": {
         "num": 15,
         "name": "Beedrill",
-        "category": "Poison Bee Pokémon",
+        "category": "Poison Bee",
         "fastMoves": [
                       "Infestation",
                       "Poison Jab"
@@ -452,7 +452,7 @@
     "16": {
         "num": 16,
         "name": "Pidgey",
-        "category": "Tiny Bird Pokémon",
+        "category": "Tiny Bird",
         "fastMoves": [
                       "Quick Attack",
                       "Tackle"
@@ -483,7 +483,7 @@
     "17": {
         "num": 17,
         "name": "Pidgeotto",
-        "category": "Bird Pokémon",
+        "category": "Bird",
         "fastMoves": [
                       "Steel Wing",
                       "Wing Attack"
@@ -514,7 +514,7 @@
     "18": {
         "num": 18,
         "name": "Pidgeot",
-        "category": "Bird Pokémon",
+        "category": "Bird",
         "fastMoves": [
                       "Air Slash",
                       "Steel Wing"
@@ -545,7 +545,7 @@
     "19": {
         "num": 19,
         "name": "Rattata",
-        "category": "Mouse Pokémon",
+        "category": "Mouse",
         "fastMoves": [
                       "Quick Attack",
                       "Tackle"
@@ -575,7 +575,7 @@
     "20": {
         "num": 20,
         "name": "Raticate",
-        "category": "Mouse Pokémon",
+        "category": "Mouse",
         "fastMoves": [
                       "Bite",
                       "Quick Attack"
@@ -605,7 +605,7 @@
     "21": {
         "num": 21,
         "name": "Spearow",
-        "category": "Tiny Bird Pokémon",
+        "category": "Tiny Bird",
         "fastMoves": [
                       "Peck",
                       "Quick Attack"
@@ -636,7 +636,7 @@
     "22": {
         "num": 22,
         "name": "Fearow",
-        "category": "Beak Pokémon",
+        "category": "Beak",
         "fastMoves": [
                       "Peck",
                       "Steel Wing"
@@ -667,7 +667,7 @@
     "23": {
         "num": 23,
         "name": "Ekans",
-        "category": "Snake Pokémon",
+        "category": "Snake",
         "fastMoves": [
                       "Acid",
                       "Poison Sting"
@@ -697,7 +697,7 @@
     "24": {
         "num": 24,
         "name": "Arbok",
-        "category": "Cobra Pokémon",
+        "category": "Cobra",
         "fastMoves": [
                       "Acid",
                       "Bite"
@@ -727,7 +727,7 @@
     "25": {
         "num": 25,
         "name": "Pikachu",
-        "category": "Mouse Pokémon",
+        "category": "Mouse",
         "fastMoves": [
                       "Quick Attack",
                       "Thunder Shock"
@@ -757,7 +757,7 @@
     "26": {
         "num": 26,
         "name": "Raichu",
-        "category": "Mouse Pokémon",
+        "category": "Mouse",
         "fastMoves": [
                       "Spark",
                       "Volt Switch"
@@ -787,7 +787,7 @@
     "27": {
         "num": 27,
         "name": "Sandshrew",
-        "category": "Mouse Pokémon",
+        "category": "Mouse",
         "fastMoves": [
                       "Mud Shot",
                       "Scratch"
@@ -817,7 +817,7 @@
     "28": {
         "num": 28,
         "name": "Sandslash",
-        "category": "Mouse Pokémon",
+        "category": "Mouse",
         "fastMoves": [
                       "Metal Claw",
                       "Mud Shot"
@@ -847,7 +847,7 @@
     "29": {
         "num": 29,
         "name": "Nidoran♀",
-        "category": "Poison Pin Pokémon",
+        "category": "Poison Pin",
         "fastMoves": [
                       "Bite",
                       "Poison Sting"
@@ -877,7 +877,7 @@
     "30": {
         "num": 30,
         "name": "Nidorina",
-        "category": "Poison Pin Pokémon",
+        "category": "Poison Pin",
         "fastMoves": [
                       "Bite",
                       "Poison Sting"
@@ -907,7 +907,7 @@
     "31": {
         "num": 31,
         "name": "Nidoqueen",
-        "category": "Drill Pokémon",
+        "category": "Drill",
         "fastMoves": [
                       "Bite",
                       "Poison Jab"
@@ -938,7 +938,7 @@
     "32": {
         "num": 32,
         "name": "Nidoran♂",
-        "category": "Poison Pin Pokémon",
+        "category": "Poison Pin",
         "fastMoves": [
                       "Peck",
                       "Poison Sting"
@@ -968,7 +968,7 @@
     "33": {
         "num": 33,
         "name": "Nidorino",
-        "category": "Poison Pin Pokémon",
+        "category": "Poison Pin",
         "fastMoves": [
                       "Poison Jab",
                       "Poison Sting"
@@ -998,7 +998,7 @@
     "34": {
         "num": 34,
         "name": "Nidoking",
-        "category": "Drill Pokémon",
+        "category": "Drill",
         "fastMoves": [
                       "Iron Tail",
                       "Poison Jab"
@@ -1029,7 +1029,7 @@
     "35": {
         "num": 35,
         "name": "Clefairy",
-        "category": "Fairy Pokémon",
+        "category": "Fairy",
         "fastMoves": [
                       "Pound",
                       "Zen Headbutt"
@@ -1059,7 +1059,7 @@
     "36": {
         "num": 36,
         "name": "Clefable",
-        "category": "Fairy Pokémon",
+        "category": "Fairy",
         "fastMoves": [
                       "Charge Beam",
                       "Zen Headbutt"
@@ -1089,7 +1089,7 @@
     "37": {
         "num": 37,
         "name": "Vulpix",
-        "category": "Fox Pokémon",
+        "category": "Fox",
         "fastMoves": [
                       "Ember",
                       "Quick Attack"
@@ -1119,7 +1119,7 @@
     "38": {
         "num": 38,
         "name": "Ninetales",
-        "category": "Fox Pokémon",
+        "category": "Fox",
         "fastMoves": [
                       "Feint Attack",
                       "Fire Spin"
@@ -1149,7 +1149,7 @@
     "39": {
         "num": 39,
         "name": "Jigglypuff",
-        "category": "Balloon Pokémon",
+        "category": "Balloon",
         "fastMoves": [
                       "Feint Attack",
                       "Pound"
@@ -1180,7 +1180,7 @@
     "40": {
         "num": 40,
         "name": "Wigglytuff",
-        "category": "Balloon Pokémon",
+        "category": "Balloon",
         "fastMoves": [
                       "Feint Attack",
                       "Pound"
@@ -1211,7 +1211,7 @@
     "41": {
         "num": 41,
         "name": "Zubat",
-        "category": "Bat Pokémon",
+        "category": "Bat",
         "fastMoves": [
                       "Bite",
                       "Quick Attack"
@@ -1242,7 +1242,7 @@
     "42": {
         "num": 42,
         "name": "Golbat",
-        "category": "Bat Pokémon",
+        "category": "Bat",
         "fastMoves": [
                       "Bite",
                       "Wing Attack"
@@ -1273,7 +1273,7 @@
     "43": {
         "num": 43,
         "name": "Oddish",
-        "category": "Weed Pokémon",
+        "category": "Weed",
         "fastMoves": [
                       "Acid",
                       "Razor Leaf"
@@ -1304,7 +1304,7 @@
     "44": {
         "num": 44,
         "name": "Gloom",
-        "category": "Weed Pokémon",
+        "category": "Weed",
         "fastMoves": [
                       "Acid",
                       "Razor Leaf"
@@ -1335,7 +1335,7 @@
     "45": {
         "num": 45,
         "name": "Vileplume",
-        "category": "Flower Pokémon",
+        "category": "Flower",
         "fastMoves": [
                       "Acid",
                       "Razor Leaf"
@@ -1366,7 +1366,7 @@
     "46": {
         "num": 46,
         "name": "Paras",
-        "category": "Mushroom Pokémon",
+        "category": "Mushroom",
         "fastMoves": [
                       "Bug Bite",
                       "Scratch"
@@ -1397,7 +1397,7 @@
     "47": {
         "num": 47,
         "name": "Parasect",
-        "category": "Mushroom Pokémon",
+        "category": "Mushroom",
         "fastMoves": [
                       "Fury Cutter",
                       "Struggle Bug"
@@ -1428,7 +1428,7 @@
     "48": {
         "num": 48,
         "name": "Venonat",
-        "category": "Insect Pokémon",
+        "category": "Insect",
         "fastMoves": [
                       "Bug Bite",
                       "Confusion"
@@ -1459,7 +1459,7 @@
     "49": {
         "num": 49,
         "name": "Venomoth",
-        "category": "Poison Moth Pokémon",
+        "category": "Poison Moth",
         "fastMoves": [
                       "Confusion",
                       "Infestation"
@@ -1490,7 +1490,7 @@
     "50": {
         "num": 50,
         "name": "Diglett",
-        "category": "Mole Pokémon",
+        "category": "Mole",
         "fastMoves": [
                       "Mud Slap",
                       "Scratch"
@@ -1520,7 +1520,7 @@
     "51": {
         "num": 51,
         "name": "Dugtrio",
-        "category": "Mole Pokémon",
+        "category": "Mole",
         "fastMoves": [
                       "Mud Slap",
                       "Sucker Punch"
@@ -1550,7 +1550,7 @@
     "52": {
         "num": 52,
         "name": "Meowth",
-        "category": "Scratch Cat Pokémon",
+        "category": "Scratch Cat",
         "fastMoves": [
                       "Bite",
                       "Scratch"
@@ -1580,7 +1580,7 @@
     "53": {
         "num": 53,
         "name": "Persian",
-        "category": "Classy Cat Pokémon",
+        "category": "Classy Cat",
         "fastMoves": [
                       "Feint Attack",
                       "Scratch"
@@ -1610,7 +1610,7 @@
     "54": {
         "num": 54,
         "name": "Psyduck",
-        "category": "Duck Pokémon",
+        "category": "Duck",
         "fastMoves": [
                       "Water Gun",
                       "Zen Headbutt"
@@ -1640,7 +1640,7 @@
     "55": {
         "num": 55,
         "name": "Golduck",
-        "category": "Duck Pokémon",
+        "category": "Duck",
         "fastMoves": [
                       "Confusion",
                       "Water Gun"
@@ -1670,7 +1670,7 @@
     "56": {
         "num": 56,
         "name": "Mankey",
-        "category": "Pig Monkey Pokémon",
+        "category": "Pig Monkey",
         "fastMoves": [
                       "Karate Chop",
                       "Scratch"
@@ -1700,7 +1700,7 @@
     "57": {
         "num": 57,
         "name": "Primeape",
-        "category": "Pig Monkey Pokémon",
+        "category": "Pig Monkey",
         "fastMoves": [
                       "Counter",
                       "Low Kick"
@@ -1730,7 +1730,7 @@
     "58": {
         "num": 58,
         "name": "Growlithe",
-        "category": "Puppy Pokémon",
+        "category": "Puppy",
         "fastMoves": [
                       "Bite",
                       "Ember"
@@ -1760,7 +1760,7 @@
     "59": {
         "num": 59,
         "name": "Arcanine",
-        "category": "Legendary Pokémon",
+        "category": "Legendary",
         "fastMoves": [
                       "Fire Fang",
                       "Snarl"
@@ -1790,7 +1790,7 @@
     "60": {
         "num": 60,
         "name": "Poliwag",
-        "category": "Tadpole Pokémon",
+        "category": "Tadpole",
         "fastMoves": [
                       "Bubble",
                       "Mud Shot"
@@ -1820,7 +1820,7 @@
     "61": {
         "num": 61,
         "name": "Poliwhirl",
-        "category": "Tadpole Pokémon",
+        "category": "Tadpole",
         "fastMoves": [
                       "Bubble",
                       "Mud Shot"
@@ -1850,7 +1850,7 @@
     "62": {
         "num": 62,
         "name": "Poliwrath",
-        "category": "Tadpole Pokémon",
+        "category": "Tadpole",
         "fastMoves": [
                       "Bubble",
                       "Rock Smash"
@@ -1881,7 +1881,7 @@
     "63": {
         "num": 63,
         "name": "Abra",
-        "category": "Psi Pokémon",
+        "category": "Psi",
         "fastMoves": [
                       "Zen Headbutt"
                       ],
@@ -1910,7 +1910,7 @@
     "64": {
         "num": 64,
         "name": "Kadabra",
-        "category": "Psi Pokémon",
+        "category": "Psi",
         "fastMoves": [
                       "Confusion",
                       "Psycho Cut"
@@ -1940,7 +1940,7 @@
     "65": {
         "num": 65,
         "name": "Alakazam",
-        "category": "Psi Pokémon",
+        "category": "Psi",
         "fastMoves": [
                       "Confusion",
                       "Psycho Cut"
@@ -1970,7 +1970,7 @@
     "66": {
         "num": 66,
         "name": "Machop",
-        "category": "Superpower Pokémon",
+        "category": "Superpower",
         "fastMoves": [
                       "Karate Chop",
                       "Rock Smash"
@@ -2000,7 +2000,7 @@
     "67": {
         "num": 67,
         "name": "Machoke",
-        "category": "Superpower Pokémon",
+        "category": "Superpower",
         "fastMoves": [
                       "Karate Chop",
                       "Low Kick"
@@ -2030,7 +2030,7 @@
     "68": {
         "num": 68,
         "name": "Machamp",
-        "category": "Superpower Pokémon",
+        "category": "Superpower",
         "fastMoves": [
                       "Bullet Punch",
                       "Counter"
@@ -2060,7 +2060,7 @@
     "69": {
         "num": 69,
         "name": "Bellsprout",
-        "category": "Flower Pokémon",
+        "category": "Flower",
         "fastMoves": [
                       "Acid",
                       "Vine Whip"
@@ -2091,7 +2091,7 @@
     "70": {
         "num": 70,
         "name": "Weepinbell",
-        "category": "Flycatcher Pokémon",
+        "category": "Flycatcher",
         "fastMoves": [
                       "Acid",
                       "Bullet Seed"
@@ -2122,7 +2122,7 @@
     "71": {
         "num": 71,
         "name": "Victreebel",
-        "category": "Flycatcher Pokémon",
+        "category": "Flycatcher",
         "fastMoves": [
                       "Acid",
                       "Razor Leaf"
@@ -2153,7 +2153,7 @@
     "72": {
         "num": 72,
         "name": "Tentacool",
-        "category": "Jellyfish Pokémon",
+        "category": "Jellyfish",
         "fastMoves": [
                       "Bubble",
                       "Poison Sting"
@@ -2184,7 +2184,7 @@
     "73": {
         "num": 73,
         "name": "Tentacruel",
-        "category": "Jellyfish Pokémon",
+        "category": "Jellyfish",
         "fastMoves": [
                       "Acid",
                       "Poison Jab"
@@ -2215,7 +2215,7 @@
     "74": {
         "num": 74,
         "name": "Geodude",
-        "category": "Rock Pokémon",
+        "category": "Rock",
         "fastMoves": [
                       "Rock Throw",
                       "Tackle"
@@ -2246,7 +2246,7 @@
     "75": {
         "num": 75,
         "name": "Graveler",
-        "category": "Rock Pokémon",
+        "category": "Rock",
         "fastMoves": [
                       "Mud Slap",
                       "Rock Throw"
@@ -2277,7 +2277,7 @@
     "76": {
         "num": 76,
         "name": "Golem",
-        "category": "Megaton Pokémon",
+        "category": "Megaton",
         "fastMoves": [
                       "Mud Slap",
                       "Rock Throw"
@@ -2308,7 +2308,7 @@
     "77": {
         "num": 77,
         "name": "Ponyta",
-        "category": "Fire Horse Pokémon",
+        "category": "Fire Horse",
         "fastMoves": [
                       "Ember",
                       "Tackle"
@@ -2338,7 +2338,7 @@
     "78": {
         "num": 78,
         "name": "Rapidash",
-        "category": "Fire Horse Pokémon",
+        "category": "Fire Horse",
         "fastMoves": [
                       "Fire Spin",
                       "Low Kick"
@@ -2368,7 +2368,7 @@
     "79": {
         "num": 79,
         "name": "Slowpoke",
-        "category": "Dopey Pokémon",
+        "category": "Dopey",
         "fastMoves": [
                       "Confusion",
                       "Water Gun"
@@ -2399,7 +2399,7 @@
     "80": {
         "num": 80,
         "name": "Slowbro",
-        "category": "Hermit Crab Pokémon",
+        "category": "Hermit Crab",
         "fastMoves": [
                       "Confusion",
                       "Water Gun"
@@ -2430,7 +2430,7 @@
     "81": {
         "num": 81,
         "name": "Magnemite",
-        "category": "Magnet Pokémon",
+        "category": "Magnet",
         "fastMoves": [
                       "Spark",
                       "Thunder Shock"
@@ -2461,7 +2461,7 @@
     "82": {
         "num": 82,
         "name": "Magneton",
-        "category": "Magnet Pokémon",
+        "category": "Magnet",
         "fastMoves": [
                       "Spark",
                       "Charge Beam"
@@ -2492,7 +2492,7 @@
     "83": {
         "num": 83,
         "name": "Farfetch'd",
-        "category": "Wild Duck Pokémon",
+        "category": "Wild Duck",
         "fastMoves": [
                       "Air Slash",
                       "Fury Cutter"
@@ -2523,7 +2523,7 @@
     "84": {
         "num": 84,
         "name": "Doduo",
-        "category": "Twin Bird Pokémon",
+        "category": "Twin Bird",
         "fastMoves": [
                       "Peck",
                       "Quick Attack"
@@ -2554,7 +2554,7 @@
     "85": {
         "num": 85,
         "name": "Dodrio",
-        "category": "Triple Bird Pokémon",
+        "category": "Triple Bird",
         "fastMoves": [
                       "Feint Attack",
                       "Steel Wing"
@@ -2585,7 +2585,7 @@
     "86": {
         "num": 86,
         "name": "Seel",
-        "category": "Sea Lion Pokémon",
+        "category": "Sea Lion",
         "fastMoves": [
                       "Ice Shard",
                       "Lick"
@@ -2615,7 +2615,7 @@
     "87": {
         "num": 87,
         "name": "Dewgong",
-        "category": "Sea Lion Pokémon",
+        "category": "Sea Lion",
         "fastMoves": [
                       "Frost Breath",
                       "Iron Tail"
@@ -2646,7 +2646,7 @@
     "88": {
         "num": 88,
         "name": "Grimer",
-        "category": "Sludge Pokémon",
+        "category": "Sludge",
         "fastMoves": [
                       "Mud Slap",
                       "Poison Jab"
@@ -2676,7 +2676,7 @@
     "89": {
         "num": 89,
         "name": "Muk",
-        "category": "Sludge Pokémon",
+        "category": "Sludge",
         "fastMoves": [
                       "Infestation",
                       "Poison Jab"
@@ -2706,7 +2706,7 @@
     "90": {
         "num": 90,
         "name": "Shellder",
-        "category": "Bivalve Pokémon",
+        "category": "Bivalve",
         "fastMoves": [
                       "Ice Shard",
                       "Tackle"
@@ -2736,7 +2736,7 @@
     "91": {
         "num": 91,
         "name": "Cloyster",
-        "category": "Bivalve Pokémon",
+        "category": "Bivalve",
         "fastMoves": [
                       "Frost Breath",
                       "Ice Shard"
@@ -2767,7 +2767,7 @@
     "92": {
         "num": 92,
         "name": "Gastly",
-        "category": "Gas Pokémon",
+        "category": "Gas",
         "fastMoves": [
                       "Astonish",
                       "Lick"
@@ -2798,7 +2798,7 @@
     "93": {
         "num": 93,
         "name": "Haunter",
-        "category": "Gas Pokémon",
+        "category": "Gas",
         "fastMoves": [
                       "Astonish",
                       "Shadow Claw"
@@ -2829,7 +2829,7 @@
     "94": {
         "num": 94,
         "name": "Gengar",
-        "category": "Shadow Pokémon",
+        "category": "Shadow",
         "fastMoves": [
                       "Hex",
                       "Sucker Punch"
@@ -2860,7 +2860,7 @@
     "95": {
         "num": 95,
         "name": "Onix",
-        "category": "Rock Snake Pokémon",
+        "category": "Rock Snake",
         "fastMoves": [
                       "Rock Throw",
                       "Tackle"
@@ -2891,7 +2891,7 @@
     "96": {
         "num": 96,
         "name": "Drowzee",
-        "category": "Hypnosis Pokémon",
+        "category": "Hypnosis",
         "fastMoves": [
                       "Confusion",
                       "Pound"
@@ -2921,7 +2921,7 @@
     "97": {
         "num": 97,
         "name": "Hypno",
-        "category": "Hypnosis Pokémon",
+        "category": "Hypnosis",
         "fastMoves": [
                       "Confusion",
                       "Zen Headbutt"
@@ -2951,7 +2951,7 @@
     "98": {
         "num": 98,
         "name": "Krabby",
-        "category": "River Crab Pokémon",
+        "category": "River Crab",
         "fastMoves": [
                       "Bubble",
                       "Mud Shot"
@@ -2981,7 +2981,7 @@
     "99": {
         "num": 99,
         "name": "Kingler",
-        "category": "Pincer Pokémon",
+        "category": "Pincer",
         "fastMoves": [
                       "Bubble",
                       "Metal Claw"
@@ -3011,7 +3011,7 @@
     "100": {
         "num": 100,
         "name": "Voltorb",
-        "category": "Ball Pokémon",
+        "category": "Ball",
         "fastMoves": [
                       "Spark",
                       "Tackle"
@@ -3041,7 +3041,7 @@
     "101": {
         "num": 101,
         "name": "Electrode",
-        "category": "Ball Pokémon",
+        "category": "Ball",
         "fastMoves": [
                       "Spark",
                       "Volt Switch"
@@ -3071,7 +3071,7 @@
     "102": {
         "num": 102,
         "name": "Exeggcute",
-        "category": "Egg Pokémon",
+        "category": "Egg",
         "fastMoves": [
                       "Confusion"
                       ],
@@ -3101,7 +3101,7 @@
     "103": {
         "num": 103,
         "name": "Exeggutor",
-        "category": "Coconut Pokémon",
+        "category": "Coconut",
         "fastMoves": [
                       "Bullet Seed",
                       "Extrasensory"
@@ -3132,7 +3132,7 @@
     "104": {
         "num": 104,
         "name": "Cubone",
-        "category": "Lonely Pokémon",
+        "category": "Lonely",
         "fastMoves": [
                       "Mud Slap",
                       "Rock Smash"
@@ -3162,7 +3162,7 @@
     "105": {
         "num": 105,
         "name": "Marowak",
-        "category": "Bone Keeper Pokémon",
+        "category": "Bone Keeper",
         "fastMoves": [
                       "Mud Slap",
                       "Rock Smash"
@@ -3192,7 +3192,7 @@
     "106": {
         "num": 106,
         "name": "Hitmonlee",
-        "category": "Kicking Pokémon",
+        "category": "Kicking",
         "fastMoves": [
                       "Low Kick",
                       "Rock Smash"
@@ -3222,7 +3222,7 @@
     "107": {
         "num": 107,
         "name": "Hitmonchan",
-        "category": "Punching Pokémon",
+        "category": "Punching",
         "fastMoves": [
                       "Bullet Punch",
                       "Counter"
@@ -3252,7 +3252,7 @@
     "108": {
         "num": 108,
         "name": "Lickitung",
-        "category": "Licking Pokémon",
+        "category": "Licking",
         "fastMoves": [
                       "Lick",
                       "Zen Headbutt"
@@ -3282,7 +3282,7 @@
     "109": {
         "num": 109,
         "name": "Koffing",
-        "category": "Poison Gas Pokémon",
+        "category": "Poison Gas",
         "fastMoves": [
                       "Infestation",
                       "Tackle"
@@ -3312,7 +3312,7 @@
     "110": {
         "num": 110,
         "name": "Weezing",
-        "category": "Poison Gas Pokémon",
+        "category": "Poison Gas",
         "fastMoves": [
                       "Infestation",
                       "Tackle"
@@ -3342,7 +3342,7 @@
     "111": {
         "num": 111,
         "name": "Rhyhorn",
-        "category": "Spikes Pokémon",
+        "category": "Spikes",
         "fastMoves": [
                       "Mud Slap",
                       "Rock Smash"
@@ -3373,7 +3373,7 @@
     "112": {
         "num": 112,
         "name": "Rhydon",
-        "category": "Drill Pokémon",
+        "category": "Drill",
         "fastMoves": [
                       "Mud Slap",
                       "Rock Smash"
@@ -3404,7 +3404,7 @@
     "113": {
         "num": 113,
         "name": "Chansey",
-        "category": "Egg Pokémon",
+        "category": "Egg",
         "fastMoves": [
                       "Pound",
                       "Zen Headbutt"
@@ -3434,7 +3434,7 @@
     "114": {
         "num": 114,
         "name": "Tangela",
-        "category": "Vine Pokémon",
+        "category": "Vine",
         "fastMoves": [
                       "Infestation",
                       "Vine Whip"
@@ -3464,7 +3464,7 @@
     "115": {
         "num": 115,
         "name": "Kangaskhan",
-        "category": "Parent Pokémon",
+        "category": "Parent",
         "fastMoves": [
                       "Low Kick",
                       "Mud Slap"
@@ -3494,7 +3494,7 @@
     "116": {
         "num": 116,
         "name": "Horsea",
-        "category": "Dragon Pokémon",
+        "category": "Dragon",
         "fastMoves": [
                       "Bubble",
                       "Water Gun"
@@ -3524,7 +3524,7 @@
     "117": {
         "num": 117,
         "name": "Seadra",
-        "category": "Dragon Pokémon",
+        "category": "Dragon",
         "fastMoves": [
                       "Dragon Breath",
                       "Water Gun"
@@ -3554,7 +3554,7 @@
     "118": {
         "num": 118,
         "name": "Goldeen",
-        "category": "Goldfish Pokémon",
+        "category": "Goldfish",
         "fastMoves": [
                       "Mud Shot",
                       "Peck"
@@ -3584,7 +3584,7 @@
     "119": {
         "num": 119,
         "name": "Seaking",
-        "category": "Goldfish Pokémon",
+        "category": "Goldfish",
         "fastMoves": [
                       "Peck",
                       "Poison Jab"
@@ -3614,7 +3614,7 @@
     "120": {
         "num": 120,
         "name": "Staryu",
-        "category": "Star Shape Pokémon",
+        "category": "Star Shape",
         "fastMoves": [
                       "Tackle",
                       "Water Gun"
@@ -3644,7 +3644,7 @@
     "121": {
         "num": 121,
         "name": "Starmie",
-        "category": "Mysterious Pokémon",
+        "category": "Mysterious",
         "fastMoves": [
                       "Hidden Power",
                       "Water Gun"
@@ -3675,7 +3675,7 @@
     "122": {
         "num": 122,
         "name": "Mr. Mime",
-        "category": "Barrier Pokémon",
+        "category": "Barrier",
         "fastMoves": [
                       "Confusion",
                       "Zen Headbutt"
@@ -3706,7 +3706,7 @@
     "123": {
         "num": 123,
         "name": "Scyther",
-        "category": "Mantis Pokémon",
+        "category": "Mantis",
         "fastMoves": [
                       "Air Slash",
                       "Fury Cutter"
@@ -3737,7 +3737,7 @@
     "124": {
         "num": 124,
         "name": "Jynx",
-        "category": "Human Shape Pokémon",
+        "category": "Human Shape",
         "fastMoves": [
                       "Confusion",
                       "Frost Breath"
@@ -3768,7 +3768,7 @@
     "125": {
         "num": 125,
         "name": "Electabuzz",
-        "category": "Electric Pokémon",
+        "category": "Electric",
         "fastMoves": [
                       "Low Kick",
                       "Thunder Shock"
@@ -3798,7 +3798,7 @@
     "126": {
         "num": 126,
         "name": "Magmar",
-        "category": "Spitfire Pokémon",
+        "category": "Spitfire",
         "fastMoves": [
                       "Ember",
                       "Karate Chop"
@@ -3828,7 +3828,7 @@
     "127": {
         "num": 127,
         "name": "Pinsir",
-        "category": "Stag Beetle Pokémon",
+        "category": "Stag Beetle",
         "fastMoves": [
                       "Bug Bite",
                       "Rock Smash"
@@ -3858,7 +3858,7 @@
     "128": {
         "num": 128,
         "name": "Tauros",
-        "category": "Wild Bull Pokémon",
+        "category": "Wild Bull",
         "fastMoves": [
                       "Tackle",
                       "Zen Headbutt"
@@ -3888,7 +3888,7 @@
     "129": {
         "num": 129,
         "name": "Magikarp",
-        "category": "Fish Pokémon",
+        "category": "Fish",
         "fastMoves": [
                       "Splash"
                       ],
@@ -3915,7 +3915,7 @@
     "130": {
         "num": 130,
         "name": "Gyarados",
-        "category": "Atrocious Pokémon",
+        "category": "Atrocious",
         "fastMoves": [
                       "Bite",
                       "Dragon Tail"
@@ -3946,7 +3946,7 @@
     "131": {
         "num": 131,
         "name": "Lapras",
-        "category": "Transport Pokémon",
+        "category": "Transport",
         "fastMoves": [
                       "Frost Breath",
                       "Water Gun"
@@ -3977,7 +3977,7 @@
     "132": {
         "num": 132,
         "name": "Ditto",
-        "category": "Transform Pokémon",
+        "category": "Transform",
         "fastMoves": [
                       "Transform"
                       ],
@@ -4004,7 +4004,7 @@
     "133": {
         "num": 133,
         "name": "Eevee",
-        "category": "Evolution Pokémon",
+        "category": "Evolution",
         "fastMoves": [
                       "Quick Attack",
                       "Tackle"
@@ -4033,7 +4033,7 @@
     "134": {
         "num": 134,
         "name": "Vaporeon",
-        "category": "Bubble Jet Pokémon",
+        "category": "Bubble Jet",
         "fastMoves": [
                       "Water Gun"
                       ],
@@ -4062,7 +4062,7 @@
     "135": {
         "num": 135,
         "name": "Jolteon",
-        "category": "Lightning Pokémon",
+        "category": "Lightning",
         "fastMoves": [
                       "Thunder Shock",
                       "Volt Switch"
@@ -4092,7 +4092,7 @@
     "136": {
         "num": 136,
         "name": "Flareon",
-        "category": "Flame Pokémon",
+        "category": "Flame",
         "fastMoves": [
                       "Ember",
                       "Fire Spin"
@@ -4122,7 +4122,7 @@
     "137": {
         "num": 137,
         "name": "Porygon",
-        "category": "Virtual Pokémon",
+        "category": "Virtual",
         "fastMoves": [
                       "Charge Beam",
                       "Hidden Power"
@@ -4152,7 +4152,7 @@
     "138": {
         "num": 138,
         "name": "Omanyte",
-        "category": "Spiral Pokémon",
+        "category": "Spiral",
         "fastMoves": [
                       "Mud Shot",
                       "Water Gun"
@@ -4183,7 +4183,7 @@
     "139": {
         "num": 139,
         "name": "Omastar",
-        "category": "Spiral Pokémon",
+        "category": "Spiral",
         "fastMoves": [
                       "Mud Shot",
                       "Water Gun"
@@ -4214,7 +4214,7 @@
     "140": {
         "num": 140,
         "name": "Kabuto",
-        "category": "Shellfish Pokémon",
+        "category": "Shellfish",
         "fastMoves": [
                       "Mud Shot",
                       "Scratch"
@@ -4245,7 +4245,7 @@
     "141": {
         "num": 141,
         "name": "Kabutops",
-        "category": "Shellfish Pokémon",
+        "category": "Shellfish",
         "fastMoves": [
                       "Mud Shot",
                       "Rock Smash"
@@ -4276,7 +4276,7 @@
     "142": {
         "num": 142,
         "name": "Aerodactyl",
-        "category": "Fossil Pokémon",
+        "category": "Fossil",
         "fastMoves": [
                       "Bite",
                       "Steel Wing"
@@ -4307,7 +4307,7 @@
     "143": {
         "num": 143,
         "name": "Snorlax",
-        "category": "Sleeping Pokémon",
+        "category": "Sleeping",
         "fastMoves": [
                       "Lick",
                       "Zen Headbutt"
@@ -4337,7 +4337,7 @@
     "144": {
         "num": 144,
         "name": "Articuno",
-        "category": "Freeze Pokémon",
+        "category": "Freeze",
         "fastMoves": [
                       "Frost Breath"
                       ],
@@ -4367,7 +4367,7 @@
     "145": {
         "num": 145,
         "name": "Zapdos",
-        "category": "Electric Pokémon",
+        "category": "Electric",
         "fastMoves": [
                       "Charge Beam"
                       ],
@@ -4397,7 +4397,7 @@
     "146": {
         "num": 146,
         "name": "Moltres",
-        "category": "Flame Pokémon",
+        "category": "Flame",
         "fastMoves": [
                       "Fire Spin"
                       ],
@@ -4427,7 +4427,7 @@
     "147": {
         "num": 147,
         "name": "Dratini",
-        "category": "Dragon Pokémon",
+        "category": "Dragon",
         "fastMoves": [
                       "Bite",
                       "Dragon Breath"
@@ -4457,7 +4457,7 @@
     "148": {
         "num": 148,
         "name": "Dragonair",
-        "category": "Dragon Pokémon",
+        "category": "Dragon",
         "fastMoves": [
                       "Dragon Breath"
                       ],
@@ -4486,7 +4486,7 @@
     "149": {
         "num": 149,
         "name": "Dragonite",
-        "category": "Dragon Pokémon",
+        "category": "Dragon",
         "fastMoves": [
                       "Dragon Tail",
                       "Steel Wing"
@@ -4517,7 +4517,7 @@
     "150": {
         "num": 150,
         "name": "Mewtwo",
-        "category": "Genetic Pokémon",
+        "category": "Genetic",
         "fastMoves": [
                       "Psycho Cut",
                       "Confusion"
@@ -4547,7 +4547,7 @@
     "151": {
         "num": 151,
         "name": "Mew",
-        "category": "New Species Pokémon",
+        "category": "New Species",
         "fastMoves": [
                       "Pound"
                       ],
@@ -4576,7 +4576,7 @@
     "152": {
         "num": 152,
         "name": "Chikorita",
-        "category": "Leaf Pokémon",
+        "category": "Leaf",
         "fastMoves": [
                       "Tackle",
                       "Vine Whip"
@@ -4606,7 +4606,7 @@
     "153": {
         "num": 153,
         "name": "Bayleef",
-        "category": "Leaf Pokémon",
+        "category": "Leaf",
         "fastMoves": [
                       "Razor Leaf",
                       "Tackle"
@@ -4636,7 +4636,7 @@
     "154": {
         "num": 154,
         "name": "Meganium",
-        "category": "Herb Pokémon",
+        "category": "Herb",
         "fastMoves": [
                       "Razor Leaf",
                       "Vine Whip"
@@ -4666,7 +4666,7 @@
     "155": {
         "num": 155,
         "name": "Cyndaquil",
-        "category": "Fire Mouse Pokémon",
+        "category": "Fire Mouse",
         "fastMoves": [
                       "Ember",
                       "Tackle"
@@ -4696,7 +4696,7 @@
     "156": {
         "num": 156,
         "name": "Quilava",
-        "category": "Volcano Pokémon",
+        "category": "Volcano",
         "fastMoves": [
                       "Ember",
                       "Tackle"
@@ -4726,7 +4726,7 @@
     "157": {
         "num": 157,
         "name": "Typhlosion",
-        "category": "Volcano Pokémon",
+        "category": "Volcano",
         "fastMoves": [
                       "Ember",
                       "Shadow Claw"
@@ -4756,7 +4756,7 @@
     "158": {
         "num": 158,
         "name": "Totodile",
-        "category": "Big Jaw Pokémon",
+        "category": "Big Jaw",
         "fastMoves": [
                       "Scratch",
                       "Water Gun"
@@ -4786,7 +4786,7 @@
     "159": {
         "num": 159,
         "name": "Croconaw",
-        "category": "Big Jaw Pokémon",
+        "category": "Big Jaw",
         "fastMoves": [
                       "Scratch",
                       "Water Gun"
@@ -4816,7 +4816,7 @@
     "160": {
         "num": 160,
         "name": "Feraligatr",
-        "category": "Big Jaw Pokémon",
+        "category": "Big Jaw",
         "fastMoves": [
                       "Bite",
                       "Water Gun"
@@ -4846,7 +4846,7 @@
     "161": {
         "num": 161,
         "name": "Sentret",
-        "category": "Scout Pokémon",
+        "category": "Scout",
         "fastMoves": [
                       "Quick Attack",
                       "Scratch"
@@ -4876,7 +4876,7 @@
     "162": {
         "num": 162,
         "name": "Furret",
-        "category": "Long Body Pokémon",
+        "category": "Long Body",
         "fastMoves": [
                       "Quick Attack",
                       "Sucker Punch"
@@ -4906,7 +4906,7 @@
     "163": {
         "num": 163,
         "name": "Hoothoot",
-        "category": "Owl Pokémon",
+        "category": "Owl",
         "fastMoves": [
                       "Feint Attack",
                       "Peck"
@@ -4937,7 +4937,7 @@
     "164": {
         "num": 164,
         "name": "Noctowl",
-        "category": "Owl Pokémon",
+        "category": "Owl",
         "fastMoves": [
                       "Extrasensory",
                       "Wing Attack"
@@ -4968,7 +4968,7 @@
     "165": {
         "num": 165,
         "name": "Ledyba",
-        "category": "Five Star Pokémon",
+        "category": "Five Star",
         "fastMoves": [
                       "Bug Bite",
                       "Tackle"
@@ -4999,7 +4999,7 @@
     "166": {
         "num": 166,
         "name": "Ledian",
-        "category": "Five Star Pokémon",
+        "category": "Five Star",
         "fastMoves": [
                       "Bug Bite",
                       "Struggle Bug"
@@ -5030,7 +5030,7 @@
     "167": {
         "num": 167,
         "name": "Spinarak",
-        "category": "String Spit Pokémon",
+        "category": "String Spit",
         "fastMoves": [
                       "Bug Bite",
                       "Poison Sting"
@@ -5061,7 +5061,7 @@
     "168": {
         "num": 168,
         "name": "Ariados",
-        "category": "Long Leg Pokémon",
+        "category": "Long Leg",
         "fastMoves": [
                       "Infestation",
                       "Poison Sting"
@@ -5092,7 +5092,7 @@
     "169": {
         "num": 169,
         "name": "Crobat",
-        "category": "Bat Pokémon",
+        "category": "Bat",
         "fastMoves": [
                       "Air Slash",
                       "Bite"
@@ -5123,7 +5123,7 @@
     "170": {
         "num": 170,
         "name": "Chinchou",
-        "category": "Angler Pokémon",
+        "category": "Angler",
         "fastMoves": [
                       "Bubble",
                       "Spark"
@@ -5154,7 +5154,7 @@
     "171": {
         "num": 171,
         "name": "Lanturn",
-        "category": "Light Pokémon",
+        "category": "Light",
         "fastMoves": [
                       "Charge Beam",
                       "Water Gun"
@@ -5185,7 +5185,7 @@
     "172": {
         "num": 172,
         "name": "Pichu",
-        "category": "Tiny Mouse Pokémon",
+        "category": "Tiny Mouse",
         "fastMoves": [
                       "Thunder Shock"
                       ],
@@ -5214,7 +5214,7 @@
     "173": {
         "num": 173,
         "name": "Cleffa",
-        "category": "Star Shape Pokémon",
+        "category": "Star Shape",
         "fastMoves": [
                       "Pound",
                       "Zen Headbutt"
@@ -5244,7 +5244,7 @@
     "174": {
         "num": 174,
         "name": "Igglybuff",
-        "category": "Balloon Pokémon",
+        "category": "Balloon",
         "fastMoves": [
                       "Feint Attack",
                       "Pound"
@@ -5275,7 +5275,7 @@
     "175": {
         "num": 175,
         "name": "Togepi",
-        "category": "Spike Ball Pokémon",
+        "category": "Spike Ball",
         "fastMoves": [
                       "Hidden Power",
                       "Peck"
@@ -5305,7 +5305,7 @@
     "176": {
         "num": 176,
         "name": "Togetic",
-        "category": "Happiness Pokémon",
+        "category": "Happiness",
         "fastMoves": [
                       "Extrasensory",
                       "Hidden Power"
@@ -5336,7 +5336,7 @@
     "177": {
         "num": 177,
         "name": "Natu",
-        "category": "Tiny Bird Pokémon",
+        "category": "Tiny Bird",
         "fastMoves": [
                       "Peck",
                       "Quick Attack"
@@ -5367,7 +5367,7 @@
     "178": {
         "num": 178,
         "name": "Xatu",
-        "category": "Mystic Pokémon",
+        "category": "Mystic",
         "fastMoves": [
                       "Air Slash",
                       "Feint Attack"
@@ -5398,7 +5398,7 @@
     "179": {
         "num": 179,
         "name": "Mareep",
-        "category": "Wool Pokémon",
+        "category": "Wool",
         "fastMoves": [
                       "Tackle",
                       "Thunder Shock"
@@ -5428,7 +5428,7 @@
     "180": {
         "num": 180,
         "name": "Flaaffy",
-        "category": "Wool Pokémon",
+        "category": "Wool",
         "fastMoves": [
                       "Charge Beam",
                       "Tackle"
@@ -5458,7 +5458,7 @@
     "181": {
         "num": 181,
         "name": "Ampharos",
-        "category": "Light Pokémon",
+        "category": "Light",
         "fastMoves": [
                       "Charge Beam",
                       "Volt Switch"
@@ -5488,7 +5488,7 @@
     "182": {
         "num": 182,
         "name": "Bellossom",
-        "category": "Flower Pokémon",
+        "category": "Flower",
         "fastMoves": [
                       "Acid",
                       "Razor Leaf"
@@ -5518,7 +5518,7 @@
     "183": {
         "num": 183,
         "name": "Marill",
-        "category": "Aqua Mouse Pokémon",
+        "category": "Aqua Mouse",
         "fastMoves": [
                       "Bubble",
                       "Tackle"
@@ -5549,7 +5549,7 @@
     "184": {
         "num": 184,
         "name": "Azumarill",
-        "category": "Aqua Rabbit Pokémon",
+        "category": "Aqua Rabbit",
         "fastMoves": [
                       "Bubble",
                       "Rock Smash"
@@ -5580,7 +5580,7 @@
     "185": {
         "num": 185,
         "name": "Sudowoodo",
-        "category": "Imitation Pokémon",
+        "category": "Imitation",
         "fastMoves": [
                       "Counter",
                       "Rock Throw"
@@ -5610,7 +5610,7 @@
     "186": {
         "num": 186,
         "name": "Politoed",
-        "category": "Frog Pokémon",
+        "category": "Frog",
         "fastMoves": [
                       "Bubble",
                       "Mud Shot"
@@ -5640,7 +5640,7 @@
     "187": {
         "num": 187,
         "name": "Hoppip",
-        "category": "Cottonweed Pokémon",
+        "category": "Cottonweed",
         "fastMoves": [
                       "Bullet Seed",
                       "Tackle"
@@ -5671,7 +5671,7 @@
     "188": {
         "num": 188,
         "name": "Skiploom",
-        "category": "Cottonweed Pokémon",
+        "category": "Cottonweed",
         "fastMoves": [
                       "Bullet Seed",
                       "Tackle"
@@ -5702,7 +5702,7 @@
     "189": {
         "num": 189,
         "name": "Jumpluff",
-        "category": "Cottonweed Pokémon",
+        "category": "Cottonweed",
         "fastMoves": [
                       "Bullet Seed",
                       "Infestation"
@@ -5733,7 +5733,7 @@
     "190": {
         "num": 190,
         "name": "Aipom",
-        "category": "Long Tail Pokémon",
+        "category": "Long Tail",
         "fastMoves": [
                       "Astonish",
                       "Scratch"
@@ -5763,7 +5763,7 @@
     "191": {
         "num": 191,
         "name": "Sunkern",
-        "category": "Seed Pokémon",
+        "category": "Seed",
         "fastMoves": [
                       "Cut",
                       "Razor Leaf"
@@ -5793,7 +5793,7 @@
     "192": {
         "num": 192,
         "name": "Sunflora",
-        "category": "Sun Pokémon",
+        "category": "Sun",
         "fastMoves": [
                       "Bullet Seed",
                       "Razor Leaf"
@@ -5823,7 +5823,7 @@
     "193": {
         "num": 193,
         "name": "Yanma",
-        "category": "Clear Wing Pokémon",
+        "category": "Clear Wing",
         "fastMoves": [
                       "Quick Attack",
                       "Wing Attack"
@@ -5854,7 +5854,7 @@
     "194": {
         "num": 194,
         "name": "Wooper",
-        "category": "Water Fish Pokémon",
+        "category": "Water Fish",
         "fastMoves": [
                       "Mud Shot",
                       "Water Gun"
@@ -5885,7 +5885,7 @@
     "195": {
         "num": 195,
         "name": "Quagsire",
-        "category": "Water Fish Pokémon",
+        "category": "Water Fish",
         "fastMoves": [
                       "Mud Shot",
                       "Water Gun"
@@ -5916,7 +5916,7 @@
     "196": {
         "num": 196,
         "name": "Espeon",
-        "category": "Sun Pokémon",
+        "category": "Sun",
         "fastMoves": [
                       "Confusion",
                       "Zen Headbutt"
@@ -5946,7 +5946,7 @@
     "197": {
         "num": 197,
         "name": "Umbreon",
-        "category": "Moonlight Pokémon",
+        "category": "Moonlight",
         "fastMoves": [
                       "Feint Attack",
                       "Snarl"
@@ -5975,7 +5975,7 @@
     "198": {
         "num": 198,
         "name": "Murkrow",
-        "category": "Darkness Pokémon",
+        "category": "Darkness",
         "fastMoves": [
                       "Feint Attack",
                       "Peck"
@@ -6006,7 +6006,7 @@
     "199": {
         "num": 199,
         "name": "Slowking",
-        "category": "Royal Pokémon",
+        "category": "Royal",
         "fastMoves": [
                       "Confusion",
                       "Water Gun"
@@ -6037,7 +6037,7 @@
     "200": {
         "num": 200,
         "name": "Misdreavus",
-        "category": "Screech Pokémon",
+        "category": "Screech",
         "fastMoves": [
                       "Astonish",
                       "Hex"
@@ -6066,7 +6066,7 @@
     "201": {
         "num": 201,
         "name": "Unown",
-        "category": "Symbol Pokémon",
+        "category": "Symbol",
         "fastMoves": [
                       "Hidden Power"
                       ],
@@ -6093,7 +6093,7 @@
     "202": {
         "num": 202,
         "name": "Wobbuffet",
-        "category": "Patient Pokémon",
+        "category": "Patient",
         "fastMoves": [
                       "Counter",
                       "Splash"
@@ -6121,7 +6121,7 @@
     "203": {
         "num": 203,
         "name": "Girafarig",
-        "category": "Long Neck Pokémon",
+        "category": "Long Neck",
         "fastMoves": [
                       "Confusion",
                       "Tackle"
@@ -6152,7 +6152,7 @@
     "204": {
         "num": 204,
         "name": "Pineco",
-        "category": "Bagworm Pokémon",
+        "category": "Bagworm",
         "fastMoves": [
                       "Bug Bite",
                       "Tackle"
@@ -6182,7 +6182,7 @@
     "205": {
         "num": 205,
         "name": "Forretress",
-        "category": "Bagworm Pokémon",
+        "category": "Bagworm",
         "fastMoves": [
                       "Bug Bite",
                       "Struggle Bug"
@@ -6213,7 +6213,7 @@
     "206": {
         "num": 206,
         "name": "Dunsparce",
-        "category": "Land Snake Pokémon",
+        "category": "Land Snake",
         "fastMoves": [
                       "Astonish",
                       "Bite"
@@ -6243,7 +6243,7 @@
     "207": {
         "num": 207,
         "name": "Gligar",
-        "category": "Fly Scorpion Pokémon",
+        "category": "Fly Scorpion",
         "fastMoves": [
                       "Fury Cutter",
                       "Wing Attack"
@@ -6274,7 +6274,7 @@
     "208": {
         "num": 208,
         "name": "Steelix",
-        "category": "Iron Snake Pokémon",
+        "category": "Iron Snake",
         "fastMoves": [
                       "Dragon Tail",
                       "Iron Tail"
@@ -6305,7 +6305,7 @@
     "209": {
         "num": 209,
         "name": "Snubbull",
-        "category": "Fairy Pokémon",
+        "category": "Fairy",
         "fastMoves": [
                       "Bite",
                       "Tackle"
@@ -6335,7 +6335,7 @@
     "210": {
         "num": 210,
         "name": "Granbull",
-        "category": "Fairy Pokémon",
+        "category": "Fairy",
         "fastMoves": [
                       "Bite",
                       "Snarl"
@@ -6365,7 +6365,7 @@
     "211": {
         "num": 211,
         "name": "Qwilfish",
-        "category": "Balloon Pokémon",
+        "category": "Balloon",
         "fastMoves": [
                       "Poison Sting",
                       "Water Gun"
@@ -6396,7 +6396,7 @@
     "212": {
         "num": 212,
         "name": "Scizor",
-        "category": "Pincer Pokémon",
+        "category": "Pincer",
         "fastMoves": [
                       "Bullet Punch",
                       "Fury Cutter"
@@ -6427,7 +6427,7 @@
     "213": {
         "num": 213,
         "name": "Shuckle",
-        "category": "Mold Pokémon",
+        "category": "Mold",
         "fastMoves": [
                       "Rock Throw",
                       "Struggle Bug"
@@ -6458,7 +6458,7 @@
     "214": {
         "num": 214,
         "name": "Heracross",
-        "category": "Single Horn Pokémon",
+        "category": "Single Horn",
         "fastMoves": [
                       "Counter",
                       "Struggle Bug"
@@ -6489,7 +6489,7 @@
     "215": {
         "num": 215,
         "name": "Sneasel",
-        "category": "Sharp Claw Pokémon",
+        "category": "Sharp Claw",
         "fastMoves": [
                       "Feint Attack",
                       "Ice Shard"
@@ -6520,7 +6520,7 @@
     "216": {
         "num": 216,
         "name": "Teddiursa",
-        "category": "Little Bear Pokémon",
+        "category": "Little Bear",
         "fastMoves": [
                       "Lick",
                       "Scratch"
@@ -6550,7 +6550,7 @@
     "217": {
         "num": 217,
         "name": "Ursaring",
-        "category": "Hibernator Pokémon",
+        "category": "Hibernator",
         "fastMoves": [
                       "Counter",
                       "Metal Claw"
@@ -6580,7 +6580,7 @@
     "218": {
         "num": 218,
         "name": "Slugma",
-        "category": "Lava Pokémon",
+        "category": "Lava",
         "fastMoves": [
                       "Ember",
                       "Rock Throw"
@@ -6610,7 +6610,7 @@
     "219": {
         "num": 219,
         "name": "Magcargo",
-        "category": "Lava Pokémon",
+        "category": "Lava",
         "fastMoves": [
                       "Ember",
                       "Rock Throw"
@@ -6641,7 +6641,7 @@
     "220": {
         "num": 220,
         "name": "Swinub",
-        "category": "Pig Pokémon",
+        "category": "Pig",
         "fastMoves": [
                       "Powder Snow",
                       "Tackle"
@@ -6672,7 +6672,7 @@
     "221": {
         "num": 221,
         "name": "Piloswine",
-        "category": "Swine Pokémon",
+        "category": "Swine",
         "fastMoves": [
                       "Ice Shard",
                       "Powder Snow"
@@ -6703,7 +6703,7 @@
     "222": {
         "num": 222,
         "name": "Corsola",
-        "category": "Coral Pokémon",
+        "category": "Coral",
         "fastMoves": [
                       "Bubble",
                       "Tackle"
@@ -6734,7 +6734,7 @@
     "223": {
         "num": 223,
         "name": "Remoraid",
-        "category": "Jet Pokémon",
+        "category": "Jet",
         "fastMoves": [
                       "Mud Shot",
                       "Water Gun"
@@ -6764,7 +6764,7 @@
     "224": {
         "num": 224,
         "name": "Octillery",
-        "category": "Jet Pokémon",
+        "category": "Jet",
         "fastMoves": [
                       "Mud Shot",
                       "Water Gun"
@@ -6794,7 +6794,7 @@
     "225": {
         "num": 225,
         "name": "Delibird",
-        "category": "Delivery Pokémon",
+        "category": "Delivery",
         "fastMoves": [
                       "Ice Shard",
                       "Quick Attack"
@@ -6825,7 +6825,7 @@
     "226": {
         "num": 226,
         "name": "Mantine",
-        "category": "Kite Pokémon",
+        "category": "Kite",
         "fastMoves": [
                       "Bubble",
                       "Wing Attack"
@@ -6856,7 +6856,7 @@
     "227": {
         "num": 227,
         "name": "Skarmory",
-        "category": "Armor Bird Pokémon",
+        "category": "Armor Bird",
         "fastMoves": [
                       "Air Slash",
                       "Steel Wing"
@@ -6887,7 +6887,7 @@
     "228": {
         "num": 228,
         "name": "Houndour",
-        "category": "Dark Pokémon",
+        "category": "Dark",
         "fastMoves": [
                       "Ember",
                       "Feint Attack"
@@ -6918,7 +6918,7 @@
     "229": {
         "num": 229,
         "name": "Houndoom",
-        "category": "Dark Pokémon",
+        "category": "Dark",
         "fastMoves": [
                       "Fire Fang",
                       "Snarl"
@@ -6949,7 +6949,7 @@
     "230": {
         "num": 230,
         "name": "Kingdra",
-        "category": "Dragon Pokémon",
+        "category": "Dragon",
         "fastMoves": [
                       "Dragon Breath",
                       "Water Gun"
@@ -6980,7 +6980,7 @@
     "231": {
         "num": 231,
         "name": "Phanpy",
-        "category": "Long Nose Pokémon",
+        "category": "Long Nose",
         "fastMoves": [
                       "Rock Smash",
                       "Tackle"
@@ -7010,7 +7010,7 @@
     "232": {
         "num": 232,
         "name": "Donphan",
-        "category": "Armor Pokémon",
+        "category": "Armor",
         "fastMoves": [
                       "Counter",
                       "Tackle"
@@ -7040,7 +7040,7 @@
     "233": {
         "num": 233,
         "name": "Porygon2",
-        "category": "Virtual Pokémon",
+        "category": "Virtual",
         "fastMoves": [
                       "Charge Beam",
                       "Hidden Power"
@@ -7070,7 +7070,7 @@
     "234": {
         "num": 234,
         "name": "Stantler",
-        "category": "Big Horn Pokémon",
+        "category": "Big Horn",
         "fastMoves": [
                       "Tackle",
                       "Zen Headbutt"
@@ -7100,7 +7100,7 @@
     "235": {
         "num": 235,
         "name": "Smeargle",
-        "category": "Painter Pokémon",
+        "category": "Painter",
         "fastMoves": [
                       "Tackle"
                       ],
@@ -7127,7 +7127,7 @@
     "236": {
         "num": 236,
         "name": "Tyrogue",
-        "category": "Scuffle Pokémon",
+        "category": "Scuffle",
         "fastMoves": [
                       "Rock Smash",
                       "Tackle"
@@ -7157,7 +7157,7 @@
     "237": {
         "num": 237,
         "name": "Hitmontop",
-        "category": "Handstand Pokémon",
+        "category": "Handstand",
         "fastMoves": [
                       "Counter",
                       "Rock Smash"
@@ -7187,7 +7187,7 @@
     "238": {
         "num": 238,
         "name": "Smoochum",
-        "category": "Kiss Pokémon",
+        "category": "Kiss",
         "fastMoves": [
                       "Pound",
                       "Powder Snow"
@@ -7218,7 +7218,7 @@
     "239": {
         "num": 239,
         "name": "Elekid",
-        "category": "Electric Pokémon",
+        "category": "Electric",
         "fastMoves": [
                       "Thunder Shock",
                       "Low Kick"
@@ -7248,7 +7248,7 @@
     "240": {
         "num": 240,
         "name": "Magby",
-        "category": "Live Coal Pokémon",
+        "category": "Live Coal",
         "fastMoves": [
                       "Ember",
                       "Karate Chop"
@@ -7278,7 +7278,7 @@
     "241": {
         "num": 241,
         "name": "Miltank",
-        "category": "Milk Cow Pokémon",
+        "category": "Milk Cow",
         "fastMoves": [
                       "Tackle",
                       "Zen Headbutt"
@@ -7308,7 +7308,7 @@
     "242": {
         "num": 242,
         "name": "Blissey",
-        "category": "Happiness Pokémon",
+        "category": "Happiness",
         "fastMoves": [
                       "Pound",
                       "Zen Headbutt"
@@ -7338,7 +7338,7 @@
     "243": {
         "num": 243,
         "name": "Raikou",
-        "category": "Thunder Pokémon",
+        "category": "Thunder",
         "fastMoves": [
                       "Thunder Shock",
                       "Volt Switch"
@@ -7368,7 +7368,7 @@
     "244": {
         "num": 244,
         "name": "Entei",
-        "category": "Volcano Pokémon",
+        "category": "Volcano",
         "fastMoves": [
                       "Fire Spin",
                       "Fire Fang"
@@ -7398,7 +7398,7 @@
     "245": {
         "num": 245,
         "name": "Suicune",
-        "category": "Aurora Pokémon",
+        "category": "Aurora",
         "fastMoves": [
                       "Extrasensory",
                       "Snarl"
@@ -7428,7 +7428,7 @@
     "246": {
         "num": 246,
         "name": "Larvitar",
-        "category": "Rock Skin Pokémon",
+        "category": "Rock Skin",
         "fastMoves": [
                       "Bite",
                       "Rock Smash"
@@ -7459,7 +7459,7 @@
     "247": {
         "num": 247,
         "name": "Pupitar",
-        "category": "Hard Shell Pokémon",
+        "category": "Hard Shell",
         "fastMoves": [
                       "Bite",
                       "Rock Smash"
@@ -7490,7 +7490,7 @@
     "248": {
         "num": 248,
         "name": "Tyranitar",
-        "category": "Armor Pokémon",
+        "category": "Armor",
         "fastMoves": [
                       "Bite",
                       "Iron Tail"
@@ -7521,7 +7521,7 @@
     "249": {
         "num": 249,
         "name": "Lugia",
-        "category": "Diving Pokémon",
+        "category": "Diving",
         "fastMoves": [
                       "Dragon Tail",
                       "Extrasensory"
@@ -7552,7 +7552,7 @@
     "250": {
         "num": 250,
         "name": "Ho-Oh",
-        "category": "Rainbow Pokémon",
+        "category": "Rainbow",
         "fastMoves": [
                       "Extrasensory",
                       "Steel Wing"
@@ -7583,7 +7583,7 @@
     "251": {
         "num": 251,
         "name": "Celebi",
-        "category": "Time Travel Pokémon",
+        "category": "Time Travel",
         "fastMoves": [
                       "Charge Beam",
                       "Confusion"

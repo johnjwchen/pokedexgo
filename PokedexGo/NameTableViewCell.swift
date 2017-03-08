@@ -43,6 +43,7 @@ class NameTableViewCell: UITableViewCell {
             detail.text = String(format: "%@, %@", h2, w2)
         }
         gender.text = text(genderType: info["gendertype"] as! Int)
-        category.setTitle(info["category"] as? String, for: .normal)
+        let cat = String(format: "%@ Pokemon", info["category"] as! String)
+        category.setTitle(cat, for: .normal)
     }
 }

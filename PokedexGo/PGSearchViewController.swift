@@ -47,14 +47,13 @@ class PGSearchViewController: UIViewController {
         tableView.delegate = self
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 140
+        
+        searchBar.delegate = self
     }
     
     
     
     func setUpArrays() {
-        pokemonArray = Array(PGJSON.pokeDex.values)
-        moveArray = Array(PGJSON.moveDex.values)
-        
         if segmentIndex > -1 {
             segmentedControl.selectedSegmentIndex = segmentIndex
             if segmentIndex == 1 {
@@ -67,8 +66,11 @@ class PGSearchViewController: UIViewController {
         
         segmentIndex = -1
         sortKey = nil
-        preSortTable()
+        
+        searchSortTable()
     }
+    
+    
     
     @IBAction func segmentChanged(_ sender: Any) {
         tableView.reloadData()
@@ -79,9 +81,7 @@ class PGSearchViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    func goSearch() {
-        
-    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -93,9 +93,47 @@ class PGSearchViewController: UIViewController {
 
 extension PGSearchViewController: PokemonSortDelegate, MoveSortDelegate {
     
-    func preSortTable() {
+    func searchSortTable() {
+        // search
+        pokemonArray = search(array: Array(PGJSON.pokeDex.values), key: searchBar.text)
+        moveArray = search(array: Array(PGJSON.moveDex.values), key: searchBar.text)
+        
+        // sort
         sortPokemon(key: pokemonHeaderView.sortKey, up: pokemonHeaderView.sortUp)
         sortMove(key: moveHeaderView.sortKey, up: moveHeaderView.sortUp)
+    }
+    
+    private func search(array: Array<Any>, key: String?) -> Array<Any> {
+        if key == nil || (key?.characters.count)! < 1 {
+            return array
+        }
+        let mykey = key!.lowercased()
+        var arr = Array<Any>()
+        for item in array {
+            let dict = item as! [String: Any]
+            // name
+            if let name = dict["name"] as? String, name.lowercased().range(of: mykey) != nil {
+                arr.append(item)
+            }
+            // type
+            else if let type = dict["type"] as? String, type.lowercased() == mykey{
+                arr.append(item)
+            }
+            else if let types = dict["types"] as? [AnyObject] {
+                for itm in types {
+                    let type = itm as! String
+                    if type.lowercased() == mykey {
+                        arr.append(item)
+                        continue
+                    }
+                }
+            }
+            if let category = dict["category"] as? String, category.lowercased() == mykey {
+                arr.append(category)
+            }
+        }
+        
+        return arr
     }
     
     func sortPokemon(key: String, up: Bool) {
@@ -128,6 +166,12 @@ extension PGSearchViewController: PokemonSortDelegate, MoveSortDelegate {
             doSort(a: a, b: b, key: key, up: up)
         }
         tableView.reloadData()
+    }
+}
+
+extension PGSearchViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchSortTable()
     }
 }
 
@@ -180,16 +224,23 @@ extension PGSearchViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 29
+        let headerHeight: CGFloat = 29
+        if segmentedControl.selectedSegmentIndex == 0 && section == 0 ||
+            segmentedControl.selectedSegmentIndex == 1 {
+            return pokemonArray.count > 0 ? headerHeight : 0
+        }
+        else {
+            return moveArray.count > 0 ? headerHeight : 0
+        }
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if segmentedControl.selectedSegmentIndex == 0 && section == 0 ||
             segmentedControl.selectedSegmentIndex == 1 {
-            return pokemonHeaderView
+            return pokemonArray.count > 0 ? pokemonHeaderView : nil
         }
         else {
-            return moveHeaderView
+            return moveArray.count > 0 ? moveHeaderView : nil
         }
     }
     
