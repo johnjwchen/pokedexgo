@@ -19,11 +19,6 @@ class MoveSimpleTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
-        if UIDevice.current.userInterfaceIdiom != .pad {
-            epsLabel.removeFromSuperview()
-            epsLabel = nil
-        }
     }
     
     func set(move: [String: Any]) {

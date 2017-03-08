@@ -51,6 +51,9 @@ class PGSearchViewController: UIViewController {
         searchBar.delegate = self
     }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        self.tableView.reloadData()
+    }
     
     
     func setUpArrays() {

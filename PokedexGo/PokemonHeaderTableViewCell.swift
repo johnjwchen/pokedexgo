@@ -16,6 +16,7 @@ protocol PokemonSortDelegate {
 class PokemonHeaderTableViewCell: UITableViewCell {
     
     @IBOutlet weak var numView: UIView!
+    @IBOutlet weak var typesView: UIView!
     @IBOutlet weak var nameView: UIView!
     @IBOutlet weak var staminaView: UIView!
     @IBOutlet weak var attackView: UIView!
@@ -84,20 +85,6 @@ class PokemonHeaderTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
-        if UIDevice.current.userInterfaceIdiom != .pad {
-            if toRemoveView != nil {
-                toRemoveView.removeFromSuperview()
-            }
-            else {
-                maxcpView.removeFromSuperview()
-            }
-            
-            if UIScreen.main.bounds.width <= 320 {
-                numView.removeFromSuperview()
-                numView = nil
-            }
-        }
         
         // tap gesture
         let numtap = UITapGestureRecognizer(target: self, action: #selector(self.numTap(_:)))

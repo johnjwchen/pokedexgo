@@ -70,7 +70,7 @@ class MoveHeaderTableViewCell: UITableViewCell {
             cdLabel.text = cdLabel.text! + arrow
         case "dps":
             dpsLabel.text = dpsLabel.text! + arrow
-        case "esp":
+        case "eps":
             espLabel.text = espLabel.text! + arrow
         default: break
         }
@@ -81,10 +81,6 @@ class MoveHeaderTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
-        if UIDevice.current.userInterfaceIdiom != .pad {
-            espView.removeFromSuperview()
-        }
         
         // tap gesture
         let typetap = UITapGestureRecognizer(target: self, action: #selector(self.typeTap(_:)))
