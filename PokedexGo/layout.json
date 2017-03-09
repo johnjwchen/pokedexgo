@@ -1,21 +1,25 @@
 {
     "pokemon":[
-               {"cell": "NameCell"},
-               {"cell": "ImageCell"},
-               {"cell": "DescriptionCell"},
-               {"cell": "TypeCell"},
-               {"cell": "StatsCell"},
-               {"cell": "TitleCell", "title": "Fast Moves"},
-               {"cell": "MoveCell", "key": "fastMoves"},
-               {"cell": "TitleCell", "title": "Charge Moves"},
-               {"cell": "MoveCell", "key": "chargeMoves"},
-               {"cell": "TitleCell", "title": "Ideal Moves"},
-               {"cell": "MoveCell", "key": "idealMoves"}
+        {"cell": "NameCell"},
+        {"cell": "ImageCell"},
+        {"cell": "DescriptionCell"},
+        {"cell": "TypeCell"},
+        {"cell": "StatsCell"},
+        {"cell": "TitleCell", "title": "Fast Moves"},
+        {"cell": "MoveCell", "key": "fastMoves"},
+        {"cell": "TitleCell", "title": "Charge Moves"},
+        {"cell": "MoveCell", "key": "chargeMoves"},
+        {"cell": "TitleCell", "title": "Ideal Moves"},
+        {"cell": "MoveCell", "key": "idealMoves"}
+        
     ],
     "move": [
-             {"cell": "MoveNameCell"},
-             {"cell": "DescriptionCell"},
-             {"cell": "TitleCell", "title": "Pokemon that can have the move"},
-             {"cell": "PokemonCell"} 
+        {"cell": "MoveNameCell"},
+        {"cell": "DescriptionCell"},
+        {"cell": "TitleCell", "title": "Pokemon that can have the move"}, 
+        {
+            "header": "PokemonTitleCell",
+            "cell": "PokemonCell"
+        }
     ]
 }

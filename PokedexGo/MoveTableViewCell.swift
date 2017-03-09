@@ -9,7 +9,6 @@
 import UIKit
 
 class MoveTableViewCell: UITableViewCell {
-    @IBOutlet weak var lastView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var typeButton: PTTypeButton!
     @IBOutlet weak var powerLabel: UILabel!
@@ -19,9 +18,6 @@ class MoveTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        if UIDevice.current.userInterfaceIdiom != .pad {
-            lastView.removeFromSuperview()
-        }
     }
     
     func set(move: [String: Any]) {

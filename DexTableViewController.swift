@@ -30,7 +30,20 @@ class DexTableViewController: UITableViewController {
         self.dexType = dexType
     }
     
+    private func currentDex() -> [String: Any] {
+        return self.dexType == .Pokemon ? PGJSON.pokeDex : PGJSON.moveDex
+    }
+    
     private var layout: [Any]!
+    
+    fileprivate(set) var pokemonArray: [Any] = []
+    fileprivate(set) var pokemonMoveName: String!
+    
+    fileprivate lazy var pokemonHeaderView: PokemonHeaderTableViewCell = {
+        let header = self.tableView.dequeueReusableCell(withIdentifier: "PokemonTitleCell") as! PokemonHeaderTableViewCell
+        header.delegate = self
+        return header
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,25 +66,23 @@ class DexTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let sec = layout[section] as! [String: Any]
+        if let key = sec["key"] as? String {
+            let pokemon = self.currentDex()[dexKey] as! [String: Any]
+            let array = pokemon[key] as! [Any]
+            return array.count
+        }
         if let cell = sec["cell"] as? String {
             if cell == "PokemonCell" {
-                let move = PGJSON.moveDex[dexKey] as! [String: Any]
+                let move = self.currentDex()[dexKey] as! [String: Any]
                 let array = PGJSON.pokemonWith(move: move["name"] as! String)
                 return array.count
             }
         }
-        if let key = sec["key"] as? String {
-            let pokemon = PGJSON.pokeDex[dexKey] as! [String: Any]
-            let array = pokemon[key] as! [Any]
-            return array.count
-        }
-        else {
-            return 1;
-        }
+        return 1
     }
     
-    func cellIdentifier(section: Int) -> String! {
-        let sec = layout[section] as! [String: Any]
+    func cellIdentifier(indexPath: IndexPath) -> String! {
+        let sec = layout[indexPath.section] as! [String: Any]
         return sec["cell"] as! String
     }
 
@@ -126,15 +137,23 @@ class DexTableViewController: UITableViewController {
             titleCell.setTitle(name: sec["title"] as! String)
         }
         else if let pokemonCell = cell as? PokemonTableViewCell {
-            let array = PGJSON.pokemonWith(move: move["name"] as! String)
-            let name = array[indexPath.row]
-            pokemonCell.set(pokemon: PGJSON.pokeDex[name] as! [String : Any])
+            let moveName = move["name"] as! String
+            if pokemonArray.count < 1 || pokemonMoveName != moveName {
+                pokemonMoveName = moveName
+                let array = PGJSON.pokemonWith(move: moveName)
+                pokemonArray.removeAll()
+                for name in array {
+                    pokemonArray.append(PGJSON.pokeDex[name]!)
+                }
+            }
+            
+            pokemonCell.set(pokemon: pokemonArray[indexPath.row] as! [String : Any])
         }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let identifier = cellIdentifier(section: indexPath.section)
+        let identifier = cellIdentifier(indexPath: indexPath)
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier!, for: indexPath)
 
         if dexType == .Pokemon {
@@ -146,12 +165,28 @@ class DexTableViewController: UITableViewController {
 
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        let sec = layout[section] as! [String: Any]
+        let header = sec["header"] as? String
+        if header != nil {
+            return 29
+        }
+        return 0
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let sec = layout[section] as! [String: Any]
+        let header = sec["header"] as? String
+        if header == "PokemonTitleCell" {
+            return pokemonHeaderView
+        }
+        return nil
+    }
    
     @IBAction func powerTouchUp(_ sender: Any) {
         showSortDelegate?.showTable(sortKey: "power", up: false, scope: 2)
     }
-  
-
   
     @IBAction func cdTouchUp(_ sender: Any) {
         showSortDelegate?.showTable(sortKey: "cd", up: false, scope: 2)
@@ -175,6 +210,13 @@ class DexTableViewController: UITableViewController {
     @IBAction func maxcpTouchUp(_ sender: Any) {
         showSortDelegate?.showTable(sortKey: "maxcp", up: false, scope: 1)
     }
-    
+}
 
+extension DexTableViewController: PokemonSortDelegate {
+    func sortPokemon(key: String, up: Bool) {
+        pokemonArray = pokemonArray.sorted{ (a, b) -> Bool in
+            return PGSearchViewController.mysort(a: a, b: b, key: key, up: up)
+        }
+        tableView.reloadData()
+    }
 }

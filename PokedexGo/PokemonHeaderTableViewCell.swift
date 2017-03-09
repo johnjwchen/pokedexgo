@@ -32,11 +32,11 @@ class PokemonHeaderTableViewCell: UITableViewCell {
     
     var toRemoveView: UIView!
     
-    fileprivate(set) var sortKey: String! = "num"
+    private(set) var sortKey: String! = "num"
     
     /// fase: sort up 1, 2, 3...
     /// true: sort down 9, 8, 7...
-    fileprivate(set) var sortUp: Bool = true
+    private(set) var sortUp: Bool = true
     
     func setSort(key: String!, up: Bool) {
         sortKey = key
@@ -63,9 +63,9 @@ class PokemonHeaderTableViewCell: UITableViewCell {
         let arrow = sortUp ? "▲" : "▼"
         switch sortKey {
         case "num":
-            numLabel.text = numLabel.text! + arrow
+            numLabel?.text = numLabel.text! + arrow
         case "name":
-            nameLabel.text = nameLabel.text! + arrow
+            nameLabel?.text = nameLabel.text! + arrow
         case "stamina":
             staminaLabel.text = staminaLabel.text! + arrow
         case "attack":
@@ -88,22 +88,22 @@ class PokemonHeaderTableViewCell: UITableViewCell {
         
         // tap gesture
         let numtap = UITapGestureRecognizer(target: self, action: #selector(self.numTap(_:)))
-        numView?.addGestureRecognizer(numtap)
+        numView!.addGestureRecognizer(numtap)
         
         let nametap = UITapGestureRecognizer(target: self, action: #selector(self.nameTap(_:)))
-        nameView?.addGestureRecognizer(nametap)
+        nameView!.addGestureRecognizer(nametap)
         
         let staminatap = UITapGestureRecognizer(target: self, action: #selector(self.staminaTap(_:)))
-        staminaView?.addGestureRecognizer(staminatap)
+        staminaView!.addGestureRecognizer(staminatap)
         
         let attacktap = UITapGestureRecognizer(target: self, action: #selector(self.attackTap(_:)))
-        attackView?.addGestureRecognizer(attacktap)
+        attackView!.addGestureRecognizer(attacktap)
         
         let defensetap = UITapGestureRecognizer(target: self, action: #selector(self.defenseTap(_:)))
-        defenseView?.addGestureRecognizer(defensetap)
+        defenseView!.addGestureRecognizer(defensetap)
         
         let maxcptap = UITapGestureRecognizer(target: self, action: #selector(self.maxcpTap(_:)))
-        maxcpView?.addGestureRecognizer(maxcptap)
+        maxcpView!.addGestureRecognizer(maxcptap)
     }
     
     func tap(key: String?) {
@@ -114,10 +114,9 @@ class PokemonHeaderTableViewCell: UITableViewCell {
             sortUp = false
             sortKey = key
         }
-        updateArrow()
         delegate?.sortPokemon(key: sortKey, up: sortUp)
+        updateArrow()
     }
-    
     
 
     func numTap(_ sender: UITapGestureRecognizer) {
