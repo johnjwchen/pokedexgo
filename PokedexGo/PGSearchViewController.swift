@@ -45,9 +45,9 @@ class PGSearchViewController: UIViewController {
     fileprivate var isSearching: Bool = false
     
     var segmentIndex: Int = -1
-    
     var sortKey: String?
     var sortUp: Bool!
+    var searchKey: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,6 +69,9 @@ class PGSearchViewController: UIViewController {
     func setUpArrays() {
         if segmentIndex > -1 {
             segmentedControl.selectedSegmentIndex = segmentIndex
+            // search
+            searchBar.text = searchKey
+            searchTable()
             if segmentIndex == 1 {
                 pokemonHeaderView.setSort(key: sortKey, up: sortUp)
             }
@@ -79,6 +82,7 @@ class PGSearchViewController: UIViewController {
         
         segmentIndex = -1
         sortKey = nil
+        searchKey = nil
         
         searchSortTable()
     }
@@ -111,10 +115,13 @@ class PGSearchViewController: UIViewController {
 
 extension PGSearchViewController: PokemonSortDelegate, MoveSortDelegate {
     
-    func searchSortTable() {
+    fileprivate func searchTable() {
         // search
         pokemonArray = search(array: pokemonMutableArray, key: searchBar.text)
         moveArray = search(array: moveMutableArray, key: searchBar.text)
+    }
+    func searchSortTable() {
+        searchTable()
         
         // sort
         sortPokemon(key: pokemonHeaderView.sortKey, up: pokemonHeaderView.sortUp)
@@ -126,29 +133,29 @@ extension PGSearchViewController: PokemonSortDelegate, MoveSortDelegate {
             return array
         }
         let mykey = key!.lowercased()
-        var arr = NSMutableArray()
+        let arr = NSMutableArray()
         for item in array {
             let dict = item as! [String: Any]
             // name
             if let name = dict["name"] as? String, name.lowercased().range(of: mykey) != nil {
-                arr.add(item)
+                arr.add(dict)
             }
             // type
             else if let type = dict["type"] as? String, type.lowercased() == mykey{
-                arr.add(item)
+                arr.add(dict)
             }
             else if let types = dict["types"] as? [AnyObject] {
                 for itm in types {
                     let type = itm as! String
                     if type.lowercased() == mykey {
-                        arr.add(item)
+                        arr.add(dict)
                         continue
                     }
                 }
             }
-            if let category = dict["category"] as? String, category.lowercased() == mykey {
-                arr.add(category)
-            }
+//            if let category = dict["category"] as? String, category.lowercased() == mykey {
+//                arr.add(dict)
+//            }
         }
         
         return arr

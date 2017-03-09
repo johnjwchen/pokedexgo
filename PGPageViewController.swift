@@ -108,10 +108,11 @@ extension PGPageViewController:UIPageViewControllerDataSource {
 }
 
 extension PGPageViewController: ShowSortTableDelegate {
-    func showTable(sortKey: String, up: Bool, scope: Int) {
+    func showTable(searchKey: String?, sortKey: String, up: Bool, scope: Int) {
         searchViewController.segmentIndex = scope
         searchViewController.sortKey = sortKey
         searchViewController.sortUp = up
+        searchViewController.searchKey = searchKey
         self.present(searchViewController, animated: true, completion: nil)
     }
 }

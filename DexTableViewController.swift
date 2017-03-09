@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ShowSortTableDelegate {
-    func showTable(sortKey: String, up: Bool, scope: Int)
+    func showTable(searchKey: String?, sortKey: String, up: Bool, scope: Int)
 }
 
 enum DexType {
@@ -43,6 +43,22 @@ class DexTableViewController: UITableViewController {
         let header = self.tableView.dequeueReusableCell(withIdentifier: "PokemonTitleCell") as! PokemonHeaderTableViewCell
         header.delegate = self
         return header
+    }()
+    
+    private lazy var moveTypeButtonDelegate: PTTypeButtonDelegate = {
+        class Foo: NSObject, PTTypeButtonDelegate {
+            var parentViewController: DexTableViewController!
+            init(parent: DexTableViewController) {
+                parentViewController = parent
+            }
+            func touchUp(_ button: Any!) {
+                guard let label = button as? UILabel else {
+                    return
+                }
+            parentViewController?.showSortDelegate?.showTable(searchKey: label.text, sortKey: "name", up: false, scope: 2)
+            }
+        }
+        return Foo(parent: self)
     }()
     
     override func viewDidLoad() {
@@ -98,7 +114,7 @@ class DexTableViewController: UITableViewController {
             imageCell.setPokemonImage(num: Int(dexKey)!)
         }
         else if let typeCell = cell as? TypeTableViewCell {
-            typeCell.set(types: pokemon["types"] as! [String])
+            typeCell.set(types: pokemon["types"] as! [String], delegate: self as PTTypeButtonDelegate)
         }
         else if let statsCell = cell as? StatsTableViewCell {
             statsCell.set(stats: pokemon)
@@ -127,7 +143,7 @@ class DexTableViewController: UITableViewController {
         let move = PGJSON.moveDex[dexKey] as! [String: Any]
         
         if let nameCell = cell as? MoveNameTableViewCell {
-            nameCell.set(info: move)
+            nameCell.set(info: move, typeButtonDelegate: moveTypeButtonDelegate)
         }
         else if let desCell = cell as? DescriptionTableViewCell {
             desCell.set(description: move["desc"] as! String)
@@ -183,32 +199,34 @@ class DexTableViewController: UITableViewController {
         }
         return nil
     }
+    
+
    
     @IBAction func powerTouchUp(_ sender: Any) {
-        showSortDelegate?.showTable(sortKey: "power", up: false, scope: 2)
+        showSortDelegate?.showTable(searchKey: nil, sortKey: "power", up: false, scope: 2)
     }
   
     @IBAction func cdTouchUp(_ sender: Any) {
-        showSortDelegate?.showTable(sortKey: "cd", up: true, scope: 2)
+        showSortDelegate?.showTable(searchKey: nil, sortKey: "cd", up: true, scope: 2)
     }
     @IBAction func dpsTouchUp(_ sender: Any) {
-        showSortDelegate?.showTable(sortKey: "dps", up: false, scope: 2)
+        showSortDelegate?.showTable(searchKey: nil, sortKey: "dps", up: false, scope: 2)
     }
     @IBAction func epsTouchUp(_ sender: Any) {
-        showSortDelegate?.showTable(sortKey: "eps", up: false, scope: 2)
+        showSortDelegate?.showTable(searchKey: nil, sortKey: "eps", up: false, scope: 2)
     }
 
     @IBAction func staminaTouchUp(_ sender: Any) {
-        showSortDelegate?.showTable(sortKey: "stamina", up: false, scope: 1)
+        showSortDelegate?.showTable(searchKey: nil, sortKey: "stamina", up: false, scope: 1)
     }
     @IBAction func attackTouchUp(_ sender: Any) {
-        showSortDelegate?.showTable(sortKey: "attack", up: false, scope: 1)
+        showSortDelegate?.showTable(searchKey: nil, sortKey: "attack", up: false, scope: 1)
     }
     @IBAction func defenseTouchUp(_ sender: Any) {
-        showSortDelegate?.showTable(sortKey: "defense", up: false, scope: 1)
+        showSortDelegate?.showTable(searchKey: nil, sortKey: "defense", up: false, scope: 1)
     }
     @IBAction func maxcpTouchUp(_ sender: Any) {
-        showSortDelegate?.showTable(sortKey: "maxcp", up: false, scope: 1)
+        showSortDelegate?.showTable(searchKey: nil, sortKey: "maxcp", up: false, scope: 1)
     }
     
     @IBAction func composeTouchUp(_ sender: Any) {
@@ -218,6 +236,16 @@ class DexTableViewController: UITableViewController {
         }
     }
     
+}
+
+extension DexTableViewController: PTTypeButtonDelegate {
+    // this should only be called by pokemon type button
+    func touchUp(_ button: Any!) {
+        guard let label = button as? UILabel else {
+            return
+        }
+        showSortDelegate?.showTable(searchKey: label.text, sortKey: "name", up: false, scope: 1)
+    }
 }
 
 extension DexTableViewController: PokemonSortDelegate {

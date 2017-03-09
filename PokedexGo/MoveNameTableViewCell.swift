@@ -26,9 +26,10 @@ class MoveNameTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    func set(info: [String: Any]) {
+    func set(info: [String: Any], typeButtonDelegate: PTTypeButtonDelegate) {
         nameLabel?.text = info["name"] as? String
         typeButton?.set(info["type"] as! String)
+        typeButton.delegate = typeButtonDelegate
         categoryLabel?.text = info["category"] as? String
         
         powerLabel?.text = String(info["power"] as! Int)
