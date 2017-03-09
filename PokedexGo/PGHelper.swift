@@ -54,6 +54,11 @@ class PGHelper: NSObject {
         return URL(string: url)
     }
     
+    class func keyString(moveName: String!) -> String! {
+        var key = moveName.replacingOccurrences(of: " ", with: "")
+        return key.lowercased()
+    }
+    
     class func jsonFrom(name: String) -> Any? {
         do {
             if let file = Bundle.main.url(forResource: name, withExtension: "json") {

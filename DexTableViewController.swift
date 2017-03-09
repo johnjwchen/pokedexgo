@@ -20,7 +20,7 @@ enum DexType {
 class DexTableViewController: UITableViewController {
     
     var showSortDelegate: ShowSortTableDelegate?
-    
+    var viewPageDelegate: ViewDexPageDelegate?
     
     private var dexType: DexType = .Pokemon
     private var dexKey: String = ""

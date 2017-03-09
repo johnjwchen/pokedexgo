@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol ViewDexPageDelegate {
+    func viewPage(type: DexType, key: String!)
+}
+
 class PGPageViewController: UIPageViewController {
 
     fileprivate(set) lazy var orderedViewControllers: [UIViewController] = {
@@ -25,7 +29,9 @@ class PGPageViewController: UIPageViewController {
     }
     
     lazy var searchViewController: PGSearchViewController! = {
-        return self.storyboard!.instantiateViewController(withIdentifier: "SearchViewController") as! PGSearchViewController
+        let viewController = self.storyboard!.instantiateViewController(withIdentifier: "SearchViewController") as! PGSearchViewController
+        viewController.viewPageDelegate = self
+        return viewController
     }()
     
     
@@ -67,6 +73,11 @@ class PGPageViewController: UIPageViewController {
 
 }
 
+extension PGPageViewController: ViewDexPageDelegate {
+    func viewPage(type: DexType, key: String!) {
+        // to do
+    }
+}
 
 extension PGPageViewController:UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {

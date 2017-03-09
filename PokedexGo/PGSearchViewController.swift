@@ -12,6 +12,8 @@ import UIKit
 
 class PGSearchViewController: UIViewController {
     
+    var viewPageDelegate: ViewDexPageDelegate?
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -339,5 +341,22 @@ extension PGSearchViewController: UITableViewDataSource {
 
 
 extension PGSearchViewController: UITableViewDelegate {
+    func viewPage(type: DexType, key: String!) {
+        self.dismiss(animated: true) { 
+            self.viewPageDelegate?.viewPage(type: type, key: key)
+        }
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if (segmentedControl.selectedSegmentIndex == 0 && indexPath.section == 0 ||
+            segmentedControl.selectedSegmentIndex == 1) {
+            let pokemon = pokemonArray[indexPath.row] as! [String : Any]
+            
+            viewPage(type: .Pokemon, key: String(pokemon["num"] as! Int))
+        }
+        else {
+            let move = moveArray[indexPath.row] as! [String : Any]
+            viewPage(type: .Move, key: PGHelper.keyString(moveName: move["name"] as! String))
+        }
+    }
     
 }
