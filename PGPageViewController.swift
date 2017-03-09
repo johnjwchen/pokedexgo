@@ -42,18 +42,10 @@ class PGPageViewController: UIPageViewController {
                                animated: true,
                                completion: nil)
         }
-
-        
-        
-        let button = UIButton(type: .infoDark)
-        button.frame = CGRect(x: 50, y: 50, width: 30, height: 30)
-        self.view.addSubview(button)
-        button.addTarget(self, action: #selector(testTouch), for: .touchUpInside)
         
     }
     
-    func testTouch(sender: AnyObject) {
-        
+    func search() {
         self.present(searchViewController, animated: true, completion: nil)
     }
 
@@ -119,6 +111,7 @@ extension PGPageViewController: ShowSortTableDelegate {
     func showTable(sortKey: String, up: Bool, scope: Int) {
         searchViewController.segmentIndex = scope
         searchViewController.sortKey = sortKey
+        searchViewController.sortUp = up
         self.present(searchViewController, animated: true, completion: nil)
     }
 }

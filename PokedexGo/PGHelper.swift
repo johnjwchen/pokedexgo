@@ -21,12 +21,8 @@ extension UIImageView {
                 else { return }
             DispatchQueue.main.async() { () -> Void in
                 self.image = image
-                self.superview?.setNeedsLayout()
-                self.superview?.layoutSubviews()
-                self.superview?.superview?.setNeedsLayout()
-                self.superview?.superview?.layoutSubviews()
             }
-            }.resume()
+        }.resume()
     }
     func downloadedFrom(link: String, contentMode mode: UIViewContentMode = .scaleAspectFit) {
         guard let url = URL(string: link) else { return }

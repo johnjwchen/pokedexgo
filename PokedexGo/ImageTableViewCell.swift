@@ -16,8 +16,6 @@ class ImageTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        sizeToFit()
-        layoutIfNeeded()
     }
     
     func setPokemonImage(num: Int) {

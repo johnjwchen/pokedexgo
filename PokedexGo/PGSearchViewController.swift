@@ -47,6 +47,7 @@ class PGSearchViewController: UIViewController {
     var segmentIndex: Int = -1
     
     var sortKey: String?
+    var sortUp: Bool!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,10 +70,10 @@ class PGSearchViewController: UIViewController {
         if segmentIndex > -1 {
             segmentedControl.selectedSegmentIndex = segmentIndex
             if segmentIndex == 1 {
-                pokemonHeaderView.setSort(key: sortKey, up: false)
+                pokemonHeaderView.setSort(key: sortKey, up: sortUp)
             }
             if segmentIndex == 2 {
-                moveHeaderView.setSort(key: sortKey, up: false)
+                moveHeaderView.setSort(key: sortKey, up: sortUp)
             }
         }
         

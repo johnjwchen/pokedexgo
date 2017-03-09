@@ -189,7 +189,7 @@ class DexTableViewController: UITableViewController {
     }
   
     @IBAction func cdTouchUp(_ sender: Any) {
-        showSortDelegate?.showTable(sortKey: "cd", up: false, scope: 2)
+        showSortDelegate?.showTable(sortKey: "cd", up: true, scope: 2)
     }
     @IBAction func dpsTouchUp(_ sender: Any) {
         showSortDelegate?.showTable(sortKey: "dps", up: false, scope: 2)
@@ -210,6 +210,14 @@ class DexTableViewController: UITableViewController {
     @IBAction func maxcpTouchUp(_ sender: Any) {
         showSortDelegate?.showTable(sortKey: "maxcp", up: false, scope: 1)
     }
+    
+    @IBAction func composeTouchUp(_ sender: Any) {
+        let opened = UIApplication.shared.openURL(URL(string: "pokgear://test_page/")!)
+        if !opened {
+            UIApplication.shared.openURL(URL(string: "https://itunes.apple.com/us/app/pokgear-pokemon-creator/id849383046?ls=1&mt=8")!)
+        }
+    }
+    
 }
 
 extension DexTableViewController: PokemonSortDelegate {
