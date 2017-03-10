@@ -35,15 +35,15 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3′3″, 49.6 lbs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78j-Jf-6V2">
-                                            <rect key="frame" x="0.0" y="43.5" width="866" height="18"/>
+                                            <rect key="frame" x="0.0" y="43.5" width="836" height="18"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddj-7N-ACt">
-                                            <rect key="frame" x="866" y="40" width="150" height="25"/>
+                                            <rect key="frame" x="836" y="40" width="180" height="25"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="150" id="bnA-4z-Iw6"/>
+                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="180" id="bnA-4z-Iw6"/>
                                             </constraints>
                                             <state key="normal" title="Poison Bee Pokémon"/>
                                         </button>
@@ -125,7 +125,7 @@
                                     <outlet property="centralImage" destination="6zR-AW-WE9" id="3Wn-o6-hhb"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="TypeCell" rowHeight="44" id="cEw-In-p4N" customClass="TypeTableViewCell" customModule="PokedexGo" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="TypeCell" rowHeight="44" id="cEw-In-p4N" customClass="TypeTableViewCell" customModule="PokedexGo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="338" width="1024" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cEw-In-p4N" id="UII-nu-azl">
@@ -993,7 +993,7 @@
                                     <outlet property="type2Button" destination="e4l-7a-V4l" id="lbD-hk-qIJ"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PokemonTitleCell" rowHeight="23" id="iqc-aK-uS1" customClass="PokemonHeaderTableViewCell" customModule="PokedexGo" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PokemonTitleCell" rowHeight="23" id="iqc-aK-uS1" customClass="PokemonHeaderTableViewCell" customModule="PokedexGo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="911" width="1024" height="23"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iqc-aK-uS1" id="HT3-D3-Gxh">
@@ -1368,8 +1368,8 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uTX-wl-HWW">
                                                             <rect key="frame" x="0.0" y="0.0" width="70" height="28"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1g9-dN-eXY">
-                                                                    <rect key="frame" x="0.0" y="4.5" width="48.5" height="20.5"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1g9-dN-eXY">
+                                                                    <rect key="frame" x="0.0" y="5" width="70" height="18"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                     <color key="textColor" red="1" green="0.82793337109999998" blue="0.3983075023" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -1378,8 +1378,9 @@
                                                             <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="70" id="ITP-dZ-unc"/>
+                                                                <constraint firstAttribute="trailing" secondItem="1g9-dN-eXY" secondAttribute="trailing" id="SPo-rl-Wqz"/>
                                                                 <constraint firstItem="1g9-dN-eXY" firstAttribute="centerY" secondItem="uTX-wl-HWW" secondAttribute="centerY" id="kyE-IQ-01i"/>
-                                                                <constraint firstItem="1g9-dN-eXY" firstAttribute="centerX" secondItem="uTX-wl-HWW" secondAttribute="centerX" id="nH0-lk-rHS"/>
+                                                                <constraint firstItem="1g9-dN-eXY" firstAttribute="leading" secondItem="uTX-wl-HWW" secondAttribute="leading" id="qFj-cL-Rfe"/>
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="71f-VI-sHG">
@@ -1412,8 +1413,9 @@
                                                             <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstItem="LD6-b1-JDX" firstAttribute="centerY" secondItem="qTh-xn-xHx" secondAttribute="centerY" id="9Z4-Kw-zxE"/>
-                                                                <constraint firstItem="LD6-b1-JDX" firstAttribute="centerX" secondItem="qTh-xn-xHx" secondAttribute="centerX" id="DkH-u3-mhS"/>
                                                                 <constraint firstAttribute="width" constant="60" id="Ha3-vp-wjO"/>
+                                                                <constraint firstAttribute="trailing" secondItem="LD6-b1-JDX" secondAttribute="trailing" id="tFT-c1-2Co"/>
+                                                                <constraint firstItem="LD6-b1-JDX" firstAttribute="leading" secondItem="qTh-xn-xHx" secondAttribute="leading" id="z0b-dA-XsX"/>
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2c1-rZ-M9f">

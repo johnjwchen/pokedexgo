@@ -30,6 +30,10 @@ class DexTableViewController: UITableViewController {
         self.dexType = dexType
     }
     
+    func hasSame(page: [Any]) -> Bool {
+        return dexType == page[0] as! DexType && dexKey == page[1] as! String
+    }
+    
     private func currentDex() -> [String: Any] {
         return self.dexType == .Pokemon ? PGJSON.pokeDex : PGJSON.moveDex
     }
@@ -71,6 +75,32 @@ class DexTableViewController: UITableViewController {
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         self.tableView.reloadData()
+    }
+    
+    // MARK: - Table view data delegate
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let identifier = cellIdentifier(indexPath: indexPath)
+        
+        if dexType == .Pokemon {
+            guard identifier == "MoveCell" else {
+                return
+            }
+            let pokemon = PGJSON.pokeDex[dexKey] as! [String: Any]
+            let dict = layout[indexPath.section] as! [String: Any]
+            let key = dict["key"] as! String
+            let array = pokemon[key]as! [AnyObject]
+            let moveName = array[indexPath.row] as! String
+            
+            viewPageDelegate?.viewPage(type: .Move, key: PGHelper.keyString(moveName: moveName))
+        }
+        if dexType == .Move {
+            guard identifier == "PokemonCell" else {
+                return
+            }
+            let pokemon = pokemonArray[indexPath.row] as! [String: Any]
+            viewPageDelegate?.viewPage(type: .Pokemon, key: String(pokemon["num"] as! Int))
+        }
     }
 
     // MARK: - Table view data source

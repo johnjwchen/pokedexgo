@@ -342,9 +342,18 @@ extension PGSearchViewController: UITableViewDataSource {
 
 extension PGSearchViewController: UITableViewDelegate {
     func viewPage(type: DexType, key: String!) {
-        self.dismiss(animated: true) { 
-            self.viewPageDelegate?.viewPage(type: type, key: key)
-        }
+//        self.dismiss(animated: true) {
+//            self.viewPageDelegate?.viewPage(type: type, key: key)
+//        }
+        
+        let transition: CATransition = CATransition()
+        transition.duration = 0.5
+        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        transition.type = kCATransitionReveal
+        transition.subtype = kCATransitionFromRight
+        self.view.window!.layer.add(transition, forKey: nil)
+        self.dismiss(animated: false, completion: nil)
+        self.viewPageDelegate?.viewPage(type: type, key: key)
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (segmentedControl.selectedSegmentIndex == 0 && indexPath.section == 0 ||

@@ -24,6 +24,14 @@
     _selector = selector;
 }
 
+- (void)setDelegate:(id<PTTypeButtonDelegate>)delegate {
+    _delegate = delegate;
+    if (self.gestureRecognizers.count < 1) {
+        UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(touch:)];
+        [tapGestureRecognizer setNumberOfTapsRequired:1];
+        [self addGestureRecognizer:tapGestureRecognizer];
+    }
+}
 
 - (void)setUp{
     // Initialization code
@@ -34,12 +42,6 @@
     self.textAlignment = NSTextAlignmentCenter;
     
     self.userInteractionEnabled = YES;
-    
-    
-    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(touch:)];
-    [tapGestureRecognizer setNumberOfTapsRequired:1];
-    [self addGestureRecognizer:tapGestureRecognizer];
-
 }
 
 - (void)touch:(id)sender{

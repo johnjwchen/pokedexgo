@@ -55,7 +55,7 @@ class PGHelper: NSObject {
     }
     
     class func keyString(moveName: String!) -> String! {
-        var key = moveName.replacingOccurrences(of: " ", with: "")
+        let key = moveName.replacingOccurrences(of: " ", with: "-")
         return key.lowercased()
     }
     
