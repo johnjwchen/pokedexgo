@@ -61,6 +61,7 @@ class PGSearchViewController: UIViewController {
         
         searchBar.delegate = self
         
+        searchSortTable()
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -73,7 +74,6 @@ class PGSearchViewController: UIViewController {
             segmentedControl.selectedSegmentIndex = segmentIndex
             // search
             searchBar.text = searchKey
-            searchTable()
             if segmentIndex == 1 {
                 pokemonHeaderView.setSort(key: sortKey, up: sortUp)
             }
@@ -107,11 +107,11 @@ class PGSearchViewController: UIViewController {
     
     
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        setUpArrays()
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        
+//        setUpArrays()
+//    }
 
 }
 

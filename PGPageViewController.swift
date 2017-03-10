@@ -162,6 +162,7 @@ extension PGPageViewController: ShowSortTableDelegate {
         searchViewController.sortKey = sortKey
         searchViewController.sortUp = up
         searchViewController.searchKey = searchKey
+        searchViewController.setUpArrays()
         self.present(searchViewController, animated: true, completion: nil)
     }
 }
