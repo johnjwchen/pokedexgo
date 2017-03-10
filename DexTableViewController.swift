@@ -41,7 +41,7 @@ class DexTableViewController: UITableViewController {
     private var layout: [Any]!
     
     fileprivate(set) var pokemonArray: [Any] = []
-    fileprivate(set) var pokemonMoveName: String!
+    fileprivate(set) var pokemonMoveKey: String!
     
     fileprivate lazy var pokemonHeaderView: PokemonHeaderTableViewCell = {
         let header = self.tableView.dequeueReusableCell(withIdentifier: "PokemonTitleCell") as! PokemonHeaderTableViewCell
@@ -119,9 +119,8 @@ class DexTableViewController: UITableViewController {
         }
         if let cell = sec["cell"] as? String {
             if cell == "PokemonCell" {
-                let move = self.currentDex()[dexKey] as! [String: Any]
-                let array = PGJSON.pokemonWith(move: move["name"] as! String)
-                return array.count
+                let array = PGJSON.pokemonWith(moveKey: dexKey)
+                return array != nil ? array!.count : 0
             }
         }
         return 1
@@ -183,12 +182,11 @@ class DexTableViewController: UITableViewController {
             titleCell.setTitle(name: sec["title"] as! String)
         }
         else if let pokemonCell = cell as? PokemonTableViewCell {
-            let moveName = move["name"] as! String
-            if pokemonArray.count < 1 || pokemonMoveName != moveName {
-                pokemonMoveName = moveName
-                let array = PGJSON.pokemonWith(move: moveName)
+            if pokemonArray.count < 1 || pokemonMoveKey != dexKey {
+                pokemonMoveKey = dexKey
+                let array = PGJSON.pokemonWith(moveKey: dexKey)
                 pokemonArray.removeAll()
-                for name in array {
+                for name in array! {
                     pokemonArray.append(PGJSON.pokeDex[name]!)
                 }
             }

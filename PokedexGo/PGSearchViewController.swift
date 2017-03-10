@@ -34,14 +34,14 @@ class PGSearchViewController: UIViewController {
         return UISearchController(searchResultsController: nil)
     }()
  
-    fileprivate(set) var pokemonArray: NSMutableArray!
-    fileprivate(set) var moveArray: NSMutableArray!
+    fileprivate(set) var pokemonArray: [Any]!
+    fileprivate(set) var moveArray: [Any]!
     
-    fileprivate lazy var pokemonMutableArray: NSMutableArray = {
-        return NSMutableArray(array: Array(PGJSON.pokeDex.values))
+    fileprivate lazy var pokemonMutableArray: [Any] = {
+        return Array(PGJSON.pokeDex.values)
     }()
-    fileprivate lazy var moveMutableArray: NSMutableArray = {
-        return NSMutableArray(array: Array(PGJSON.moveDex.values))
+    fileprivate lazy var moveMutableArray: [Any] = {
+        return Array(PGJSON.moveDex.values)
     }()
     
     fileprivate var isSearching: Bool = false
@@ -130,27 +130,27 @@ extension PGSearchViewController: PokemonSortDelegate, MoveSortDelegate {
         sortMove(key: moveHeaderView.sortKey, up: moveHeaderView.sortUp)
     }
     
-    private func search(array: NSMutableArray, key: String?) -> NSMutableArray {
+    private func search(array: [Any], key: String?) -> [Any] {
         if key == nil || (key?.characters.count)! < 1 {
             return array
         }
         let mykey = key!.lowercased()
-        let arr = NSMutableArray()
+        var arr = Array<Any>()
         for item in array {
             let dict = item as! [String: Any]
             // name
             if let name = dict["name"] as? String, name.lowercased().range(of: mykey) != nil {
-                arr.add(dict)
+                arr.append(dict)
             }
             // type
             else if let type = dict["type"] as? String, type.lowercased() == mykey{
-                arr.add(dict)
+                arr.append(dict)
             }
             else if let types = dict["types"] as? [AnyObject] {
                 for itm in types {
                     let type = itm as! String
                     if type.lowercased() == mykey {
-                        arr.add(dict)
+                        arr.append(dict)
                         continue
                     }
                 }
@@ -164,34 +164,18 @@ extension PGSearchViewController: PokemonSortDelegate, MoveSortDelegate {
     }
     
     func sortPokemon(key: String, up: Bool) {
-        DispatchQueue.global(qos: .userInitiated).async {
-            if(self.segmentedControl.selectedSegmentIndex != 2) {
-                let count = self.tableView.visibleCells.count * self.pokemonArray.count/5
-                var i=0 as Int
-                self.pokemonArray.sort(comparator: { (a, b) -> ComparisonResult in
-                    i += 1
-                    if count > 0 && i % count == 0 {
-                        DispatchQueue.main.async {
-                            self.tableView.reloadData()
-                        }
-                    }
-                    return self.doSort(a: a, b: b, key: key, up: up)
-                })
-                
-            }
-            else {
-                self.pokemonArray.sort(comparator: { (a, b) -> ComparisonResult in
-                    return self.doSort(a: a, b: b, key: key, up: up)
-                })
-            }
-            
+        var sortArray = Array(self.pokemonArray)
+        DispatchQueue.global(qos: .default).async {
+            sortArray.sort(by: { (a, b) -> Bool in
+                return PGSearchViewController.mysort(a: a, b: b, key: key, up: up)
+            })
             DispatchQueue.main.async {
+                self.pokemonArray = sortArray
                 self.tableView.reloadData()
             }
         }
-        
     }
-  
+    
     func comparisonResult(value: Bool) -> ComparisonResult {
         if value {
             return .orderedAscending
@@ -226,27 +210,13 @@ extension PGSearchViewController: PokemonSortDelegate, MoveSortDelegate {
     }
     
     func sortMove(key: String, up: Bool) {
-        DispatchQueue.global(qos: .userInitiated).async {
-            if(self.segmentedControl.selectedSegmentIndex == 2) {
-                let count = self.tableView.visibleCells.count * self.moveArray.count/5
-                var i=0 as Int
-                self.moveArray.sort(comparator: { (a, b) -> ComparisonResult in
-                    i += 1
-                    if count > 0 && i % count == 0 {
-                        DispatchQueue.main.async {
-                            self.tableView.reloadData()
-                        }
-                    }
-                    return self.doSort(a: a, b: b, key: key, up: up)
-                })
-                
-            }
-            else {
-                self.moveArray.sort(comparator: { (a, b) -> ComparisonResult in
-                    return self.doSort(a: a, b: b, key: key, up: up)
-                })
-            }
+        var sortArray = Array(self.moveArray)
+        DispatchQueue.global(qos: .default).async {
+            sortArray.sort(by: { (a, b) -> Bool in
+                return PGSearchViewController.mysort(a: a, b: b, key: key, up: up)
+            })
             DispatchQueue.main.async {
+                self.moveArray = sortArray
                 self.tableView.reloadData()
             }
         }
@@ -316,7 +286,7 @@ extension PGSearchViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        let headerHeight: CGFloat = 29
+        let headerHeight: CGFloat = 33
         if segmentedControl.selectedSegmentIndex == 0 && section == 0 ||
             segmentedControl.selectedSegmentIndex == 1 {
             return pokemonArray.count > 0 ? headerHeight : 0

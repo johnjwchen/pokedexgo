@@ -20,25 +20,26 @@ class PGJSON: NSObject {
     }
     
     static private var movePokemon: [String: Any]!
-    static func pokemonWith(move: String) -> [String] {
+    static func pokemonWith(moveKey: String) -> [String]? {
         if (movePokemon == nil) {
             movePokemon = [:]
             for key in pokeDex.keys {
                 let pokemon = pokeDex[key] as! [String: Any]
                 for key2 in ["fastMoves", "chargeMoves"] {
                     for mName in pokemon[key2] as! [String?] {
-                        if (movePokemon[mName!] == nil) {
-                            movePokemon[mName!] = [key]
+                        let mKey = PGHelper.keyString(moveName: mName) as String
+                        if (movePokemon[mKey] == nil) {
+                            movePokemon[mKey] = [key]
                         }
                         else {
-                            var array = movePokemon[mName!] as! [String]
+                            var array = movePokemon[mKey] as! [String]
                             array.append(key)
-                            movePokemon[mName!] = array
+                            movePokemon[mKey] = array
                         }
                     }
                 }
             }
         }
-        return movePokemon[move] as! [String]
+        return movePokemon[moveKey] as? [String]
     }
 }
