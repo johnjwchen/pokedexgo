@@ -94,6 +94,95 @@ class PGHelper: NSObject {
         return key.lowercased()
     }
     
+    static let attackArray: [[Float]] = [
+        [1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1],// 0: not used
+        [1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,0.5,  0,  1,  1,0.5,  1],// 1: normal
+        [1,  1,0.5,0.5,  1,  2,  2,  1,  1,  1,  1,  1,  2,0.5,  1,0.5,  1,  2,  1],// 2: Fire
+        [1,  1,  2,0.5,  1,0.5,  1,  1,  1,  2,  1,  1,  1,  2,  1,0.5,  1,  1,  1],// 3: Water
+        [1,  1,  1,  2,0.5,0.5,  1,  1,  1,  0,  2,  1,  1,  1,  1,0.5,  1,  1,  1],// 4: Electric
+        [1,  1,0.5,  2,  1,0.5,  1,  1,0.5,  2,0.5,  1,0.5,  2,  1,0.5,  1,0.5,  1],// 5: Grass
+        [1,  1,0.5,0.5,  1,  2,0.5,  1,  1,  2,  2,  1,  1,  1,  1,  2,  1,0.5,  1],// 6: Ice
+        [1,  2,  1,  1,  1,  1,  2,  1,0.5,  1,0.5,0.5,0.5,  2,  0,  1,  2,  2,0.5],// 7: Fighting
+        [1,  1,  1,  1,  1,  2,  1,  1,0.5,0.5,  1,  1,  1,0.5,0.5,  1,  1,  0,  2],// 8: Poison
+        [1,  1,  2,  1,  2,0.5,  1,  1,  2,  1,  0,  1,0.5,  2,  1,  1,  1,  2,  1],// 9: Ground
+        [1,  1,  1,  1,0.5,  2,  1,  2,  1,  1,  1,  1,  2,0.5,  1,  1,  1,0.5,  1],//10: Flying
+        [1,  1,  1,  1,  1,  1,  1,  2,  2,  1,  1,0.5,  1,  1,  1,  1,  0,0.5,  1],//11: Psychic
+        [1,  1,0.5,  1,  1,  2,  1,0.5,0.5,  1,0.5,  2,  1,  1,0.5,  1,  2,0.5,0.5],//12: Bug
+        [1,  1,  2,  1,  1,  1,  2,0.5,  1,0.5,  2,  1,  2,  1,  1,  1,  1,0.5,  1],//13: Rock
+        [1,  0,  1,  1,  1,  1,  1,  1,  1,  1,  1,  2,  1,  1,  2,  1,0.5,  1,  1],//14: Ghost
+        [1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  2,  1,0.5,  0],//15: Dragon
+        [1,  1,  1,  1,  1,  1,  1,0.5,  1,  1,  1,  2,  1,  1,  2,  1,0.5,  1,0.5],//16: Dark
+        [1,  1,0.5,0.5,0.5,  1,  2,  1,  1,  1,  1,  1,  1,  2,  1,  1,  1,0.5,  2],//17: Steel
+        [1,  1,0.5,  1,  1,  1,  1,  2,0.5,  1,  1,  1,  1,  1,  1,  2,  2,0.5,  1] //18: Fairy
+    ]
+    
+    static var defenseArray: [[Float]]? = nil
+    private class func writeDefenseArray() {
+        defenseArray = []
+        for i in 0...18 {
+            var ar: [Float] = []
+            for j in 0...18 {
+                ar.append(attackArray[j][i])
+            }
+            defenseArray!.append(ar)
+        }
+    }
+    
+    /**
+     get the effectiveness (super-effective, not very effective) of type(s)
+    
+    */
+    class func effectOn(pokemonTypes: [Int]) -> [String: Any] {
+        if defenseArray == nil {
+            writeDefenseArray()
+        }
+        var effects = ["super": [], "not": []]
+        var array = defenseArray![pokemonTypes[0]]
+        var index = 1
+        while(index < pokemonTypes.count) {
+            var ar = defenseArray![pokemonTypes[index]]
+            for i in 1...18 {
+                array[i] = array[i] * ar[i]
+            }
+            index += 1
+        }
+        var superArray: [Any] = []
+        var notArray: [Any] = []
+        for i in 1...18 {
+            let eff = array[i]
+            if eff > 1 {
+                superArray.append([i, eff])
+            }
+            if eff < 1 {
+                notArray.append([i, eff])
+            }
+        }
+        effects["super"] = superArray.sorted(by: { (a, b) -> Bool in
+            let ar1 = a as! [Any]
+            let ar2 = b as! [Any]
+            let f1 = ar1[1] as! Float
+            let f2 = ar2[1] as! Float
+            
+            return f1 > f2
+        })
+        effects["not"] = notArray.sorted(by: { (a, b) -> Bool in
+            let ar1 = a as! [Any]
+            let ar2 = b as! [Any]
+            let f1 = ar1[1] as! Float
+            let f2 = ar2[1] as! Float
+            
+            return f1 < f2
+        })
+        
+        return effects
+    }
+    
+    /**
+     parse json file to Array or Dictionary
+     
+     - parameter name: json file name *without extension*
+     - returns: Array or Dictionary. *can be nil*
+    */
     class func jsonFrom(name: String) -> Any? {
         do {
             if let file = Bundle.main.url(forResource: name, withExtension: "json") {

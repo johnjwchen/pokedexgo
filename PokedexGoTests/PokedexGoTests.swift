@@ -29,6 +29,11 @@ class PokedexGoTests: XCTestCase {
         XCTAssert(s == "https://pokedex.me/new-pokemon/240/001.png", "pokemon image url correct")
     }
     
+    func testEffectArray() {
+        let s = PGHelper.effectOn(pokemonTypes: [1, 2])
+        XCTAssert(s != nil, "get effect object")
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
