@@ -19,6 +19,17 @@ enum DexType {
 
 class DexTableViewController: UITableViewController {
     
+    private var _pageIndex: Int = -1
+    var pageIndex: Int {
+        get {return _pageIndex}
+        set(value) {
+            if _pageIndex == -1 && value >= 0 {
+                _pageIndex = value
+            }
+        }
+    }
+    
+    
     var showSortDelegate: ShowSortTableDelegate?
     var viewPageDelegate: ViewDexPageDelegate?
     
@@ -283,7 +294,7 @@ extension DexTableViewController: PTTypeButtonDelegate {
         guard let label = button as? UILabel else {
             return
         }
-        showSortDelegate?.showTable(searchKey: label.text, sortKey: "name", up: false, scope: 1)
+        showSortDelegate?.showTable(searchKey: label.text, sortKey: "name", up: true, scope: 1)
     }
 }
 

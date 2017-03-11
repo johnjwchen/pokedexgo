@@ -25,15 +25,13 @@ class PGPageViewController: UIPageViewController {
     
     deinit {
         // save current viewing page
-        UserDefaults.standard.setValue(currentPage(), forKey: PGPageViewController.CurrentPageKey)
+        let currentVC = self.viewControllers!.first as! DexTableViewController
+        let p = pageArray[currentVC.pageIndex] as! [Any]
+        UserDefaults.standard.setValue(p, forKey: PGPageViewController.CurrentPageKey)
         UserDefaults.standard.synchronize()
     }
     
     
-    fileprivate var pageIndex: Int = 0
-    fileprivate func currentPage() -> [Any] {
-        return pageArray[pageIndex] as! [Any]
-    }
     fileprivate func page(index: Int) -> [Any]? {
         guard index >= 0 else {
             return nil
@@ -43,24 +41,25 @@ class PGPageViewController: UIPageViewController {
         }
         return pageArray[index] as? [Any]
     }
-    fileprivate func add(page: [Any]) {
-        pageIndex += 1
-        pageArray.insert(page, at: pageIndex)
-        
+    fileprivate func add(page: [Any], insertIndex: Int) -> Int {
+        pageArray.insert(page, at: insertIndex)
         if pageArray.count >= PGPageViewController.MaxPageAllowed {
             pageArray.remove(at: 0)
-            pageIndex -= 1
+            return insertIndex - 1
         }
+        return insertIndex
     }
     
     
-    fileprivate func newTableViewController(page: [Any]) -> UIViewController {
+    fileprivate func newTableViewController(page: [Any], index: Int) -> UIViewController {
         let type = page[0] as! DexType
         let key = page[1] as! String
         let vc = storyboard!.instantiateViewController(withIdentifier: "DexTableViewController") as! DexTableViewController
         vc.setDex(dexType: type, dexKey: key)
         vc.showSortDelegate = self
         vc.viewPageDelegate = self
+        // must set the pageIndex
+        vc.pageIndex = index
         return vc
     }
     
@@ -76,9 +75,9 @@ class PGPageViewController: UIPageViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
 
         dataSource = self
-        delegate = self
+//        delegate = self
         
-        let firstViewController = newTableViewController(page: currentPage())
+        let firstViewController = newTableViewController(page: pageArray.first as! [Any], index: 0)
         setViewControllers([firstViewController],
                            direction: .forward,
                            animated: true,
@@ -110,34 +109,19 @@ class PGPageViewController: UIPageViewController {
 
 extension PGPageViewController: ViewDexPageDelegate {
     func viewPage(type: DexType, key: String!) {
-        self.add(page: [type, key])
-        setViewControllers([newTableViewController(page: self.currentPage())], direction: .forward, animated: true, completion: nil)
+        let p = [type, key] as [Any]
+        let currentVC = self.viewControllers!.first as! DexTableViewController
+        let currentP = page(index: currentVC.pageIndex)!
+        if currentP[0] as! DexType == p[0] as! DexType &&
+            currentP[1] as! String == p[1] as! String {
+            // same page
+            return
+        }
+        let insertIndex = self.add(page: p, insertIndex: currentVC.pageIndex + 1)
+        setViewControllers([newTableViewController(page: p, index: insertIndex)], direction: .forward, animated: true, completion: nil)
     }
 }
 
-extension PGPageViewController: UIPageViewControllerDelegate {
-    public func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
-        if completed {
-            // update pageIndex
-            var index: Int = pageIndex - 1
-            let vc = self.viewControllers?[0] as! DexTableViewController
-            let p = self.page(index: index)
-            if p != nil {
-                if vc.hasSame(page: p!) {
-                    pageIndex = index
-                    return
-                }
-            }
-            index = pageIndex + 1
-            let p2 = self.page(index: index)
-            if p2 != nil {
-                if vc.hasSame(page: p2!) {
-                    pageIndex = index
-                }
-            }
-        }
-    }
-}
 
 extension PGPageViewController: UIPageViewControllerDataSource {
     func viewController(forIndex: Int) -> UIViewController? {
@@ -145,14 +129,16 @@ extension PGPageViewController: UIPageViewControllerDataSource {
         guard p != nil else {
             return nil
         }
-        return self.newTableViewController(page: p!)
+        return self.newTableViewController(page: p!, index: forIndex)
     }
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        return self.viewController(forIndex: pageIndex + 1)
+        let currentVC = self.viewControllers!.first as! DexTableViewController
+        return self.viewController(forIndex: currentVC.pageIndex + 1)
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        return self.viewController(forIndex: pageIndex - 1)
+        let currentVC = self.viewControllers!.first as! DexTableViewController
+        return self.viewController(forIndex: currentVC.pageIndex - 1)
     }
 }
 
