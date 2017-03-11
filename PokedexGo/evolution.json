@@ -1,0 +1,530 @@
+{
+	"bulbasaur-ivysaur-venusaur": {
+		"from": 1,
+		"candy": 25,
+		"to": {
+			"from": 2,
+			"candy": 100,
+            "to": 3
+		}
+	},
+	"charmander-charmeleon-charizard": {
+		"from": 4,
+		"candy": 25,
+		"to": {
+			"from": 5,
+			"candy": 100,
+			"to": 6
+		}
+	},
+	"squirtle-wartortle-blastoise": {
+		"from": 7,
+		"candy": 25,
+		"to": {
+			"from": 8,
+			"candy": 100,
+			"to": 9
+		}
+	},
+	"caterpie-metapod-butterfree": {
+		"from": 10,
+		"candy": 12,
+		"to": {
+			"from": 11,
+			"candy": 50,
+			"to": 12
+		}
+	},
+	"weedle-kakuna-beedrill": {
+		"from": 13,
+		"candy": 12,
+		"to": {
+			"from": 14,
+			"candy": 50,
+			"to": 15
+		}
+	},
+	"pidgey-pidgeotto-pidgeot": {
+		"from": 16,
+		"candy": 12,
+		"to": {
+			"from": 17,
+			"candy": 50,
+			"to": 18
+		}
+	},
+	"rattata-raticate": {
+		"from": 19,
+		"candy": 25,
+		"to": 20
+	},
+	"spearow-fearow": {
+		"from": 21,
+		"candy": 50,
+		"to": 22
+	},
+	"ekans-arbok": {
+		"from": 23,
+		"candy": 50,
+		"to": 24
+	},
+	"pichu-pikachu-raichu": {
+		"from": 172,
+		"candy": 25,
+		"to": {
+			"from": 25,
+			"candy": 50,
+			"to": 26
+		}
+	},
+	"sandshrew-sandslash": {
+		"from": 27,
+		"candy": 50,
+		"to": 28
+	},
+	"nidoran♀-nidorina-nidoqueen": {
+		"from": 29,
+		"candy": 25,
+		"to": {
+			"from": 30,
+			"candy": 100,
+			"to": 31
+		}
+	},
+	"nidoran♂-nidorino-nidoking": {
+		"from": 32,
+		"candy": 25,
+		"to": {
+			"from": 33,
+			"candy": 100,
+			"to": 34
+		}
+	},
+	"cleffa-clefairy-clefable": {
+		"from": 173,
+		"candy": 25,
+		"to": {
+			"from": 35,
+			"candy": 50,
+			"to": 36
+		}
+	},
+	"vulpix-ninetales": {
+		"from": 37,
+		"candy": 50,
+		"to": 38
+	},
+	"igglybuff-jigglypuff-wigglytuff": {
+		"from": 174,
+		"candy": 25,
+		"to": {
+			"from": 39,
+			"candy": 50,
+			"to": 40
+		}
+	},
+	"zubat-golbat-crobat": {
+		"from": 41,
+		"candy": 50,
+		"to": {
+			"from": 42,
+			"candy": 50,
+			"to": 169
+		}
+	},
+	"oddish-gloom-vileplume": {
+		"from": 43,
+		"candy": 25,
+		"to": {
+			"from": 44,
+			"candy": 100,
+			"to": 45
+		}
+	},
+	"paras-parasect": {
+		"from": 46,
+		"candy": 50,
+		"to": 47
+	},
+	"venonat-venomoth": {
+		"from": 48,
+		"candy": 50,
+		"to": 49
+	},
+	"diglett-dugtrio": {
+		"from": 50,
+		"candy": 50,
+		"to": 51
+	},
+	"meowth-persian": {
+		"from": 52,
+		"candy": 50,
+		"to": 53
+	},
+	"psyduck-golduck": {
+		"from": 54,
+		"candy": 50,
+		"to": 55
+	},
+	"mankey-primeape": {
+		"from": 56,
+		"candy": 50,
+		"to": 57
+	},
+	"growlithe-arcanine": {
+		"from": 58,
+		"candy": 50,
+		"to": 59
+	},
+	"poliwag-poliwhirl-poliwrath": {
+		"from": 60,
+		"candy": 25,
+		"to": {
+			"from": 61,
+			"candy": 100,
+			"to": 62
+		}
+	},
+	"abra-kadabra-alakazam": {
+		"from": 63,
+		"candy": 25,
+		"to": {
+			"from": 64,
+			"candy": 100,
+			"to": 65
+		}
+	},
+	"machop-machoke-machamp": {
+		"from": 66,
+		"candy": 25,
+		"to": {
+			"from": 67,
+			"candy": 100,
+			"to": 68
+		}
+	},
+	"bellsprout-weepinbell-victreebel": {
+		"from": 69,
+		"candy": 25,
+		"to": {
+			"from": 70,
+			"candy": 100,
+			"to": 71
+		}
+	},
+	"tentacool-tentacruel": {
+		"from": 72,
+		"candy": 50,
+		"to": 73
+	},
+	"geodude-graveler-golem": {
+		"from": 74,
+		"candy": 25,
+		"to": {
+			"from": 75,
+			"candy": 100,
+			"to": 76
+		}
+	},
+	"ponyta-rapidash": {
+		"from": 77,
+		"candy": 50,
+		"to": 78
+	},
+	"slowpoke-slowbro": {
+		"from": 79,
+		"candy": 50,
+		"to": 80
+	},
+	"magnemite-magneton": {
+		"from": 81,
+		"candy": 50,
+		"to": 82
+	},
+	"doduo-dodrio": {
+		"candy": 50,
+		"to": 85
+	},
+	"seel-dewgong": {
+		"from": 86,
+		"candy": 50,
+		"to": 87
+	},
+	"grimer-muk": {
+		"from": 88,
+		"candy": 50,
+		"to": 89
+	},
+	"shellder-cloyster": {
+		"from": 90,
+		"candy": 50,
+		"to": 91
+	},
+	"gastly-haunter-gengar": {
+		"from": 92,
+		"candy": 25,
+		"to": {
+			"from": 93,
+			"candy": 100,
+			"to": 94
+		}
+	},
+	"drowzee-hypno": {
+		"from": 96,
+		"candy": 50,
+		"to": 97
+	},
+	"krabby-kingler": {
+		"from": 98,
+		"candy": 50,
+		"to": 99
+	},
+	"voltorb-electrode": {
+		"from": 100,
+		"candy": 50,
+		"to": 101
+	},
+	"exeggcute-exeggutor": {
+		"from": 102,
+		"candy": 50,
+		"to": 103
+	},
+	"cubone-marowak": {
+		"from": 104,
+		"candy": 50,
+		"to": 105
+	},
+	"koffing-weezing": {
+		"from": 109,
+		"candy": 50,
+		"to": 110
+	},
+	"rhyhorn-rhydon": {
+		"from": 111,
+		"candy": 50,
+		"to": 112
+	},
+	"horsea-seadra": {
+		"from": 116,
+		"candy": 50,
+		"to": 117
+	},
+	"goldeen-seaking": {
+		"from": 118,
+		"candy": 50,
+		"to": 119
+	},
+	"staryu-starmie": {
+		"from": 120,
+		"candy": 50,
+		"to": 121
+	},
+	"magikarp-gyarados": {
+		"from": 129,
+		"candy": 400,
+		"to": 130
+	},
+	"eevee-vaporeon-jolteon-flareon": {
+		"from": 133,
+		"candy": 25,
+		"to": [
+			134,
+			135,
+			136
+		]
+	},
+	"omanyte-omastar": {
+		"from": 138,
+		"candy": 50,
+		"to": 139
+	},
+	"kabuto-kabutops": {
+		"from": 140,
+		"candy": 50,
+		"to": 141
+	},
+	"dratini-dragonair-dragonite": {
+		"from": 147,
+		"candy": 25,
+		"to": {
+			"from": 148,
+			"candy": 100,
+			"to": 149
+		}
+	},
+	"chikorita-bayleef-meganium": {
+		"from": 152,
+		"candy": 25,
+		"to": {
+			"from": 153,
+			"candy": 100,
+			"to": 154
+		}
+	},
+	"cyndaquil-quilava-typhlosion": {
+		"from": 155,
+		"candy": 25,
+		"to": {
+			"from": 156,
+			"candy": 100,
+			"to": 157
+		}
+	},
+	"totodile-croconaw-feraligatr": {
+		"from": 158,
+		"candy": 25,
+		"to": {
+			"from": 159,
+			"candy": 100,
+			"to": 160
+		}
+	},
+	"sentret-furret": {
+		"from": 161,
+		"candy": 50,
+		"to": 162
+	},
+	"hoothoot-noctowl": {
+		"from": 163,
+		"candy": 50,
+		"to": 164
+	},
+	"ledyba-ledian": {
+		"from": 165,
+		"candy": 50,
+		"to": 166
+	},
+	"spinarak-ariados": {
+		"from": 167,
+		"candy": 50,
+		"to": 168
+	},
+	"chinchou-lanturn": {
+		"from": 170,
+		"candy": 50,
+		"to": 171
+	},
+	"togepi-togetic": {
+		"from": 175,
+		"candy": 50,
+		"to": 176
+	},
+	"natu-xatu": {
+		"from": 177,
+		"candy": 50,
+		"to": 178
+	},
+	"mareep-flaaffy-ampharos": {
+		"from": 179,
+		"candy": 25,
+		"to": 181
+	},
+	"marill-azumarill": {
+		"from": 183,
+		"candy": 50,
+		"to": 184
+	},
+	"hoppip-skiploom-jumpluff": {
+		"from": 187,
+		"candy": 25,
+		"to": {
+			"from": 188,
+			"candy": 100,
+			"to": 189
+		}
+	},
+	"sunkern-sunflora": {
+		"from": 191,
+		"candy": 50,
+		"to": 192
+	},
+	"wooper-quagsire": {
+		"from": 194,
+		"candy": 50,
+		"to": 195
+	},
+	"pineco-forretress": {
+		"from": 204,
+		"candy": 50,
+		"to": 205
+	},
+	"onix-steelix": {
+		"from": 95,
+		"candy": 50,
+		"to": 208
+	},
+	"snubbull-granbull": {
+		"from": 209,
+		"candy": 50,
+		"to": 210
+	},
+	"scyther-scizor": {
+		"from": 123,
+		"candy": 50,
+		"to": 212
+	},
+	"teddiursa-ursaring": {
+		"from": 216,
+		"candy": 50,
+		"to": 217
+	},
+	"slugma-magcargo": {
+		"from": 218,
+		"candy": 50,
+		"to": 219
+	},
+	"swinub-piloswine": {
+		"from": 220,
+		"candy": 50,
+		"to": 221
+	},
+	"remoraid-octillery": {
+		"from": 223,
+		"candy": 50,
+		"to": 224
+	},
+	"houndour-houndoom": {
+		"from": 228,
+		"candy": 50,
+		"to": 229
+	},
+	"phanpy-donphan": {
+		"from": 231,
+		"candy": 50,
+		"to": 232
+	},
+	"hitmonchan-hitmontop": {
+		"from": 107,
+		"candy": 50,
+		"to": 237
+	},
+	"smoochum-jynx": {
+		"from": 238,
+		"candy": 50,
+		"to": 124
+	},
+	"elekid-electabuzz": {
+		"from": 239,
+		"candy": 50,
+		"to": 125
+	},
+	"magby-magmar": {
+		"from": 240,
+		"candy": 50,
+		"to": 126
+	},
+	"chansey-blissey": {
+		"from": 113,
+		"candy": 50,
+		"to": 242
+	},
+	"larvitar-pupitar-tyranitar": {
+		"from": 246,
+		"candy": 25,
+		"to": {
+			"from": 247,
+			"candy": 100,
+			"to": 248
+		}
+	}
+}

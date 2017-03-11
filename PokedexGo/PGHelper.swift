@@ -30,6 +30,26 @@ extension UIImageView {
     }
 }
 
+extension UIButton {
+    func downloadedFrom(url: URL) {
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard
+                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                let data = data, error == nil,
+                let image = UIImage(data: data)
+                else { return }
+            DispatchQueue.main.async() { () -> Void in
+                self.setBackgroundImage(image, for: .normal)
+            }
+            }.resume()
+    }
+    func downloadedFrom(link: String) {
+        guard let url = URL(string: link) else { return }
+        downloadedFrom(url: url)
+    }
+}
+
 //extension String {
 //    mutating func stringByRemovingRegexMatches(pattern: String, replaceWith: String = "") {
 //        do {
@@ -60,8 +80,12 @@ class PGHelper: NSObject {
      - Requires: Both first and last name should be parts of the full name, separated with a *space character*.
 
     */
-    class func imageUrlOfPokemon(width: NSInteger, num: NSInteger) -> URL! {
-        let url = String(format: "https://pokedex.me/new-pokemon/%d/%03d.png", width, num)
+    class func imageUrlOfPokemon(width: Int, num: Int) -> URL! {
+        var w = Float(width) * Float(UIScreen.main.scale)
+        if w > 480 {
+            w = 480
+        }
+        let url = String(format: "https://pokedex.me/new-pokemon/%d/%03d.png", Int(w), num)
         return URL(string: url)
     }
     

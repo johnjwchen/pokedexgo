@@ -122,7 +122,13 @@ class DexTableViewController: UITableViewController {
                 let array = PGJSON.pokemonWith(moveKey: dexKey)
                 return array != nil ? array!.count : 0
             }
+            if cell == "EvolutionCell" {
+                let pokemon = PGJSON.pokeDex[dexKey] as! [String: Any]
+                let dict = PGJSON.evolutionOf(pokemonName: pokemon["name"] as! String)
+                return dict == nil ? 0 : 1
+            }
         }
+        
         return 1
     }
     
@@ -165,6 +171,11 @@ class DexTableViewController: UITableViewController {
             let num = pokemon["num"] as! Int
             let desc = PGJSON.pokemonDescArray[num] as! String
             desCell.set(description: desc)
+        }
+        else if let evoCell = cell as? EvolutionTableViewCell {
+            let pokemonName = pokemon["name"] as! String
+            evoCell.set(evolution: PGJSON.evolutionOf(pokemonName: pokemonName)!)
+            evoCell.viewPageDelegate = self.viewPageDelegate
         }
     }
     

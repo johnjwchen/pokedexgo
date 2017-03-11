@@ -13,10 +13,31 @@ class PGJSON: NSObject {
     static let moveDex = PGHelper.jsonFrom(name: "movedex-go") as! [String: Any]
     static let pokeDex = PGHelper.jsonFrom(name: "godex") as! [String: Any]
     static let pokemonDescArray = PGHelper.jsonFrom(name: "pokemon_desc_30") as! [Any]
+    static let evolutionDict = PGHelper.jsonFrom(name: "evolution") as! [String: Any]
     
     static func moveOf(name: String) -> [String: Any] {
         let name2 = name.lowercased().replacingOccurrences(of: " ", with: "-")
         return moveDex[name2] as! [String: Any]
+    }
+    
+    static private var pokemonEvolution: [String: String]!
+    // get evolution info from pokemon name
+    static func evolutionOf(pokemonName: String) -> [String: Any]? {
+        if pokemonEvolution == nil {
+            pokemonEvolution = Dictionary()
+            for key in evolutionDict.keys {
+                let nameArray = key.characters.split(separator: "-").map(String.init)
+                for name in nameArray {
+                    pokemonEvolution[name] = key
+                }
+            }
+        }
+        
+        let key = pokemonEvolution[pokemonName.lowercased()]
+        if key == nil {
+            return nil
+        }
+        return evolutionDict[key!] as? [String: Any]
     }
     
     static private var movePokemon: [String: Any]!

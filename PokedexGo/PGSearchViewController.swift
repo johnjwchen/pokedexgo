@@ -70,6 +70,9 @@ class PGSearchViewController: UIViewController {
     
     
     func setUpArrays() {
+        guard segmentedControl != nil else {
+            return
+        }
         if segmentIndex > -1 {
             segmentedControl.selectedSegmentIndex = segmentIndex
             // search
