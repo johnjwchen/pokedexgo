@@ -1382,41 +1382,6 @@
             </objects>
             <point key="canvasLocation" x="-536" y="-273.4632683658171"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="CO3-aT-02p">
-            <objects>
-                <viewController id="DZ0-aN-3Ig" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="nDy-23-MSD"/>
-                        <viewControllerLayoutGuide type="bottom" id="9pr-V8-chm"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="LQj-Ts-utT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 Candy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sc4-s0-ZS1" customClass="PGArrowLabel" customModule="PokedexGo" customModuleProvider="target">
-                                <rect key="frame" x="16" y="40" width="343" height="60"/>
-                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="eLe-6q-0cL"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Sc4-s0-ZS1" firstAttribute="top" secondItem="nDy-23-MSD" secondAttribute="bottom" constant="20" id="Mym-aU-Ocq"/>
-                            <constraint firstItem="Sc4-s0-ZS1" firstAttribute="leading" secondItem="LQj-Ts-utT" secondAttribute="leadingMargin" id="jCm-iz-8Kx"/>
-                            <constraint firstItem="Sc4-s0-ZS1" firstAttribute="trailing" secondItem="LQj-Ts-utT" secondAttribute="trailingMargin" id="x0h-VS-LLK"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oXy-dC-W4W" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1740" y="-2171.0644677661171"/>
-        </scene>
         <!--Main View Controller-->
         <scene sceneID="385-qb-94V">
             <objects>
