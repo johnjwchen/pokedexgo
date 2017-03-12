@@ -1,21 +1,3 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Gist
- @johnjwchen
- Sign out
- Watch 1,989
-  Star 47,463
-  Fork 19,844 github/gitignore
- Code  Pull requests 123  Projects 0  Pulse  Graphs
-Branch: master Find file Copy pathgitignore/Swift.gitignore
-8ca6baa  24 days ago
-@shiftkey shiftkey updated link to fastlane docs
-18 contributors @KrauseFx @shiftkey @czechboy0 @Coeur @adrfer @nwest @nrbrook @natestedman @martinblech @yanniks @FabrizioBrancati @evfemist @dbburgess @chrisamanse @modocache @commscheck @bbodenmiller @chenyufeng1991
-RawBlameHistory     
-68 lines (56 sloc)  1.41 KB
 # Xcode
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
@@ -86,3 +68,4 @@ fastlane/test_output
 
 # app icons
 appicons/
+

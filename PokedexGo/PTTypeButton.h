@@ -42,11 +42,16 @@ typedef enum
 #define RGB(A,B,C) [UIColor colorWithRed:A/255.0 green:B/255.0 blue:C/255.0 alpha:1.0]
 
 
+@protocol PTTypeButtonDelegate <NSObject>
+
+@required
+- (void)touchUp:(id)button;
+
+@end
 
 @interface PTTypeButton : UILabel
 
 @property (nonatomic, assign) PokemonType pokemonType;
-
-- (void)addTarget:(id)target action:(SEL)selector;
-
+@property (nonatomic, weak) id <PTTypeButtonDelegate> delegate;
+- (void)set:(NSString *)type;
 @end

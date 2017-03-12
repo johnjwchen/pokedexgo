@@ -24,6 +24,14 @@
     _selector = selector;
 }
 
+- (void)setDelegate:(id<PTTypeButtonDelegate>)delegate {
+    _delegate = delegate;
+    if (self.gestureRecognizers.count < 1) {
+        UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(touch:)];
+        [tapGestureRecognizer setNumberOfTapsRequired:1];
+        [self addGestureRecognizer:tapGestureRecognizer];
+    }
+}
 
 - (void)setUp{
     // Initialization code
@@ -34,16 +42,12 @@
     self.textAlignment = NSTextAlignmentCenter;
     
     self.userInteractionEnabled = YES;
-    
-    
-    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(touch:)];
-    [tapGestureRecognizer setNumberOfTapsRequired:1];
-    [self addGestureRecognizer:tapGestureRecognizer];
-
 }
 
 - (void)touch:(id)sender{
-    [_target performSelector:_selector withObject:self];
+    if (_delegate) {
+        [_delegate touchUp:self];
+    }
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -61,6 +65,46 @@
         [self setUp];
     }
     return self;
+}
+
+- (void)set:(NSString *)type {
+    NSString *a = type.lowercaseString;
+    if ([a isEqualToString:@"normal"])
+        [self setPokemonType:PokemonTypeNormal];
+    else if ([a isEqualToString:@"fire"])
+        [self setPokemonType:PokemonTypeFire];
+    else if ([a isEqualToString:@"water"])
+        [self setPokemonType:PokemonTypeWater];
+    else if ([a isEqualToString:@"grass"])
+        [self setPokemonType:PokemonTypeGrass];
+    else if ([a isEqualToString:@"electric"])
+        [self setPokemonType:PokemonTypeElectric];
+    else if ([a isEqualToString:@"ice"])
+        [self setPokemonType:PokemonTypeIce];
+    else if ([a isEqualToString:@"fighting"])
+        [self setPokemonType:PokemonTypeFighting];
+    else if ([a isEqualToString:@"poison"])
+        [self setPokemonType:PokemonTypePoison];
+    else if ([a isEqualToString:@"ground"])
+        [self setPokemonType:PokemonTypeGround];
+    else if ([a isEqualToString:@"flying"])
+        [self setPokemonType:PokemonTypeFlying];
+    else if ([a isEqualToString:@"psychic"])
+        [self setPokemonType:PokemonTypePsychic];
+    else if ([a isEqualToString:@"bug"])
+        [self setPokemonType:PokemonTypeBug];
+    else if ([a isEqualToString:@"rock"])
+        [self setPokemonType:PokemonTypeRock];
+    else if ([a isEqualToString:@"ghost"])
+        [self setPokemonType:PokemonTypeGhost];
+    else if ([a isEqualToString:@"dragon"])
+        [self setPokemonType:PokemonTypeDragon];
+    else if ([a isEqualToString:@"dark"])
+        [self setPokemonType:PokemonTypeDark];
+    else if ([a isEqualToString:@"steel"])
+        [self setPokemonType:PokemonTypeSteel];
+    else if ([a isEqualToString:@"fairy"])
+        [self setPokemonType:PokemonTypeFairy];
 }
 
 - (void)setPokemonType:(PokemonType)pokemonType {
