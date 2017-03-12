@@ -19,11 +19,12 @@ class EffectivenessTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    private func addArray(_ array: [Any], to stackView: UIStackView) {
+    private func addArray(_ array: [Any], to stackView: UIStackView, delegate: PTTypeButtonDelegate) {
         for item in array {
             let ar = item as! [Any]
             let view = TypeEffectView.instanceFromNib()
             view.typeButton.pokemonType = PokemonType(rawValue: UInt32(ar[0] as! Int))
+            view.typeButton.delegate = delegate
             view.set(effect: ar[1] as! Float)
             stackView.addArrangedSubview(view)
         }
@@ -37,8 +38,8 @@ class EffectivenessTableViewCell: UITableViewCell {
         
         let effect = PGHelper.effectOn(typeNames: typeNames)
     
-        addArray(effect["super"] as! [Any], to: superEffectStackView)
-        addArray(effect["less"] as! [Any], to: lessEffectStackView)
+        addArray(effect["super"] as! [Any], to: superEffectStackView, delegate: delegate)
+        addArray(effect["less"] as! [Any], to: lessEffectStackView, delegate: delegate)
     }
 
 }

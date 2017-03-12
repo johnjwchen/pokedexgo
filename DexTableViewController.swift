@@ -189,7 +189,7 @@ class DexTableViewController: UITableViewController {
             evoCell.viewPageDelegate = self.viewPageDelegate
         }
         else if let effectCell = cell as? EffectivenessTableViewCell {
-            effectCell.set(typeNames: pokemon["types"] as! [String], delegate: self)
+            effectCell.set(typeNames: pokemon["types"] as! [String], delegate: self.moveTypeButtonDelegate)
         }
     }
     

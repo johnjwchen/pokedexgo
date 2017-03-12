@@ -15,14 +15,37 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RoZ-jz-Uy4" customClass="PTTypeButton">
-                    <rect key="frame" x="0.0" y="12" width="70" height="21"/>
+                    <rect key="frame" x="0.0" y="12" width="60" height="21"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="70" id="QtV-Ly-Swl"/>
+                        <constraint firstAttribute="width" constant="70" id="gkI-k1-iyu"/>
                         <constraint firstAttribute="height" constant="21" id="jNN-8g-sgu"/>
+                        <constraint firstAttribute="width" constant="60" id="nJy-r9-bym"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="gkI-k1-iyu"/>
+                            <exclude reference="nJy-r9-bym"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=regular">
+                        <mask key="constraints">
+                            <include reference="gkI-k1-iyu"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=compact-widthClass=compact">
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <mask key="constraints">
+                            <include reference="gkI-k1-iyu"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="nJy-r9-bym"/>
+                        </mask>
+                    </variation>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nm5-Cu-7u3">
                     <rect key="frame" x="0.0" y="33" width="70" height="21"/>

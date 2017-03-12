@@ -1348,6 +1348,10 @@
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Jhk-j4-vhE">
                                                     <rect key="frame" x="0.0" y="130" width="1008" height="70"/>
+                                                    <color key="backgroundColor" red="1" green="0.43529412150000002" blue="0.81176471709999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="70" id="rUx-7R-R9A"/>
+                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                         </stackView>
