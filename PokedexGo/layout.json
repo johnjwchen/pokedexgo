@@ -6,6 +6,7 @@
         {"cell": "TypeCell"},
         {"cell": "StatsCell"},
         {"cell": "EvolutionCell"},
+        {"cell": "EffectivenessCell"},
         {"cell": "TitleCell", "title": "Fast Moves"},
         {"cell": "MoveCell", "key": "fastMoves"},
         {"cell": "TitleCell", "title": "Charge Moves"},

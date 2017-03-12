@@ -128,6 +128,43 @@ class PGHelper: NSObject {
         }
     }
     
+    static let typeNameDict: [String: Int] = [
+        "normal": 1,
+        "fire": 2,
+        "water": 3,
+        "electric": 4,
+        "grass": 5,
+        "ice": 6,
+        "fighting": 7,
+        "poison": 8,
+        "ground": 9,
+        "flying": 10,
+        "psychic": 11,
+        "bug": 12,
+        "rock": 13,
+        "ghost": 14,
+        "dragon": 15,
+        "dark": 16,
+        "steel": 17,
+        "fairy": 18
+    ]
+    class func typeOf(name: String) -> Int {
+        guard let type = typeNameDict[name.lowercased()] else {
+            return 0
+        }
+        return type
+    }
+    
+    class func effectOn(typeNames: [String]) -> [String: Any] {
+        var types = [typeOf(name: typeNames.first!)]
+        var i = 1
+        while i < typeNames.count {
+            types.append(typeOf(name: typeNames[i]))
+            i += 1
+        }
+        return effectOn(pokemonTypes: types)
+    }
+    
     /**
      get the effectiveness (super-effective, not very effective) of type(s)
     
@@ -136,7 +173,7 @@ class PGHelper: NSObject {
         if defenseArray == nil {
             writeDefenseArray()
         }
-        var effects = ["super": [], "not": []]
+        var effects = ["super": [], "less": []]
         var array = defenseArray![pokemonTypes[0]]
         var index = 1
         while(index < pokemonTypes.count) {
@@ -147,14 +184,14 @@ class PGHelper: NSObject {
             index += 1
         }
         var superArray: [Any] = []
-        var notArray: [Any] = []
+        var lessArray: [Any] = []
         for i in 1...18 {
             let eff = array[i]
             if eff > 1 {
                 superArray.append([i, eff])
             }
             if eff < 1 {
-                notArray.append([i, eff])
+                lessArray.append([i, eff])
             }
         }
         effects["super"] = superArray.sorted(by: { (a, b) -> Bool in
@@ -165,7 +202,7 @@ class PGHelper: NSObject {
             
             return f1 > f2
         })
-        effects["not"] = notArray.sorted(by: { (a, b) -> Bool in
+        effects["less"] = lessArray.sorted(by: { (a, b) -> Bool in
             let ar1 = a as! [Any]
             let ar2 = b as! [Any]
             let f1 = ar1[1] as! Float

@@ -188,6 +188,9 @@ class DexTableViewController: UITableViewController {
             evoCell.set(evolution: PGJSON.evolutionOf(pokemonName: pokemonName)!)
             evoCell.viewPageDelegate = self.viewPageDelegate
         }
+        else if let effectCell = cell as? EffectivenessTableViewCell {
+            effectCell.set(typeNames: pokemon["types"] as! [String], delegate: self)
+        }
     }
     
     func configMove(cell: UITableViewCell, indexPath: IndexPath) {
