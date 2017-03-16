@@ -48,7 +48,7 @@ class ImageTableViewCell: UITableViewCell, AVAudioPlayerDelegate {
     
     
     func setPokemonImage(num: Int) {
-        centralImage.downloadedFrom(url: PGHelper.imageUrlOfPokemon(width: 240, num: num))
+        centralImage.downloadedFrom(url: PGHelper.imageUrlOfPokemon(width: 240, num: num), placeHolder: #imageLiteral(resourceName: "placeholder80"))
         // load cry soud
         loadSound(num: num)
     }

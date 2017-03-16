@@ -68,13 +68,14 @@ class EvolutionTableViewCell: UITableViewCell {
     private func _set(evolution: [String: Any], i: Int) {
         let from = evolution["from"] as! Int
         let pokemon = PGJSON.pokeDex[String(from)] as! [String: Any]
-        self.imageButtons[i].downloadedFrom(url: PGHelper.imageUrlOfPokemon(width: 60, num: pokemon["num"] as! Int))
+        self.imageButtons[i].downloadedFrom(url: PGHelper.imageUrlOfPokemon(width: 60, num: pokemon["num"] as! Int), placeTitle: pokemon["name"] as! String)
         self.imageButtons[i].tag = from
         let candy = evolution["candy"] as! Int
         self.arrowLabels[i].text = String(format: "%d Candy", candy)
         
         if let to = evolution["to"] as? Int {
-            self.imageButtons[i + 1].downloadedFrom(url: PGHelper.imageUrlOfPokemon(width: 60, num: to))
+            let toPokemon = PGJSON.pokeDex[String(to)] as! [String: Any]
+            self.imageButtons[i + 1].downloadedFrom(url: PGHelper.imageUrlOfPokemon(width: 60, num: to), placeTitle: toPokemon["name"] as! String)
             self.imageButtons[i + 1].tag = to
             if i == 0 {
                 self.imageButtons[2].removeFromSuperview()
@@ -92,7 +93,8 @@ class EvolutionTableViewCell: UITableViewCell {
             while (k + i + 1 < self.imageButtons.count && k < to.count) {
                 let num = to[k] as! Int
                 self.imageButtons[k + i + 1].tag = num
-                self.imageButtons[k + i + 1].downloadedFrom(url: PGHelper.imageUrlOfPokemon(width: 60, num: num))
+                let pkm = PGJSON.pokeDex[String(num)] as! [String: Any]
+                self.imageButtons[k + i + 1].downloadedFrom(url: PGHelper.imageUrlOfPokemon(width: 60, num: num), placeTitle: pkm["name"] as! String)
                 k += 1
             }
             while (k < to.count) {
@@ -101,7 +103,8 @@ class EvolutionTableViewCell: UITableViewCell {
                 button.widthAnchor.constraint(equalToConstant: 60).isActive = true
                 button.tag = num
                 button.addTarget(self, action: #selector(imageButtonTouchUp(_:)), for: .touchUpInside)
-                button.downloadedFrom(url: PGHelper.imageUrlOfPokemon(width: 60, num: num))
+                let pkm = PGJSON.pokeDex[String(num)] as! [String: Any]
+                button.downloadedFrom(url: PGHelper.imageUrlOfPokemon(width: 60, num: num), placeTitle: pkm["name"] as! String)
                 self.stackView.addArrangedSubview(button)
                 self.stackView.setNeedsLayout()
                 k += 1

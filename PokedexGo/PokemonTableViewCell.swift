@@ -36,7 +36,7 @@ class PokemonTableViewCell: UITableViewCell {
 
     func set(pokemon: [String: Any]) {
         let num = pokemon["num"] as! NSInteger
-        pokemonImage.downloadedFrom(url: PGHelper.imageUrlOfPokemon(width: 40, num: num))
+        pokemonImage.downloadedFrom(url: PGHelper.imageUrlOfPokemon(width: 40, num: num), placeHolder: #imageLiteral(resourceName: "placeholder40"))
         numLabel?.text = String(format: "#%03d", arguments: [num])
         nameLabel?.text = pokemon["name"] as? String
         staminaLabel?.text = String(pokemon["stamina"] as! Int)

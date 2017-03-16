@@ -10,9 +10,9 @@ import UIKit
 import Foundation
 
 extension UIImageView {
-    func downloadedFrom(url: URL, contentMode mode: UIViewContentMode = .scaleAspectFit) {
+    func downloadedFrom(url: URL, placeHolder: UIImage, contentMode mode: UIViewContentMode = .scaleAspectFit) {
         contentMode = mode
-        image = nil
+        image = placeHolder
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard
                 let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
@@ -25,29 +25,35 @@ extension UIImageView {
             }
         }.resume()
     }
-    func downloadedFrom(link: String, contentMode mode: UIViewContentMode = .scaleAspectFit) {
+    func downloadedFrom(link: String, placeHolder: UIImage, contentMode mode: UIViewContentMode = .scaleAspectFit) {
         guard let url = URL(string: link) else { return }
-        downloadedFrom(url: url, contentMode: mode)
+        downloadedFrom(url: url, placeHolder: placeHolder, contentMode: mode)
     }
 }
 
 extension UIButton {
-    func downloadedFrom(url: URL) {
+    func downloadedFrom(url: URL, placeTitle: String) {
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard
                 let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
                 let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
                 let data = data, error == nil,
                 let image = UIImage(data: data)
-                else { return }
+                else {
+                    DispatchQueue.main.async {
+                        self.setTitle(placeTitle, for: .normal)
+                    }
+                    return
+            }
             DispatchQueue.main.async() { () -> Void in
+                self.setTitle(nil, for: .normal)
                 self.setBackgroundImage(image, for: .normal)
             }
             }.resume()
     }
-    func downloadedFrom(link: String) {
+    func downloadedFrom(link: String, placeTitle: String) {
         guard let url = URL(string: link) else { return }
-        downloadedFrom(url: url)
+        downloadedFrom(url: url, placeTitle: placeTitle)
     }
 }
 
@@ -86,7 +92,7 @@ class PGHelper: NSObject {
         if w > 480 {
             w = 480
         }
-        let url = String(format: "https://pokedex.me/new-pokemon/%d/%03d.png", Int(w), num)
+        let url = String(format: "https://pokedex.me/v1/new-pokemon/%d/%03d.png", Int(w), num)
         return URL(string: url)
     }
     

@@ -15,7 +15,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RoZ-jz-Uy4" customClass="PTTypeButton">
-                    <rect key="frame" x="0.0" y="12" width="60" height="21"/>
+                    <rect key="frame" x="5" y="12" width="60" height="21"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="70" id="gkI-k1-iyu"/>
                         <constraint firstAttribute="height" constant="21" id="jNN-8g-sgu"/>
@@ -59,8 +59,9 @@
             </subviews>
             <constraints>
                 <constraint firstItem="nm5-Cu-7u3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Axl-k6-lrt"/>
-                <constraint firstAttribute="trailing" secondItem="RoZ-jz-Uy4" secondAttribute="trailing" id="TOl-Sf-tt2"/>
-                <constraint firstItem="RoZ-jz-Uy4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="W64-zF-HqB"/>
+                <constraint firstAttribute="trailing" secondItem="RoZ-jz-Uy4" secondAttribute="trailing" priority="750" id="TOl-Sf-tt2"/>
+                <constraint firstItem="RoZ-jz-Uy4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" priority="750" id="W64-zF-HqB"/>
+                <constraint firstItem="RoZ-jz-Uy4" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gF9-q1-va0"/>
                 <constraint firstAttribute="trailing" secondItem="nm5-Cu-7u3" secondAttribute="trailing" id="js4-5D-MFB"/>
                 <constraint firstItem="nm5-Cu-7u3" firstAttribute="top" secondItem="RoZ-jz-Uy4" secondAttribute="bottom" id="jtt-HB-msj"/>
                 <constraint firstItem="RoZ-jz-Uy4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="kd0-m2-xTt"/>
