@@ -20,15 +20,16 @@ class PGPageViewController: UIPageViewController {
         if p == nil {
             p = [DexType.Pokemon, "1"]
         }
+        else {
+            let type = p![0] as! Int
+            p = [DexType(rawValue: type), p![1]]
+        }
         return [p!]
     }()
     
     deinit {
         // save current viewing page
-        let currentVC = self.viewControllers!.first as! DexTableViewController
-        let p = pageArray[currentVC.pageIndex] as! [Any]
-        UserDefaults.standard.setValue(p, forKey: PGPageViewController.CurrentPageKey)
-        UserDefaults.standard.synchronize()
+        NotificationCenter.default.removeObserver(self)
     }
     
     
@@ -83,6 +84,16 @@ class PGPageViewController: UIPageViewController {
                            animated: true,
                            completion: nil)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(handleApplicationResignActive(notification:)), name: ApplicationResignActiveNotification, object: nil)
+    }
+    
+    func handleApplicationResignActive(notification: Notification) {
+        let currentVC = self.viewControllers!.first as! DexTableViewController
+        let p = pageArray[currentVC.pageIndex] as! [Any]
+        let type = p[0] as! DexType
+        let pdata = [type.rawValue, p[1] as! String] as [Any]
+        UserDefaults.standard.setValue(pdata, forKey: PGPageViewController.CurrentPageKey)
+        UserDefaults.standard.synchronize()
     }
     
     func search() {

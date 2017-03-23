@@ -12,7 +12,7 @@ protocol ShowSortTableDelegate {
     func showTable(searchKey: String?, sortKey: String, up: Bool, scope: Int)
 }
 
-enum DexType {
+enum DexType: Int {
     case Pokemon
     case Move
 }
@@ -39,11 +39,19 @@ class DexTableViewController: UITableViewController {
     func setDex(dexType: DexType, dexKey: String) {
         self.dexKey = dexKey
         self.dexType = dexType
+        if dexType == .Move && ( pokemonArray.count < 1 || pokemonMoveKey != dexKey) {
+            pokemonMoveKey = dexKey
+            let array = PGJSON.pokemonWith(moveKey: dexKey)
+            pokemonArray.removeAll()
+            for name in array! {
+                pokemonArray.append(PGJSON.pokeDex[name]!)
+            }
+            pokemonArray = pokemonArray.sorted{ (a, b) -> Bool in
+                return PGJSON.sort(a: a, b: b, key: self.pokemonHeaderView.sortKey, up: self.pokemonHeaderView.sortUp)
+            }
+        }
     }
     
-    func hasSame(page: [Any]) -> Bool {
-        return dexType == page[0] as! DexType && dexKey == page[1] as! String
-    }
     
     private func currentDex() -> [String: Any] {
         return self.dexType == .Pokemon ? PGJSON.pokeDex : PGJSON.moveDex
@@ -207,15 +215,6 @@ class DexTableViewController: UITableViewController {
             titleCell.setTitle(name: sec["title"] as! String)
         }
         else if let pokemonCell = cell as? PokemonTableViewCell {
-            if pokemonArray.count < 1 || pokemonMoveKey != dexKey {
-                pokemonMoveKey = dexKey
-                let array = PGJSON.pokemonWith(moveKey: dexKey)
-                pokemonArray.removeAll()
-                for name in array! {
-                    pokemonArray.append(PGJSON.pokeDex[name]!)
-                }
-            }
-            
             pokemonCell.set(pokemon: pokemonArray[indexPath.row] as! [String : Any])
         }
     }

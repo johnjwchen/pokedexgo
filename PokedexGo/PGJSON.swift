@@ -42,20 +42,20 @@ class PGJSON: NSObject {
         return sortedArray
     }
     
-    static func sort(a: Any, b: Any, key: String, up: Bool = true) -> Bool {
+    static func sort(a: Any, b: Any, key: String, up: Bool = false) -> Bool {
         let move1 = a as! [String: AnyObject]
         let move2 = b as! [String: AnyObject]
         if let s1 = move1[key] as? String, let s2 = move2[key] as? String {
-            return up ? s1 > s2 : s1 < s2
+            return up ? s1 < s2 : s1 > s2
         }
         else if let d1 = move1[key] as? Double, let d2 = move2[key] as? Double {
-            return up ? d1 > d2 : d1 < d2
+            return up ? d1 < d2 : d1 > d2
         }
         else if let f1 = move1[key] as? Float, let f2 = move2[key] as? Float {
-            return up ? f1 > f2 : f1 < f2
+            return up ? f1 < f2 : f1 > f2
         }
         else if let v1 = move1[key] as? Int, let v2 = move2[key] as? Int {
-            return up ? v1 > v2 : v1 < v2
+            return up ? v1 < v2 : v1 > v2
         }
         else {
             return false
