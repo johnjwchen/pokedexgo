@@ -142,5 +142,14 @@ class PokemonHeaderTableViewCell: UITableViewCell {
     func maxcpTap(_ sender: UITapGestureRecognizer) {
         tap(key: "maxcp")
     }
+    
+    static func initSortedArray() {
+        PGJSON.sortedPokemon(key: "num")
+        PGJSON.sortedPokemon(key: "name")
+        PGJSON.sortedPokemon(key: "stamina")
+        PGJSON.sortedPokemon(key: "attack")
+        PGJSON.sortedPokemon(key: "defense")
+        PGJSON.sortedPokemon(key: "maxcp")
+    }
 
 }

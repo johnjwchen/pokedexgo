@@ -8,12 +8,86 @@
 
 import UIKit
 
+
 class PGJSON: NSObject {
     static let layout = PGHelper.jsonFrom(name: "layout") as! [String: Any]
     static let moveDex = PGHelper.jsonFrom(name: "movedex-go") as! [String: Any]
     static let pokeDex = PGHelper.jsonFrom(name: "godex") as! [String: Any]
     static let pokemonDescArray = PGHelper.jsonFrom(name: "pokemon_desc_30") as! [Any]
     static let evolutionDict = PGHelper.jsonFrom(name: "evolution") as! [String: Any]
+    
+    
+    static var sortedMoveDict: [String: Any]! = [:]
+    
+    @discardableResult
+    static func sortedMove(key: String) -> [String] {
+        let low = key.lowercased()
+        var array = sortedMoveDict[low] as? [String]
+        if array == nil {
+            array = sortedMoveArray(key: low)
+            sortedMoveDict[low] = array
+        }
+        return array!
+    }
+    static private func sortedMoveArray(key: String) -> [String] {
+        let array = moveDex.values.sorted { (a, b) -> Bool in
+            return sort(a: a, b: b, key: key)
+        }
+        var sortedArray: [String] = []
+        for item in array {
+            let dict = item as! [String: Any]
+            let name = dict["name"] as! String
+            sortedArray.append(PGHelper.keyString(moveName: name))
+        }
+        return sortedArray
+    }
+    
+    static func sort(a: Any, b: Any, key: String, up: Bool = true) -> Bool {
+        let move1 = a as! [String: AnyObject]
+        let move2 = b as! [String: AnyObject]
+        if let s1 = move1[key] as? String, let s2 = move2[key] as? String {
+            return up ? s1 > s2 : s1 < s2
+        }
+        else if let d1 = move1[key] as? Double, let d2 = move2[key] as? Double {
+            return up ? d1 > d2 : d1 < d2
+        }
+        else if let f1 = move1[key] as? Float, let f2 = move2[key] as? Float {
+            return up ? f1 > f2 : f1 < f2
+        }
+        else if let v1 = move1[key] as? Int, let v2 = move2[key] as? Int {
+            return up ? v1 > v2 : v1 < v2
+        }
+        else {
+            return false
+        }
+    }
+    
+    static var sortedPokemonDict: [String: Any]! = [:]
+    @discardableResult
+    static func sortedPokemon(key: String) -> [String] {
+        let low = key.lowercased()
+        var array = sortedPokemonDict[low] as? [String]
+        if array == nil {
+            array = sortedPokemonArray(key: low)
+            sortedPokemonDict[low] = array
+        }
+        return array!
+    }
+    
+    static private func sortedPokemonArray(key: String) -> [String] {
+        let array = pokeDex.values.sorted { (a, b) -> Bool in
+            return sort(a: a, b: b, key: key)
+        }
+        var sortedArray: [String] = []
+        for item in array {
+            let dict = item as! [String: Any]
+            let num = dict["num"] as! Int
+            sortedArray.append(String(num))
+        }
+        return sortedArray
+    }
+    
+    
     
     static func moveOf(name: String) -> [String: Any] {
         let name2 = name.lowercased().replacingOccurrences(of: " ", with: "-")

@@ -34,15 +34,9 @@ class PGSearchViewController: UIViewController {
         return UISearchController(searchResultsController: nil)
     }()
  
-    fileprivate(set) var pokemonArray: [Any]!
-    fileprivate(set) var moveArray: [Any]!
+    fileprivate(set) var pokemonArray: [String]!
+    fileprivate(set) var moveArray: [String]!
     
-    fileprivate lazy var pokemonMutableArray: [Any] = {
-        return Array(PGJSON.pokeDex.values)
-    }()
-    fileprivate lazy var moveMutableArray: [Any] = {
-        return Array(PGJSON.moveDex.values)
-    }()
     
     fileprivate var isSearching: Bool = false
     
@@ -75,7 +69,6 @@ class PGSearchViewController: UIViewController {
         }
         if searchBar.text != searchKey {
             searchBar.text = searchKey
-            searchTable()
         }
         if segmentIndex > -1 {
             segmentedControl.selectedSegmentIndex = segmentIndex
@@ -84,18 +77,16 @@ class PGSearchViewController: UIViewController {
       
         if sortKey != nil && segmentIndex == 1 && pokemonHeaderView.sortKey != sortKey {
             pokemonHeaderView.setSort(key: sortKey, up: sortUp)
-            sortPokemon(key: sortKey!, up: sortUp)
         }
         if sortKey != nil && segmentIndex == 2 && moveHeaderView.sortKey != sortKey {
             moveHeaderView.setSort(key: sortKey, up: sortUp)
-            sortMove(key: sortKey!, up: sortUp)
         }
         
         sortKey = nil
         segmentIndex = -1
         searchKey = nil
         
-        self.tableView.reloadData()
+        searchTable()
     }
     
     
@@ -114,6 +105,18 @@ class PGSearchViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    fileprivate func moveAt(row: Int) -> [String : Any] {
+        let up = moveHeaderView.sortUp
+        let name = moveArray[up ? (moveArray.count - row - 1) : row]
+        return PGJSON.moveDex[name] as! [String : Any]
+    }
+    
+    fileprivate func pokemonAt(row: Int) -> [String: Any] {
+        let up = pokemonHeaderView.sortUp
+        let name = pokemonArray[up ? (pokemonArray.count - row - 1) : row]
+        return PGJSON.pokeDex[name] as! [String : Any]
+    }
+    
     
     
 //    override func viewWillAppear(_ animated: Bool) {
@@ -128,38 +131,36 @@ extension PGSearchViewController: PokemonSortDelegate, MoveSortDelegate {
     
     fileprivate func searchTable() {
         // search
-        pokemonArray = search(array: pokemonMutableArray, key: searchBar.text)
-        moveArray = search(array: moveMutableArray, key: searchBar.text)
-    }
-    func searchSortTable() {
-        searchTable()
+        let sortedPokemon = PGJSON.sortedPokemon(key: pokemonHeaderView.sortKey)
+        pokemonArray = search(array: sortedPokemon, key: searchBar.text, dex: PGJSON.pokeDex)
+        let sortedMove = PGJSON.sortedMove(key: moveHeaderView.sortKey)
+        moveArray = search(array: sortedMove, key: searchBar.text, dex: PGJSON.moveDex)
         
-        // sort
-        sortPokemon(key: pokemonHeaderView.sortKey, up: pokemonHeaderView.sortUp)
-        sortMove(key: moveHeaderView.sortKey, up: moveHeaderView.sortUp)
+        self.tableView.reloadData()
     }
+   
     
-    private func search(array: [Any], key: String?) -> [Any] {
+    private func search(array: [String], key: String?, dex: [String: Any]) -> [String] {
         if key == nil || (key?.characters.count)! < 1 {
             return array
         }
         let mykey = key!.lowercased()
-        var arr = Array<Any>()
+        var arr = Array<String>()
         for item in array {
-            let dict = item as! [String: Any]
+            let dict = dex[item] as! [String: Any]
             // name
             if let name = dict["name"] as? String, name.lowercased().range(of: mykey) != nil {
-                arr.append(dict)
+                arr.append(item)
             }
             // type
             else if let type = dict["type"] as? String, type.lowercased() == mykey{
-                arr.append(dict)
+                arr.append(item)
             }
             else if let types = dict["types"] as? [AnyObject] {
                 for itm in types {
                     let type = itm as! String
                     if type.lowercased() == mykey {
-                        arr.append(dict)
+                        arr.append(item)
                         continue
                     }
                 }
@@ -173,68 +174,18 @@ extension PGSearchViewController: PokemonSortDelegate, MoveSortDelegate {
     }
     
     func sortPokemon(key: String, up: Bool) {
-        var sortArray = Array(self.pokemonArray)
-        DispatchQueue.global(qos: .default).async {
-            sortArray.sort(by: { (a, b) -> Bool in
-                return PGSearchViewController.mysort(a: a, b: b, key: key, up: up)
-            })
-            DispatchQueue.main.async {
-                self.pokemonArray = sortArray
-                self.tableView.reloadData()
-            }
-        }
+        searchTable()
     }
     
-    func comparisonResult(value: Bool) -> ComparisonResult {
-        if value {
-            return .orderedAscending
-        }
-        else {
-            return .orderedDescending
-        }
-    }
-    
-    open class func mysort(a: Any, b: Any, key: String, up: Bool) -> Bool {
-        let move1 = a as! [String: AnyObject]
-        let move2 = b as! [String: AnyObject]
-        if let s1 = move1[key] as? String, let s2 = move2[key] as? String {
-            return !up ? s1 > s2 : s1 < s2
-        }
-        else if let d1 = move1[key] as? Double, let d2 = move2[key] as? Double {
-            return !up ? d1 > d2 : d1 < d2
-        }
-        else if let f1 = move1[key] as? Float, let f2 = move2[key] as? Float {
-            return !up ? f1 > f2 : f1 < f2
-        }
-        else if let v1 = move1[key] as? Int, let v2 = move2[key] as? Int {
-            return !up ? v1 > v2 : v1 < v2
-        }
-        else {
-            return false
-        }
-    }
-    
-    func doSort(a: Any, b: Any, key: String, up: Bool) -> ComparisonResult {
-        return comparisonResult(value: PGSearchViewController.mysort(a: a, b: b, key: key, up: up))
-    }
     
     func sortMove(key: String, up: Bool) {
-        var sortArray = Array(self.moveArray)
-        DispatchQueue.global(qos: .default).async {
-            sortArray.sort(by: { (a, b) -> Bool in
-                return PGSearchViewController.mysort(a: a, b: b, key: key, up: up)
-            })
-            DispatchQueue.main.async {
-                self.moveArray = sortArray
-                self.tableView.reloadData()
-            }
-        }
+        searchTable()
     }
 }
 
 extension PGSearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        searchSortTable()
+        searchTable()
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
@@ -281,14 +232,13 @@ extension PGSearchViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "PokemonCell", for: indexPath) as! PokemonTableViewCell
             
             // configure the cell
-            cell.set(pokemon: pokemonArray[indexPath.row] as! [String : Any])
+            cell.set(pokemon: pokemonAt(row: indexPath.row))
             
             return cell
         }
         else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MoveSimpleCell") as! MoveSimpleTableViewCell
-            
-            cell.set(move: moveArray[indexPath.row] as! [String : Any])
+            cell.set(move: moveAt(row: indexPath.row))
             
             return cell
         }
@@ -337,12 +287,13 @@ extension PGSearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (segmentedControl.selectedSegmentIndex == 0 && indexPath.section == 0 ||
             segmentedControl.selectedSegmentIndex == 1) {
-            let pokemon = pokemonArray[indexPath.row] as! [String : Any]
+            let pokemon = pokemonAt(row: indexPath.row)
             
             viewPage(type: .Pokemon, key: String(pokemon["num"] as! Int))
         }
         else {
-            let move = moveArray[indexPath.row] as! [String : Any]
+            
+            let move = moveAt(row: indexPath.row)
             viewPage(type: .Move, key: PGHelper.keyString(moveName: move["name"] as! String))
         }
     }

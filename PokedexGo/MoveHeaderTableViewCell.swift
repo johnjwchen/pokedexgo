@@ -139,5 +139,14 @@ class MoveHeaderTableViewCell: UITableViewCell {
     func espTap(_ sender: UITapGestureRecognizer) {
         tap(key: "eps")
     }
+    
+    static func initSortedArray() {
+        PGJSON.sortedMove(key: "type")
+        PGJSON.sortedMove(key: "name")
+        PGJSON.sortedMove(key: "power")
+        PGJSON.sortedMove(key: "cd")
+        PGJSON.sortedMove(key: "dps")
+        PGJSON.sortedMove(key: "eps")
+    }
 
 }

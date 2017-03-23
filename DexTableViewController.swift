@@ -304,7 +304,7 @@ extension DexTableViewController: PTTypeButtonDelegate {
 extension DexTableViewController: PokemonSortDelegate {
     func sortPokemon(key: String, up: Bool) {
         pokemonArray = pokemonArray.sorted{ (a, b) -> Bool in
-            return PGSearchViewController.mysort(a: a, b: b, key: key, up: up)
+            return PGJSON.sort(a: a, b: b, key: key, up: up)
         }
         tableView.reloadData()
     }
