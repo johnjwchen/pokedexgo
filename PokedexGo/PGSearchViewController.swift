@@ -145,26 +145,31 @@ extension PGSearchViewController: PokemonSortDelegate, MoveSortDelegate {
             return array
         }
         let mykey = key!.lowercased()
+        let keyIsType = ["normal", "fire", "water", "grass", "electric", "ice", "fighting", "poison", "ground", "flying", "psychic", "bug", "rock", "ghost", "dragon", "dark", "steel", "fairy"].contains(mykey)
         var arr = Array<String>()
         for item in array {
             let dict = dex[item] as! [String: Any]
             // name
-            if let name = dict["name"] as? String, name.lowercased().range(of: mykey) != nil {
-                arr.append(item)
-            }
-            // type
-            else if let type = dict["type"] as? String, type.lowercased() == mykey{
-                arr.append(item)
-            }
-            else if let types = dict["types"] as? [AnyObject] {
+            if let types = dict["types"] as? [AnyObject] {
                 for itm in types {
                     let type = itm as! String
                     if type.lowercased() == mykey {
                         arr.append(item)
-                        continue
+                        break
                     }
                 }
             }
+            else if let type = dict["type"] as? String, type.lowercased() == mykey{
+                arr.append(item)
+            }
+            else if keyIsType {
+                // only search type(s)
+                continue
+            }
+            else if let name = dict["name"] as? String, name.lowercased().range(of: mykey) != nil {
+                arr.append(item)
+            }
+            
 //            if let category = dict["category"] as? String, category.lowercased() == mykey {
 //                arr.add(dict)
 //            }
