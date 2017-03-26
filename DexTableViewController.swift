@@ -43,6 +43,9 @@ class DexTableViewController: UITableViewController {
             pokemonMoveKey = dexKey
             let array = PGJSON.pokemonWith(moveKey: dexKey)
             pokemonArray.removeAll()
+            guard array != nil else {
+                return
+            }
             for name in array! {
                 pokemonArray.append(PGJSON.pokeDex[name]!)
             }

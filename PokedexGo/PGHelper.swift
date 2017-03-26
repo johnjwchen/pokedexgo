@@ -105,8 +105,7 @@ class PGHelper: NSObject {
     }
     
     class func keyString(moveName: String!) -> String! {
-        let key = moveName.replacingOccurrences(of: " ", with: "-")
-        return key.lowercased()
+        return moveName.replacingOccurrences(of: " ", with: "-").lowercased()
     }
     
     static let attackArray: [[Float]] = [
