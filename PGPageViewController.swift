@@ -22,7 +22,7 @@ class PGPageViewController: UIPageViewController {
         }
         else {
             let type = p![0] as! Int
-            p = [DexType(rawValue: type), p![1]]
+            p = [DexType(rawValue: type)!, p![1]]
         }
         return [p!]
     }()
