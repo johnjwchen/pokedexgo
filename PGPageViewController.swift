@@ -97,6 +97,8 @@ class PGPageViewController: UIPageViewController {
     }
     
     func search() {
+        searchViewController.searchKey = ""
+        searchViewController.setUpArrays()
         self.present(searchViewController, animated: true, completion: nil)
     }
 

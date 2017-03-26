@@ -149,7 +149,7 @@ extension PGSearchViewController: PokemonSortDelegate, MoveSortDelegate {
         var arr = Array<String>()
         for item in array {
             let dict = dex[item] as! [String: Any]
-            // name
+            // types
             if let types = dict["types"] as? [AnyObject] {
                 for itm in types {
                     let type = itm as! String
@@ -159,7 +159,7 @@ extension PGSearchViewController: PokemonSortDelegate, MoveSortDelegate {
                     }
                 }
             }
-            else if let type = dict["type"] as? String, type.lowercased() == mykey{
+            if let type = dict["type"] as? String, type.lowercased() == mykey{
                 arr.append(item)
             }
             else if keyIsType {
