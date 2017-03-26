@@ -65,8 +65,14 @@ class EvolutionTableViewCell: UITableViewCell {
         self._set(evolution: evolution, i: 0)
     }
     
+    private var evoFrom: Int = 0
     private func _set(evolution: [String: Any], i: Int) {
         let from = evolution["from"] as! Int
+        if evoFrom == from {
+            return
+        }
+        evoFrom = from
+        
         let pokemon = PGJSON.pokeDex[String(from)] as! [String: Any]
         self.imageButtons[i].downloadedFrom(url: PGHelper.imageUrlOfPokemon(width: 60, num: pokemon["num"] as! Int), placeTitle: pokemon["name"] as! String)
         self.imageButtons[i].tag = from
