@@ -9,11 +9,19 @@
 import UIKit
 import Foundation
 
+var dataSession: URLSession! = nil
 extension UIImageView {
     func downloadedFrom(url: URL, placeHolder: UIImage, contentMode mode: UIViewContentMode = .scaleAspectFit) {
         contentMode = mode
         image = placeHolder
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
+        if dataSession == nil {
+            let config = URLSessionConfiguration.default.copy() as! URLSessionConfiguration
+            config.allowsCellularAccess = true
+            config.httpMaximumConnectionsPerHost = 1000
+            dataSession = URLSession(configuration: config)
+        }
+        
+        dataSession.dataTask(with: url) { (data, response, error) in
             guard
                 let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
                 let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
@@ -92,7 +100,7 @@ class PGHelper: NSObject {
         if w > 480 {
             w = 480
         }
-        let url = String(format: "https://pokedex.me/v1/new-pokemon/%d/%03d.png", Int(w), num)
+        let url = String(format: "https://pokedex.me/v2/new-pokemon/%d/%03d.png", Int(w), num)
         return URL(string: url)
     }
     
