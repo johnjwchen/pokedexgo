@@ -236,16 +236,23 @@ extension PGSearchViewController: UITableViewDataSource {
             segmentedControl.selectedSegmentIndex == 1) {
             let cell = tableView.dequeueReusableCell(withIdentifier: "PokemonCell", for: indexPath) as! PokemonTableViewCell
             
-            // configure the cell
-            cell.set(pokemon: pokemonAt(row: indexPath.row))
-            
             return cell
         }
         else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MoveSimpleCell") as! MoveSimpleTableViewCell
-            cell.set(move: moveAt(row: indexPath.row))
             
             return cell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if cell.isKind(of: PokemonTableViewCell.self) {
+            let pcell = cell as! PokemonTableViewCell
+            pcell.set(pokemon: pokemonAt(row: indexPath.row))
+        }
+        else {
+            let mcell = cell as! MoveSimpleTableViewCell
+            mcell.set(move: moveAt(row: indexPath.row))
         }
     }
     

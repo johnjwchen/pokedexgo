@@ -227,14 +227,16 @@ class DexTableViewController: UITableViewController {
         let identifier = cellIdentifier(indexPath: indexPath)
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier!, for: indexPath)
 
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if dexType == .Pokemon {
-             configPokemon(cell: cell, indexPath: indexPath)
+            configPokemon(cell: cell, indexPath: indexPath)
         }
         if dexType == .Move {
             configMove(cell: cell, indexPath: indexPath)
         }
-
-        return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
