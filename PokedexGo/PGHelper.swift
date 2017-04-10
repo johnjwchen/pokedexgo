@@ -100,7 +100,7 @@ class PGHelper: NSObject {
         if w > 480 {
             w = 480
         }
-        let url = String(format: "https://pokedex.me/v2/new-pokemon/%d/%03d.png", Int(w), num)
+        let url = String(format: "https://pokedex.me/v3/new-pokemon/%d/%03d.png", Int(w), num)
         return URL(string: url)
     }
     

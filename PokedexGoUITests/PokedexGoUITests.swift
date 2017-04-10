@@ -35,29 +35,26 @@ class PokedexGoUITests: XCTestCase {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
-        
-        
         let app = XCUIApplication()
-        let tablesQuery = app.tables
-        app.buttons["Search"].tap()
-        tablesQuery.staticTexts["Arbok"].tap()
+        app.buttons["search"].tap()
+        app.tables.cells.element(at: 0).tap()
         
-        tablesQuery.staticTexts["Poison"].tap()
-        tablesQuery.staticTexts["Ariados"].tap()
+        app.buttons["search"].tap()
+        app.tables.cells.element(at: 1).tap()
         
-        tablesQuery.staticTexts["Poison"].tap()
-        tablesQuery.staticTexts["Beedrill"].tap()
+        app.buttons["search"].tap()
+        app.tables.cells.element(at: 2).tap()
         
-        tablesQuery.staticTexts["Poison"].tap()
-        tablesQuery.staticTexts["Bellsprout"].tap()
+        app.buttons["search"].tap()
+        app.tables.cells.element(at: 3).tap()
         
-        tablesQuery.staticTexts["Poison"].tap()
-        tablesQuery.staticTexts["Bulbasaur"].tap()
+        app.buttons["search"].tap()
+        app.tables.cells.element(at: 4).tap()
         
-        tablesQuery.staticTexts["Poison"].tap()
-        tablesQuery.staticTexts["Crobat"].tap()
+        app.buttons["search"].tap()
+        app.tables.cells.element(at: 5).tap()
         
-        
+                
         //        let tablesQuery = tablesQuery2
 //        tablesQuery.cells.containing(.button, identifier:"More Info, Grass, Poison").staticTexts["Poison"].tap()
 //        
