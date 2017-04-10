@@ -37,6 +37,35 @@ class PokedexGoUITests: XCTestCase {
         
         
         
+        let app = XCUIApplication()
+        let tablesQuery = app.tables
+        app.buttons["Search"].tap()
+        tablesQuery.staticTexts["Arbok"].tap()
+        
+        tablesQuery.staticTexts["Poison"].tap()
+        tablesQuery.staticTexts["Ariados"].tap()
+        
+        tablesQuery.staticTexts["Poison"].tap()
+        tablesQuery.staticTexts["Beedrill"].tap()
+        
+        tablesQuery.staticTexts["Poison"].tap()
+        tablesQuery.staticTexts["Bellsprout"].tap()
+        
+        tablesQuery.staticTexts["Poison"].tap()
+        tablesQuery.staticTexts["Bulbasaur"].tap()
+        
+        tablesQuery.staticTexts["Poison"].tap()
+        tablesQuery.staticTexts["Crobat"].tap()
+        
+        
+        //        let tablesQuery = tablesQuery2
+//        tablesQuery.cells.containing(.button, identifier:"More Info, Grass, Poison").staticTexts["Poison"].tap()
+//        
+//        let tablesQuery2 = tablesQuery
+//        tablesQuery2.staticTexts["Ariados"].tap()
+//        tablesQuery2.staticTexts["Beedrill"].tap()
+        
+        
     }
     
 }

@@ -62,6 +62,59 @@
 		4E9F8BB41E6A4F6F00A9CD59 /* layout.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E9F8BB21E6A4F6F00A9CD59 /* layout.json */; };
 		4E9F8BB61E6A649E00A9CD59 /* PGJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8BB51E6A649E00A9CD59 /* PGJSON.swift */; };
 		4E9F8BB71E6A649E00A9CD59 /* PGJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8BB51E6A649E00A9CD59 /* PGJSON.swift */; };
+		4EE8F2F11E9B3DA200D53020 /* PGJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8BB51E6A649E00A9CD59 /* PGJSON.swift */; };
+		4EE8F2F21E9B3DA200D53020 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8B641E67916C00A9CD59 /* AppDelegate.swift */; };
+		4EE8F2F31E9B3DA200D53020 /* PGPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0941071E6B8F16000EA173 /* PGPageViewController.swift */; };
+		4EE8F2F41E9B3DA200D53020 /* PGSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E09410A1E6BB001000EA173 /* PGSearchViewController.swift */; };
+		4EE8F2F51E9B3DA200D53020 /* PGMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E90C5B21E71CE1C008A6ADB /* PGMainViewController.swift */; };
+		4EE8F2F61E9B3DA200D53020 /* PGHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8B961E68E5A900A9CD59 /* PGHelper.swift */; };
+		4EE8F2F71E9B3DA200D53020 /* PGArrowLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E3B091E7316C300F83D61 /* PGArrowLabel.swift */; };
+		4EE8F2F91E9B3DA200D53020 /* TypeEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E3B121E74C1A500F83D61 /* TypeEffectView.swift */; };
+		4EE8F2FB1E9B3DA200D53020 /* PTTypeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8B9D1E69E5CC00A9CD59 /* PTTypeButton.m */; };
+		4EE8F2FC1E9B3DA200D53020 /* TypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8B9F1E69E77000A9CD59 /* TypeTableViewCell.swift */; };
+		4EE8F2FD1E9B3DA200D53020 /* PokemonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0941121E6DD7F6000EA173 /* PokemonTableViewCell.swift */; };
+		4EE8F2FE1E9B3DA200D53020 /* EvolutionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E3B0C1E736D6500F83D61 /* EvolutionTableViewCell.swift */; };
+		4EE8F2FF1E9B3DA200D53020 /* PokemonHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0941141E6DEAB8000EA173 /* PokemonHeaderTableViewCell.swift */; };
+		4EE8F3001E9B3DA200D53020 /* MoveHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0941181E6DF597000EA173 /* MoveHeaderTableViewCell.swift */; };
+		4EE8F3011E9B3DA200D53020 /* MoveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8BAE1E6A491700A9CD59 /* MoveTableViewCell.swift */; };
+		4EE8F3021E9B3DA200D53020 /* MoveSimpleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0941161E6DF2AB000EA173 /* MoveSimpleTableViewCell.swift */; };
+		4EE8F3031E9B3DA200D53020 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8BAB1E6A255000A9CD59 /* TitleTableViewCell.swift */; };
+		4EE8F3041E9B3DA200D53020 /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E90C5AE1E6F4DC2008A6ADB /* DescriptionTableViewCell.swift */; };
+		4EE8F3051E9B3DA200D53020 /* StatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8BA21E6A013600A9CD59 /* StatsTableViewCell.swift */; };
+		4EE8F3061E9B3DA200D53020 /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8BA51E6A1BE500A9CD59 /* NameTableViewCell.swift */; };
+		4EE8F3071E9B3DA200D53020 /* MoveNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E90C5B01E6F5DC1008A6ADB /* MoveNameTableViewCell.swift */; };
+		4EE8F3081E9B3DA200D53020 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8BA81E6A1D1A00A9CD59 /* ImageTableViewCell.swift */; };
+		4EE8F3091E9B3DA200D53020 /* EffectivenessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E3B181E74C38600F83D61 /* EffectivenessTableViewCell.swift */; };
+		4EE8F30A1E9B3DB100D53020 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8B641E67916C00A9CD59 /* AppDelegate.swift */; };
+		4EE8F30B1E9B3DB100D53020 /* DexTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8B941E68E3D900A9CD59 /* DexTableViewController.swift */; };
+		4EE8F30C1E9B3DB100D53020 /* PGMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E90C5B21E71CE1C008A6ADB /* PGMainViewController.swift */; };
+		4EE8F30D1E9B3DB100D53020 /* PGHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8B961E68E5A900A9CD59 /* PGHelper.swift */; };
+		4EE8F3101E9B3DB100D53020 /* PTTypeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F8B9D1E69E5CC00A9CD59 /* PTTypeButton.m */; };
+		4EE8F3111E9B3DB100D53020 /* PokemonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0941121E6DD7F6000EA173 /* PokemonTableViewCell.swift */; };
+		4EE8F3121E9B3DB100D53020 /* PokemonHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0941141E6DEAB8000EA173 /* PokemonHeaderTableViewCell.swift */; };
+		4EE8F3131E9B3DB100D53020 /* MoveHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0941181E6DF597000EA173 /* MoveHeaderTableViewCell.swift */; };
+		4EE8F3141E9B3DB100D53020 /* MoveSimpleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0941161E6DF2AB000EA173 /* MoveSimpleTableViewCell.swift */; };
+		4EE8F3151E9B3DB100D53020 /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E90C5AE1E6F4DC2008A6ADB /* DescriptionTableViewCell.swift */; };
+		4EE8F3161E9B3DB100D53020 /* MoveNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E90C5B01E6F5DC1008A6ADB /* MoveNameTableViewCell.swift */; };
+		4EE8F31A1E9B401300D53020 /* layout.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E9F8BB21E6A4F6F00A9CD59 /* layout.json */; };
+		4EE8F31B1E9B401300D53020 /* godex.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E90C5AA1E6F1FB3008A6ADB /* godex.json */; };
+		4EE8F31C1E9B401300D53020 /* evolution.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E7E3B0F1E738BCA00F83D61 /* evolution.json */; };
+		4EE8F31D1E9B401300D53020 /* movedex-go.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E09411C1E6E0141000EA173 /* movedex-go.json */; };
+		4EE8F31E1E9B401300D53020 /* pokemon_desc_30.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E90C5AC1E6F4D00008A6ADB /* pokemon_desc_30.json */; };
+		4EE8F31F1E9B401300D53020 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E9F8B6B1E67916C00A9CD59 /* Assets.xcassets */; };
+		4EE8F3201E9B401300D53020 /* pt-black.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E09411A1E6DFFB3000EA173 /* pt-black.png */; };
+		4EE8F3211E9B401300D53020 /* pt-yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0941101E6D08F5000EA173 /* pt-yellow.png */; };
+		4EE8F3221E9B401300D53020 /* point-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E9F8B991E69DF8800A9CD59 /* point-bg.png */; };
+		4EE8F3231E9B40AB00D53020 /* godex.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E90C5AA1E6F1FB3008A6ADB /* godex.json */; };
+		4EE8F3241E9B40AB00D53020 /* movedex-go.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E09411C1E6E0141000EA173 /* movedex-go.json */; };
+		4EE8F3251E9B40AB00D53020 /* pokemon_desc_30.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E90C5AC1E6F4D00008A6ADB /* pokemon_desc_30.json */; };
+		4EE8F3261E9B40AB00D53020 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E9F8B6B1E67916C00A9CD59 /* Assets.xcassets */; };
+		4EE8F3271E9B40AB00D53020 /* pt-black.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E09411A1E6DFFB3000EA173 /* pt-black.png */; };
+		4EE8F3281E9B40AB00D53020 /* pt-yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0941101E6D08F5000EA173 /* pt-yellow.png */; };
+		4EE8F3291E9B40AB00D53020 /* point-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E9F8B991E69DF8800A9CD59 /* point-bg.png */; };
+		4EE8F32A1E9B40BC00D53020 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9F8B681E67916C00A9CD59 /* Main.storyboard */; };
+		4EE8F32B1E9B40C300D53020 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9F8B681E67916C00A9CD59 /* Main.storyboard */; };
+		4EE8F32C1E9B40CA00D53020 /* TypeEffectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E7E3B151E74C1BC00F83D61 /* TypeEffectView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -188,9 +241,9 @@
 				4E9F8B961E68E5A900A9CD59 /* PGHelper.swift */,
 				4E7E3B091E7316C300F83D61 /* PGArrowLabel.swift */,
 				4E9F8B9C1E69E5CC00A9CD59 /* PTTypeButton.h */,
+				4E9F8B9D1E69E5CC00A9CD59 /* PTTypeButton.m */,
 				4E7E3B121E74C1A500F83D61 /* TypeEffectView.swift */,
 				4E7E3B151E74C1BC00F83D61 /* TypeEffectView.xib */,
-				4E9F8B9D1E69E5CC00A9CD59 /* PTTypeButton.m */,
 				4E9F8B9F1E69E77000A9CD59 /* TypeTableViewCell.swift */,
 				4E0941121E6DD7F6000EA173 /* PokemonTableViewCell.swift */,
 				4E7E3B0C1E736D6500F83D61 /* EvolutionTableViewCell.swift */,
@@ -375,6 +428,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EE8F32C1E9B40CA00D53020 /* TypeEffectView.xib in Resources */,
+				4EE8F32B1E9B40C300D53020 /* Main.storyboard in Resources */,
+				4EE8F31A1E9B401300D53020 /* layout.json in Resources */,
+				4EE8F31B1E9B401300D53020 /* godex.json in Resources */,
+				4EE8F31C1E9B401300D53020 /* evolution.json in Resources */,
+				4EE8F31D1E9B401300D53020 /* movedex-go.json in Resources */,
+				4EE8F31E1E9B401300D53020 /* pokemon_desc_30.json in Resources */,
+				4EE8F31F1E9B401300D53020 /* Assets.xcassets in Resources */,
+				4EE8F3201E9B401300D53020 /* pt-black.png in Resources */,
+				4EE8F3211E9B401300D53020 /* pt-yellow.png in Resources */,
+				4EE8F3221E9B401300D53020 /* point-bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +446,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EE8F32A1E9B40BC00D53020 /* Main.storyboard in Resources */,
+				4EE8F3231E9B40AB00D53020 /* godex.json in Resources */,
+				4EE8F3241E9B40AB00D53020 /* movedex-go.json in Resources */,
+				4EE8F3251E9B40AB00D53020 /* pokemon_desc_30.json in Resources */,
+				4EE8F3261E9B40AB00D53020 /* Assets.xcassets in Resources */,
+				4EE8F3271E9B40AB00D53020 /* pt-black.png in Resources */,
+				4EE8F3281E9B40AB00D53020 /* pt-yellow.png in Resources */,
+				4EE8F3291E9B40AB00D53020 /* point-bg.png in Resources */,
 				4E7E3B111E738BCA00F83D61 /* evolution.json in Resources */,
 				4E9F8BB41E6A4F6F00A9CD59 /* layout.json in Resources */,
 				4E7E3B171E74C1BC00F83D61 /* TypeEffectView.xib in Resources */,
@@ -426,6 +498,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EE8F2F11E9B3DA200D53020 /* PGJSON.swift in Sources */,
+				4EE8F2F21E9B3DA200D53020 /* AppDelegate.swift in Sources */,
+				4EE8F2F31E9B3DA200D53020 /* PGPageViewController.swift in Sources */,
+				4EE8F2F41E9B3DA200D53020 /* PGSearchViewController.swift in Sources */,
+				4EE8F2F51E9B3DA200D53020 /* PGMainViewController.swift in Sources */,
+				4EE8F2F61E9B3DA200D53020 /* PGHelper.swift in Sources */,
+				4EE8F2F71E9B3DA200D53020 /* PGArrowLabel.swift in Sources */,
+				4EE8F2F91E9B3DA200D53020 /* TypeEffectView.swift in Sources */,
+				4EE8F2FB1E9B3DA200D53020 /* PTTypeButton.m in Sources */,
+				4EE8F2FC1E9B3DA200D53020 /* TypeTableViewCell.swift in Sources */,
+				4EE8F2FD1E9B3DA200D53020 /* PokemonTableViewCell.swift in Sources */,
+				4EE8F2FE1E9B3DA200D53020 /* EvolutionTableViewCell.swift in Sources */,
+				4EE8F2FF1E9B3DA200D53020 /* PokemonHeaderTableViewCell.swift in Sources */,
+				4EE8F3001E9B3DA200D53020 /* MoveHeaderTableViewCell.swift in Sources */,
+				4EE8F3011E9B3DA200D53020 /* MoveTableViewCell.swift in Sources */,
+				4EE8F3021E9B3DA200D53020 /* MoveSimpleTableViewCell.swift in Sources */,
+				4EE8F3031E9B3DA200D53020 /* TitleTableViewCell.swift in Sources */,
+				4EE8F3041E9B3DA200D53020 /* DescriptionTableViewCell.swift in Sources */,
+				4EE8F3051E9B3DA200D53020 /* StatsTableViewCell.swift in Sources */,
+				4EE8F3061E9B3DA200D53020 /* NameTableViewCell.swift in Sources */,
+				4EE8F3071E9B3DA200D53020 /* MoveNameTableViewCell.swift in Sources */,
+				4EE8F3081E9B3DA200D53020 /* ImageTableViewCell.swift in Sources */,
+				4EE8F3091E9B3DA200D53020 /* EffectivenessTableViewCell.swift in Sources */,
 				4E9F8B7A1E67916C00A9CD59 /* PokedexGoTests.swift in Sources */,
 				4E9F8B981E69D5E100A9CD59 /* DexTableViewController.swift in Sources */,
 			);
@@ -435,6 +530,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EE8F30A1E9B3DB100D53020 /* AppDelegate.swift in Sources */,
+				4EE8F30B1E9B3DB100D53020 /* DexTableViewController.swift in Sources */,
+				4EE8F30C1E9B3DB100D53020 /* PGMainViewController.swift in Sources */,
+				4EE8F30D1E9B3DB100D53020 /* PGHelper.swift in Sources */,
+				4EE8F3101E9B3DB100D53020 /* PTTypeButton.m in Sources */,
+				4EE8F3111E9B3DB100D53020 /* PokemonTableViewCell.swift in Sources */,
+				4EE8F3121E9B3DB100D53020 /* PokemonHeaderTableViewCell.swift in Sources */,
+				4EE8F3131E9B3DB100D53020 /* MoveHeaderTableViewCell.swift in Sources */,
+				4EE8F3141E9B3DB100D53020 /* MoveSimpleTableViewCell.swift in Sources */,
+				4EE8F3151E9B3DB100D53020 /* DescriptionTableViewCell.swift in Sources */,
+				4EE8F3161E9B3DB100D53020 /* MoveNameTableViewCell.swift in Sources */,
 				4E09410C1E6BB001000EA173 /* PGSearchViewController.swift in Sources */,
 				4E9F8BB71E6A649E00A9CD59 /* PGJSON.swift in Sources */,
 				4E9F8B851E67916C00A9CD59 /* PokedexGoUITests.swift in Sources */,
@@ -623,6 +729,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pokgear.PokedexGoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PokedexGo/PokedexGo-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PokedexGo.app/PokedexGo";
 			};
@@ -637,6 +744,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pokgear.PokedexGoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PokedexGo/PokedexGo-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PokedexGo.app/PokedexGo";
 			};
@@ -650,6 +758,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pokgear.PokedexGoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PokedexGo/PokedexGo-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = PokedexGo;
 			};
@@ -663,6 +772,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pokgear.PokedexGoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PokedexGo/PokedexGo-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = PokedexGo;
 			};
