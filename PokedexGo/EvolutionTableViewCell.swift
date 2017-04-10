@@ -67,7 +67,9 @@ class EvolutionTableViewCell: UITableViewCell {
     
     private var evoFrom: Int = 0
     private func _set(evolution: [String: Any], i: Int) {
-        let from = evolution["from"] as! Int
+        guard let from = evolution["from"] as? Int else {
+            return;
+        }
         if evoFrom == from {
             return
         }

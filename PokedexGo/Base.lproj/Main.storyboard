@@ -1485,7 +1485,7 @@
                         <viewControllerLayoutGuide type="top" id="xMo-Yo-GTh"/>
                         <viewControllerLayoutGuide type="bottom" id="S5X-NA-0d1"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="xEC-JC-i2m">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="xEC-JC-i2m">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1531,7 +1531,7 @@
                                     <constraint firstItem="Xtm-7d-KbN" firstAttribute="top" secondItem="pT6-7K-cM1" secondAttribute="top" id="pXP-kK-MED"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="31" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TsP-vo-CRD">
+                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="31" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TsP-vo-CRD">
                                 <rect key="frame" x="0.0" y="94" width="320" height="474"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -1701,7 +1701,7 @@
                                             <outlet property="typeView" destination="uTX-wl-HWW" id="L3K-Po-jzY"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MoveSimpleCell" rowHeight="41" id="UIn-X8-c17" customClass="MoveSimpleTableViewCell" customModule="PokedexGo" customModuleProvider="target">
+                                    <tableViewCell opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MoveSimpleCell" rowHeight="41" id="UIn-X8-c17" customClass="MoveSimpleTableViewCell" customModule="PokedexGo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="57" width="320" height="41"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="UIn-X8-c17" id="lpS-8n-PYB">
@@ -1711,7 +1711,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VV9-wf-saT">
                                                     <rect key="frame" x="0.0" y="5" width="320" height="41"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jIq-lm-QTl">
+                                                        <view opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jIq-lm-QTl">
                                                             <rect key="frame" x="0.0" y="0.0" width="74" height="41"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Flying" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aB0-28-Xup" customClass="PTTypeButton">
@@ -1822,7 +1822,7 @@
                                             <outlet property="typeButton" destination="aB0-28-Xup" id="Xsr-I2-b3L"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PokemonCell" rowHeight="46" id="qW2-16-6QS" customClass="PokemonTableViewCell" customModule="PokedexGo" customModuleProvider="target">
+                                    <tableViewCell opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PokemonCell" rowHeight="46" id="qW2-16-6QS" customClass="PokemonTableViewCell" customModule="PokedexGo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="98" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qW2-16-6QS" id="Q23-tB-Kc4">
@@ -1832,7 +1832,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="2iM-3C-XYQ">
                                                     <rect key="frame" x="4" y="2" width="312" height="40"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zpo-gI-IAc">
+                                                        <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zpo-gI-IAc">
                                                             <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="0pK-kq-yqh"/>
@@ -1865,7 +1865,7 @@
                                                                 </mask>
                                                             </variation>
                                                         </label>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S6M-s7-5VO">
+                                                        <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S6M-s7-5VO">
                                                             <rect key="frame" x="42" y="0.0" width="0.0" height="40"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flying" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdt-xj-1wN" customClass="PTTypeButton">
@@ -2286,7 +2286,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wxj-s3-6xd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="111.2" y="-1286.8065967016494"/>
+            <point key="canvasLocation" x="913" y="-1308"/>
         </scene>
     </scenes>
     <resources>
